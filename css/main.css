@@ -258,6 +258,13 @@ a:hover{
     margin-right:10px;
 }
 
+.pageTitle p{
+    align-self:flex-start;
+    margin-bottom:20px;
+    line-height:normal;
+    min-width:0;
+}
+
 .me .pageTitle, .sendoff .pageTitle, .contact .pageTitle{
     height:calc(100% - 150px);
     padding-top:150px;
@@ -732,6 +739,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 .timeframe, .role{
     min-width:auto;
     margin-right:50px;
+}
+
+.role{
+    margin-top:20px;
 }
 
 .projectInfo .title{
@@ -1281,8 +1292,13 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     h2{
-        font-size:30px;
-        font-size:3vw;
+        font-size:25px;
+        font-size:2.5vw;
+    }
+
+    .projectPreview h2{
+        font-size:20px;
+        font-size:2.2vw;
     }
 
     h2 span{
@@ -1295,7 +1311,6 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         font-size:40px;
         font-size:4vw;
         font-weight:400;
-        margin-bottom:30px;
     }
 
     .pageTitle{
@@ -1493,6 +1508,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .role{
         margin-right:50px;
+        margin-top:0;
     }
 
     .timeframe{
@@ -1500,10 +1516,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     .projectInfo .main{
-        font-size:30px;
-        font-size:3vw;
+        font-size:25px;
+        font-size:2.5vw;
         line-height:30px;
-        line-height:4vw;
+        line-height:3.5vw;
     }
 
     .channels{
@@ -1620,10 +1636,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     .projectInfo .main{
-        line-height:40px;
-        line-height:3vw;
-        font-size: 30px;
-        font-size: 2.5vw;
+        line-height:35px;
+        line-height:2.8vw;
+        font-size: 25px;
+        font-size: 2.2vw;
     }
 }
 
@@ -1640,14 +1656,11 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     .projectInfo{
-        margin-bottom: 0px;
+        margin-top:30px;
+        margin-bottom: 30px;
     }
 
     .projectInfo .main{
-        line-height:50px;
-        line-height:3.5vw;
-        font-size: 40px;
-        font-size: 3vw;
     }
 
     .projectInfo .title{
@@ -1657,6 +1670,16 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .timeframe{
         margin-right:250px;
+    }
+
+    .channels{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+    .mobileProject{
+        width:600px;
+        max-height:800px;
     }
 }
 
