@@ -468,7 +468,7 @@ $(document).ready(function () {
 
     $('.featured .downArrow').on('click', function(e){
         // scroll down on home page
-        var position=$('section.savings').offset().top-50;
+        var position=$('section.savings .pageTitle').offset().top-50;
         $('html, body').animate({
             scrollTop: position
         }, 400, 'swing');
