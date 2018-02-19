@@ -466,6 +466,14 @@ $(document).ready(function () {
         }, 400, 'swing');
     });
 
+    $('.featured .downArrow').on('click', function(e){
+        // scroll down on home page
+        var position=$('section.savings').offset().top-50;
+        $('html, body').animate({
+            scrollTop: position
+        }, 400, 'swing');
+    });
+
     $('.upArrow').on('click tap', function(){
         toggleProject('');
     });
