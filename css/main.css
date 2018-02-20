@@ -34,7 +34,7 @@ html{
     line-heights are rounded up to 5px intervals
     for easier math*/
     font-size:16px;
-    font-size:5vw;
+    font-size:4vw;
     color:#000;
 }
 
@@ -57,19 +57,6 @@ h1.bold{
     font-size:100px;
     font-size:10vw;
     font-weight:500;
-}
-
-textarea.email{
-    font-size:100px;
-    font-size:10vw;
-    font-weight:500;
-    margin-top:20px;
-    margin-bottom:0;
-    align-self:flex-start;
-    cursor:default;
-    width:81vw;
-    border: none;
-    border-color: transparent;
 }
 
 h1::selection{
@@ -490,7 +477,7 @@ a.toExternal{
 
 section, section > div, .pagination, .pagination > div, section.whatProject, .footer section,
 .projects > div, .close, .projectInfo, .projectInfo div, .mobileSection, .mobileContent,
-.channels{
+.channels, .askMe{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -797,135 +784,6 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
 /* End how content overrides **************/
 
-.pagination{
-    position:absolute;
-    top:30%;
-    right:10px;
-}
-
-.pagination > div{
-    cursor:pointer;
-    height:30px;
-    width:120px;
-
-    flex-direction:row;
-    justify-content:flex-end;
-}
-
-.why .pagination p{
-    color:#000;
-}
-
-.pagination > div:first-of-type .dot{
-    color:#474647;
-    border-color:#474647;
-}
-
-.pagination > div:nth-of-type(2) .dot{
-    color:#1F76DB;
-    border-color:#1F76DB;
-}
-
-.pagination > div:nth-of-type(3) .dot{
-    color:#FA7921;
-    border-color:#FA7921;
-}
-
-.pagination > div:nth-of-type(4) .dot{
-    color:#235789;
-    border-color:#235789;
-}
-
-.pagination > div:nth-of-type(5) .dot{
-    color:#E7ECEF;
-    border-color:#E7ECEF;
-}
-
-.pagination .selected{
-    opacity:0;
-}
-
-.pagination .selected:hover{
-    cursor:default;
-}
-
-.pagination p{
-    display:inline-block;
-    opacity:0;
-    cursor:pointer;
-    line-height:8px;
-    font-weight:400;
-    font-size:25px;
-    color:#fff;
-    margin-top:12px;
-}
-
-.pagination p.hovered{
-    opacity:1;
-}
-
-.dot{
-    display:inline-block;
-    min-width:8px;
-    min-height:8px;
-
-    margin-top:0;
-    margin-left:10px;
-    margin-right:0;
-
-    border-radius:100%;
-    border:1px solid;
-}
-
-.whyDot{
-    border:1px solid #000;
-}
-
-.hoveredPage{
-    color:#fff;
-}
-
-.hoveredPage .dot{
-    background-color:#fff;
-    color:#fff;
-    border:1px solid;
-    width:30px;
-    height:30px;
-    margin-top:0px;
-    margin-left:15px;
-    margin-right:5px;
-}
-
-.hoveredPage .dot:first-of-type{
-    border-color:#474647;
-}
-
-.hoveredPage .dot:nth-of-type(2){
-    border-color:#1F76DB;
-}
-
-.hoveredPage .dot:nth-of-type(3){
-    border-color:#FA7921;
-}
-
-.hoveredPage .dot:nth-of-type(4){
-    border-color:#235789;
-}
-
-.hoveredPage .dot:nth-of-type(5){
-    border-color:#E7ECEF;
-}
-
-.why .hoveredPage{
-    color:#474647;
-}
-
-.why .hoveredPage .dot{
-    background-color:#474647;
-}
-
-/* End Pagination ************************/
-
 .contact p{
     text-align:center;
     margin-bottom:-30px;
@@ -1187,11 +1045,6 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     flex-basis:50%;
 }
 
-/*.fadeUp{
-    margin-top:20px;
-    opacity:0;
-}*/
-
 /* End downArrow *********************************/
 
 @media(max-height:560px) and (max-width:400px){
@@ -1263,8 +1116,8 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     /* Medium Screen size ***********************************************************/
     /* M */
     html{
-        font-size:18px;
-        font-size:2.5vw;
+        font-size:16px;
+        font-size:2vw;
     }
 
     p{
@@ -1468,12 +1321,54 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .statement{
         margin-bottom:0;
+        flex-direction:column;
+        margin-bottom:200px;
+    }
+
+    .hobbies{
+        display:flex;
+    }
+
+    .statement .pageTitle{
+        width:80%;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+
+    .statement .icon{
+        width:100px;
+        height:100px;
+    }
+
+    .icons{
+        background-position:center;
+        background-size:contain;
+        background-repeat:no-repeat;
+        /* background-image:url('../images/carbon.png'); */
+        background-image:url('https://jwisneski.github.io/portfolio/images/carbon.png');
+    }
+
+    .games{
+        background-position:center;
+        background-size:contain;
+        background-repeat:no-repeat;
+        /* background-image:url('../images/kurt.png'); */
+        background-image:url('https://jwisneski.github.io/portfolio/images/kurt.png');
+    }
+
+    .music{
+        width:200px !important;
+        background-position:center;
+        background-size:contain;
+        background-repeat:no-repeat;
+        /* background-image:url('../images/strat.png'); */
+        background-image:url('https://jwisneski.github.io/portfolio/images/strat.png');
     }
 
     .whatIdo div{
         width:30%;
         height:30vw;
-        margin:0 !important;
+        margin:0;
     }
 
     .leadWork{
@@ -1481,8 +1376,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         height:50px !important;
     }
 
-    .portrait{
+    .whatIdo .portrait{
         order:1;
+        width:25%;
+        height:25vw;
     }
 
     .indyWork{
@@ -1547,8 +1444,8 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     /* L */
 
     html{
-        font-size:20px;
-        font-size:1.8vw;
+        font-size:16px;
+        font-size:1.7vw;
         font-weight:300;
     }
 
@@ -1687,8 +1584,8 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     /* Extra Large Screen size ***************************************************/
     /* XL */
     html{
-        font-size:45px;
-        font-size:3vw;
+        font-size:30px;
+        font-size:2.5vw;
     }
 
     h2{
