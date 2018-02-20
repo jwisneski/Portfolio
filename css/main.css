@@ -248,7 +248,6 @@ a:hover{
 .pageTitle p{
     align-self:flex-start;
     margin-bottom:20px;
-    line-height:normal;
     min-width:0;
 }
 
