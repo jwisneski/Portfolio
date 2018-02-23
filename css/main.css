@@ -1576,6 +1576,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         cursor:pointer;
     }
 
+    .hobbies .music{
+        cursor:default;
+    }
+
     .statement .pageTitle{
         width:80%;
         flex-direction:row;
