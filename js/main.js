@@ -412,7 +412,6 @@ $(document).ready(function () {
 
     $('.projects>div').on('mouseenter', function(e){
         if(e.currentTarget.className=='guitar' || e.currentTarget.className=='furniture'){
-            console.log(e.currentTarget.className);
         }else{
             $(this).addClass('projectHovered');
         }
@@ -532,6 +531,7 @@ $(document).ready(function () {
     });
 
     $('a.miniBagLink').on('click tap', function(e){
+        e.preventDefault( );
         if(e.currentTarget.className=='nounProject'){
             window.open('https://thenounproject.com/joelski/', '_blank');
         }else{
@@ -554,7 +554,6 @@ $(document).ready(function () {
     });
 
     $('a.imageMattersLink').on('click tap', function(e){
-        console.log(e);
         if(e.currentTarget.className=='nounProject'){
             window.open('https://thenounproject.com/joelski/', '_blank');
         }else{
@@ -564,4 +563,16 @@ $(document).ready(function () {
             toggleProject(element);
         }
     });
+
+    $('div.icons').on('click tap', function(e){
+        toggleProject('icons');
+    });
+
+    $('div.games').on('click tap', function(e){
+        toggleProject('games');
+    });
+
+    // $('div.music').on('click tap', function(e){
+    //     toggleProject('music');
+    // });
 });
