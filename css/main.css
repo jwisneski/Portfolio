@@ -109,7 +109,7 @@ h2::selection {
 }
 
 .me h2::selection{
-    color:#EA7E0D;
+    color:#EA7E0D;   /*orange*/
     background-color:transparent;
 }
 
@@ -120,7 +120,7 @@ h2::selection {
 
 .imageMatters h2::selection{
     color:#1F76DB;
-    background-color:#efefef;
+    background-color:#efefef; /*light grey*/
 }
 
 .projectContainer h2{
@@ -139,7 +139,7 @@ h3{
 
 h3::selection{
     color:#fff;
-    background-color:#1F76DB;
+    background-color:#1F76DB; /*bright blue*/
 }
 
 .miniBag h3::selection{
@@ -163,7 +163,7 @@ p{
 
 p::selection, div::selection, span::selection{
     color:#fff;
-    background-color:#235789;
+    background-color:#235789; /*dark blue*/
 }
 
 .miniBag p::selection, .miniBag div::selection, .miniBag span::selection{
@@ -371,6 +371,19 @@ a.external p:hover{
     border-color: #EA7E0D;
 }
 
+.iconsProject a{
+    background-color:#EA7E0D;
+    border:1px solid #EA7E0D !important;
+    color:#fff;
+    margin-top:0;
+}
+
+.iconsProject a:hover{
+    background-color:#fff;
+    border:1px solid #EA7E0D;
+    color:#EA7E0D;
+}
+
 .sendoff a::selection{
     background-color:#EA7E0D;
     color:#fff;
@@ -476,7 +489,7 @@ a.toExternal{
 
 section, section > div, .pagination, .pagination > div, section.whatProject, .footer section,
 .projects > div, .close, .projectInfo, .projectInfo div, .mobileSection, .mobileContent,
-.channels, .askMe{
+.channels, .askMe, .projectTitle{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -767,7 +780,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     fill:#fff;
 }
 
-.channels .mobileIcon svg, .channels .tabletIcon svg{
+.channels svg{
     height:80px;
     width:80px;
     margin-right:-10px;
@@ -779,6 +792,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
 .channels .laptopIcon svg{
     height:80px;
+    width:auto;
 }
 
 /* End how content overrides **************/
@@ -867,6 +881,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     padding:10px;
     top:50px;
     right:50px;
+    z-index:3;
 }
 
 .featured .downArrow{
@@ -879,6 +894,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     cursor:pointer;
 }
 
+.darkMatter{
+    z-index:2;
+}
+
 .upArrow{
     -ms-transform: rotate(180deg);
     -ms-transform-origin: center;
@@ -888,6 +907,12 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     transform-origin:  center;
     display:none;
     position:fixed;
+}
+
+.upArrow.light{
+    z-index:1;
+    margin-top:2px;
+    fill:#fff;
 }
 
 .upArrow:hover, .upArrowHovered{
@@ -1044,7 +1069,221 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     flex-basis:50%;
 }
 
-/* End downArrow *********************************/
+.projectContainer{
+    display:block;
+}
+
+.projectTitle{
+    margin-bottom:50px;
+}
+
+.projectHero{
+    max-height:400px;
+}
+
+/* Project Flow */
+.flow, .row, .process, .action, .blank, .flowTansition, .process > div, .iconShowcase,
+.iconShowcase > div{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+
+    position:relative;
+
+    box-sizing:border-box;
+    width:auto;
+}
+
+.flow{
+    width:100vw;
+    overflow:none;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.flow p{
+    min-width:0 !important;
+    max-width:90% !important;
+    line-height:normal !important;
+    font-size:16px !important;
+    margin-bottom:0 !important;
+}
+
+.flow span{
+    font-weight:500;
+}
+
+.flow span.outsideAction{
+    font-weight:700;
+    font-style:italic;
+}
+
+.row{
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content: space-between;
+    height:120px;
+    overflow:visible;
+    width:95vw;
+    max-width:800px;
+}
+
+.row, .process, .action, .blank, .flowTransition{
+    text-align:center;
+}
+
+.transitionRow, .flowTransition{
+    height:50px;
+}
+
+.doubleTall{
+    height:170px;
+}
+
+.process, .action, .blank, .flowTransition, .process > div{
+    width:30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.process > div, .action{
+    border:1px solid #000;
+}
+
+.process{
+    height:150px;
+}
+
+.process > div{
+    position:absolute;
+    width:calc(100% - 20px);
+    height:calc(100% - 20px);
+    background-color:#fff;
+}
+
+.process > div:first-of-type{
+    left:20px;
+    top:20px;
+}
+
+.process > div:nth-of-type(2){
+    left:10px;
+    top:10px;
+}
+
+.process > div:nth-of-type(3){
+    left:0px;
+    top:0px;
+}
+
+.action{
+    justify-content: flex-start;
+}
+
+.action p{
+    padding-top:20px;
+}
+
+.action span{
+    display:inline-block;
+    margin-bottom:10px;
+}
+
+.action.highlight{
+    border-color:#EA7E0D;
+    border-width:2px;
+}
+
+.action.systemAction{
+    border:none;
+}
+
+.flowTransition{
+    justify-content: center;
+}
+
+.oneByTwo{
+    width:65%;
+}
+
+.oneByThree{
+    width:100%;
+}
+
+.miniBagProject h3{
+    position:relative;
+}
+
+.miniBagProject h3:before, .miniBagProject h3:after{
+    content:" ";
+    width:22px;
+    height:25px;
+    background-color:transparent;
+    border:2px solid #00AD46;
+    position:absolute;
+    border-radius:15px;
+    left:-50px;
+    top:0px;
+    margin-left:4px;
+}
+
+.miniBagProject h3:after{
+    width:30px;
+    margin-left:0;
+    border-radius:0;
+    background-color:#00AD46;
+    top:12px;
+}
+
+.iconShowcase{
+    width:90%;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 auto;
+    padding-top:30px;
+}
+
+.iconShowcase svg{
+    width:100px;
+    height:100px;
+    align-self:center;
+}
+
+.iconShowcase > div{
+    width:90%;
+}
+
+.seattle, .powerups, .gameGuitar{
+    background:url('../images/starbucks.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+    width:150px;
+    height:150px;
+}
+
+.powerups{
+    background:url('../images/powerup.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+.gameGuitar{
+    background:url('../images/gameGuitar.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+/* End Project Flow*/
 
 @media(max-height:560px) and (max-width:400px){
     /*extra small short screen iPhone 4 mostly*/
@@ -1100,14 +1339,19 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         font-size:3vw;
     }
 
-    .channels .mobileIcon svg, .channels .tabletIcon svg{
+    .channels svg{
         height:100px;
         width:100px;
-        margin-right:0;
+        padding-right:20px;
     }
 
     .channels .laptopIcon svg{
         height:100px;
+        width:auto;
+    }
+
+    .channels .watchIcon svg{
+        margin-right:-30px;
     }
 }
 
@@ -1328,6 +1572,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         display:flex;
     }
 
+    .hobbies div{
+        cursor:pointer;
+    }
+
     .statement .pageTitle{
         width:80%;
         flex-direction:row;
@@ -1436,6 +1684,69 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     .featured .downArrow{
         margin-top:0;
     }
+
+    .desktopProject .miniBagScreen{
+        height:300px !important;
+    }
+
+    /* Project Flow Adjustments*/
+
+    .row, .process, .action, .blank, .flowTransition{
+        height:100px;
+    }
+
+    .transitionRow, .flowTransition{
+        height:50px;
+    }
+
+    .doubleTall{
+        height:150px;
+    }
+
+    .miniBagProject h3:before, .miniBagProject h3:after{
+        content:" ";
+        width:44px;
+        height:50px;
+
+        border-radius:30px;
+        left:100%;
+        margin-left:8px;
+        top:-30px;
+    }
+
+    .miniBagProject h3:after{
+        border-radius:0;
+        width:60px;
+        margin-left:0;
+        top:-5px;
+    }
+
+    .iconShowcase{
+        flex-direction:row;
+        justify-content: space-around;
+    }
+
+    .iconShowcase svg{
+        height:100px;
+    }
+
+    .iconShowcase > div{
+        width:30%;
+    }
+
+    .iconShowcase .projectInfo{
+        justify-content: center;
+    }
+
+    .iconShowcase .timeframe{
+        margin-right:0 !important;
+    }
+}
+
+@media(min-width:800px){
+    .row{
+        width:70vw;
+    }
 }
 
 @media(min-width: 1000px){
@@ -1515,6 +1826,22 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .projectInfo .title{
         line-height:35px;
+    }
+
+    .miniBagProject h3:before, .miniBagProject h3:after{
+        content:" ";
+        left:80%;
+        top:-15px;
+    }
+
+    .miniBagProject h3:after{
+        top:10px;
+    }
+}
+
+@media(min-width:1100px){
+    .row{
+        width:50vw;
     }
 }
 
