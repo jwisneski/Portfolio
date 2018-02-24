@@ -1578,6 +1578,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .hobbies, .lineBreakOne{
         display:flex;
+        min-width:0;
     }
 
     .hobbies div{
