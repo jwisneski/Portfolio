@@ -522,7 +522,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 }
 
 .mainContainer > section.me{
-    min-height:90vh;
+    min-height:80vh;
 }
 
 .mainContainer > section.sendoff{
@@ -1369,6 +1369,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     html{
         font-size:16px;
         font-size:2vw;
+    }
+
+    .mainContainer > section.me{
+        min-height:90vh;
     }
 
     p{
