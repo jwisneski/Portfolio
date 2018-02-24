@@ -161,6 +161,19 @@ p{
     line-height:7vw;
 }
 
+p.why{
+    font-size:40px;
+    line-height:60px;
+    font-style:italic;
+    font-weight:200;
+    padding-right:20px;
+}
+
+p.why > span{
+    font-style:normal;
+    font-size:30px;
+}
+
 p::selection, div::selection, span::selection{
     color:#fff;
     background-color:#235789; /*dark blue*/
@@ -227,6 +240,7 @@ a:hover{
 
 .me h1, .me h2{
     margin-left:12%;
+    margin-top:0;
 }
 
 .contact h2{
@@ -336,6 +350,7 @@ a.external p:hover{
 }
 
 .me a, .contact a{
+    margin-top:30px !important;
     background-color:#fff;
     color:#474647;
 }
@@ -1061,6 +1076,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     width:100%;
     height:auto;
     min-height:100%;
+    margin-top:80px;
 }
 
 .mobileSection.centered{
@@ -1070,6 +1086,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 .mobileContent{
     margin-top:100px;
     justify-content: flex-start;
+    align-items:flex-start;
 }
 
 .mobileContent .role{
@@ -1427,6 +1444,8 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     .projectContainer .pageTitle{
+        margin:0 auto;
+        width:85%;
         margin-top:50px;
     }
 
