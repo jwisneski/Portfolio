@@ -265,12 +265,20 @@ a:hover{
     margin-top:30px;
 }
 
-section.savings, section.nationwide, section.miniBag, section.imageMatters{
+section.savings, section.nationwide, section.miniBag, section.imageMatters,
+section.lineBreakOne{
     width:100%;
     flex-direction:row;
     justify-content: center;
     align-items: flex-start;
     padding-bottom:100px;
+}
+
+section.linebreakOne{
+    padding-top:100px;
+    padding-bottom:0;
+    font-style:italic;
+    justify-content: center;
 }
 
 section.miniBag, section.imageMatters{
@@ -1043,7 +1051,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     align-self:center !important;
 }
 
-.hobbies{
+.hobbies, .lineBreakOne{
     display:none;
 }
 
@@ -1465,7 +1473,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     section.nationwide{
-        padding-top:250px;
+        padding-top:50px;
     }
 
     section.imageMatters{
@@ -1568,7 +1576,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         margin-bottom:200px;
     }
 
-    .hobbies{
+    .hobbies, .lineBreakOne{
         display:flex;
     }
 
