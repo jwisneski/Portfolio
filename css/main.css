@@ -298,14 +298,15 @@ section.linebreakOne{
 section.miniBag, section.imageMatters{
     color:#fff;
     flex-direction:column;
+    padding-bottom:50px;
 }
 
 section.miniBag{
-    background-color:#CB187C;
+    background-color:#CB187C; /*magenta*/
 }
 
 section.imageMatters{
-    background-color:#00247D;
+    background-color:#00247D; /*yellow*/
     color:#fff;
 }
 
@@ -431,7 +432,7 @@ a.external p:hover{
 }
 
 .savings a{
-    border-color:#00AD46;
+    border-color:#00AD46; /* green */
     background-color:#00AD46;
 }
 
@@ -449,12 +450,12 @@ a.external p:hover{
 }
 
 .miniBag a:hover{
-    background-color:#CB187C;
+    background-color:#CB187C; /*magenta*/
     color:#fff;
 }
 
 .nationwide a{
-    border-color:#0072CF;
+    border-color:#0072CF; /*nationwide blue*/
     background-color:#0072CF;
 }
 
@@ -467,7 +468,7 @@ a.external p:hover{
 .imageMatters a{
     border-color:#fff;
     background-color:#fff;
-    color:#00247D;
+    color:#00247D; /*yellow*/
     position:relative;
 }
 
@@ -549,7 +550,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     background-size:cover;
     background-position:center;
 
-    background-color:#474647;
+    background-color:#474647; /*grey*/
     background-image:url('https://jwisneski.github.io/portfolio/images/MapSliceDarkGreyOptimized.jpg');
     /*background-image:url('../images/MapSliceDarkGreyOptimized.jpg');*/
 }
@@ -748,7 +749,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     flex-direction:row;
     align-self:flex-start;
     margin-top:20px;
-    margin-bottom:50px;
+    margin-bottom:20px;
     flex-wrap:wrap;
     justify-content:flex-start;
 }
@@ -764,7 +765,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 }
 
 .role{
-    margin-top:20px;
+    margin-right:10px;
 }
 
 .projectInfo .title{
@@ -794,6 +795,9 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     margin:0;
     margin-top:30px;
     margin-bottom:20px;
+    width:calc(100% - 20px);
+    padding-left:10px;
+    padding-right:10px;
     flex-direction:row;
     align-items: center;
     justify-content: center;
@@ -806,16 +810,15 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 .channels svg{
     height:80px;
     width:80px;
-    margin-right:-10px;
-}
-
-.channels .mobileIcon svg{
-    margin-right:-30px;
 }
 
 .channels .laptopIcon svg{
     height:80px;
     width:auto;
+}
+
+.channels * + .laptopIcon{
+    padding-left:10px;
 }
 
 /* End how content overrides **************/
@@ -846,8 +849,9 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     top:120%;
     height:calc(100% + 50px);
     height:auto;
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow-y:scroll;
+    -webkit-overflow-y-scrolling: touch;
+    overflow-x:hidden;
 
     border-top:1px solid #474647;
     border-bottom:0px;
@@ -1074,10 +1078,25 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     flex-direction:row;
     align-items: flex-start;
     width:100%;
+    padding-left:50px;
+    padding-right:50px;
     height:auto;
-    min-height:100%;
     margin-top:80px;
 }
+
+.mobileSection:nth-of-type(2){
+    margin-top:30px;
+}
+
+.wrap{
+    flex-wrap:wrap;
+}
+
+.mobileSection.vertical{
+    flex-direction:column;
+    align-items:center;
+}
+
 
 .mobileSection.centered{
     justify-content: center;
@@ -1108,7 +1127,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
 /* Project Flow */
 .flow, .row, .process, .action, .blank, .flowTansition, .process > div, .iconShowcase,
-.iconShowcase > div{
+.iconShowcase > div, .projectTimeline, .projectTimeline div{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -1308,7 +1327,55 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     background-size:contain;
 }
 
+.projectNav{
+    flex-direction:row;
+    width:100%;
+    height:60px;
+    margin-top:50px;
+}
+
+.savingsProject .projectNav > a:hover{
+    background-color:#00AD46;
+    color:#fff;
+}
 /* End Project Flow*/
+
+.projectTimeline{
+    width:100%;
+    margin-top:50px;
+    margin-bottom:50px;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timelineTitle{
+    width:100%;
+}
+
+.projectTimeline div{
+    width:8%;
+    height:calc((100vw - 100px)*.08);
+    border:1px solid #474647;
+    border-radius:100%;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.projectRoles, .projectMethods, .projectArtifacts{
+    flex-basis:50%;
+    min-width:50%;
+    margin-bottom:50px;
+}
+
+.projectMethods > *{
+    padding-left:100px;
+}
+
+.projectArtifacts{
+    flex-basis:100%;
+    min-width:100%;
+}
 
 @media(max-height:560px) and (max-width:400px){
     /*extra small short screen iPhone 4 mostly*/
@@ -1325,6 +1392,10 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     .me h1, .me h2 {
         margin:0;
         padding-top:0;
+    }
+
+    .timeframe{
+        margin-bottom:50px;
     }
 }
 
@@ -1365,18 +1436,23 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     }
 
     .channels svg{
-        height:100px;
-        width:100px;
-        padding-right:20px;
+        height:90px;
+        width:90px;
+    }
+
+    .channels .mobileFirst{
+        margin-left:-20px;
     }
 
     .channels .laptopIcon svg{
-        height:100px;
+        height:90px;
         width:auto;
+        padding-right:10px;
     }
 
     .channels .watchIcon svg{
-        margin-right:-30px;
+        margin-right:-10px;
+        margin-left:-20px;
     }
 }
 
@@ -1441,11 +1517,6 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
     .pageTitle{
         margin-left:20px;
         margin-right:20px;
-    }
-
-    .projectContainer .pageTitle{
-        margin:0 auto;
-        margin-top:50px;
     }
 
     .mobileProject{
@@ -1692,6 +1763,7 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
 
     .timeframe{
         margin-right:50px;
+        margin-bottom:0;
     }
 
     .projectInfo .main{
@@ -1708,8 +1780,14 @@ section, section > div, .pagination, .pagination > div, section.whatProject, .fo
         justify-content: flex-start;
     }
 
-    .channels .laptopIcon{
-        padding:10px;
+    .channels svg{
+        height:100px;
+        width:100px;
+    }
+
+    .channels .laptopIcon svg{
+        height:100px;
+        width:auto;
     }
 
     .channels.light{
