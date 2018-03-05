@@ -1465,7 +1465,7 @@ could be loaded after project is clicked */
         font-weight:400;
     }
 
-    .downArrow{
+    .mainContainer .downArrow{
         display:block;
     }
 
