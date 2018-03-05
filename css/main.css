@@ -883,7 +883,7 @@ section.sendoff{
     z-index:3;
 }
 
-.downArrow{
+.mainContainer .downArrow{
     display:none;
 }
 
