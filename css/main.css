@@ -263,7 +263,7 @@ section.savings, section.nationwide, section.miniBag, section.imageMatters,
 section.lineBreakOne{
     width:100%;
     flex-direction:row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     padding-bottom:100px;
 }
@@ -658,7 +658,7 @@ section.sendoff{
     display:none;
 
     margin-left:5%;
-    max-height:510px;
+    /* max-height:510px; */
     margin-top:50px;
 }
 
@@ -702,7 +702,7 @@ section.sendoff{
     width:100%;
     height:60%;
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:contain;
     background-position:top center;
 }
 
@@ -837,6 +837,7 @@ section.sendoff{
 .overlayContainer{
     position:fixed;
     top:120%;
+    left:0;
     width:100%;
     height:100%;
 }
@@ -881,6 +882,10 @@ section.sendoff{
     top:50px;
     right:50px;
     z-index:3;
+}
+
+.me .downArrow{
+    z-index:auto;
 }
 
 .mainContainer .downArrow{
@@ -1647,6 +1652,11 @@ could be loaded after project is clicked */
 }
 
 @media(min-width:720px){
+    section.savings, section.nationwide{
+        min-height:600px;
+        max-height:650px;
+    }
+
     /*show full project previews*/
     .mobileProject{
         width:350px;
@@ -1851,6 +1861,7 @@ could be loaded after project is clicked */
 
     .mobileProject .screen{
         margin-top:100px;
+        background-size:cover;
     }
 
     .projectInfo{
@@ -1877,6 +1888,11 @@ could be loaded after project is clicked */
 
     .miniBagProject h3:after{
         top:10px;
+    }
+
+    section.savings, section.nationwide{
+        min-height:750px;
+        max-height:none;
     }
 }
 
