@@ -159,7 +159,7 @@ p.why > span{ /*blockquote attribution*/
     font-size:30px;
 }
 
-.projectContainer .pageTitle p{
+.projectContainer > .pageTitle p{
     margin-bottom:-10px !important;
 }
 
@@ -882,6 +882,10 @@ section.sendoff{
     z-index:3;
 }
 
+.downArrow{
+    display:none;
+}
+
 .featured .downArrow{
     margin-top:100px;
 }
@@ -1454,6 +1458,10 @@ could be loaded after project is clicked */
     h3{
         font-size:38px;
         font-weight:400;
+    }
+
+    .downArrow{
+        display:block;
     }
 
     .pageTitle{
