@@ -159,7 +159,7 @@ p.why > span{ /*blockquote attribution*/
     font-size:30px;
 }
 
-.pageTitle p{
+.projectContainer .pageTitle p{
     margin-bottom:-10px !important;
 }
 
