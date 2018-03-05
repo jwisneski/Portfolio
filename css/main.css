@@ -1464,6 +1464,10 @@ could be loaded after project is clicked */
         display:block;
     }
 
+    .upArrow{
+        display:none;
+    }
+
     .pageTitle{
         margin-left:20px;
         margin-right:20px;
