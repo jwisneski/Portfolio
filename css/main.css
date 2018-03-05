@@ -335,6 +335,7 @@ a.external p:hover{
 .me a, .contact a{
     background-color:#fff;
     color:#474647;
+    bottom:50px;
 }
 
 .contact a{
