@@ -365,7 +365,7 @@ a.external p:hover{
 }
 
 .featured a{
-    background-color:#474647;
+    background-color:#EA7E0D;
     color:#fff;
     border-color:#474647;
     bottom:-100px;
@@ -403,8 +403,8 @@ a.external p:hover{
 
 .featured a:hover{
     background-color:#fff;
-    color:#474647;
-    border-color:#474647;
+    color:#EA7E0D;
+    border-color:#EA7E0D;
 }
 
 .savings a, .miniBag a, .nationwide a, .imageMatters a{
