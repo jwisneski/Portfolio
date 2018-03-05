@@ -921,7 +921,7 @@ section.sendoff{
 }
 
 .upArrowShown{
-    display:block;
+    display:block !important;
 }
 
 .downArrow .light{
