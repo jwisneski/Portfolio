@@ -1439,6 +1439,10 @@ could be loaded after project is clicked */
         font-size:25px;
     }
 
+    .me a, .contact a{
+        bottom:auto;
+    }
+
     .me h1, .me h2{
         margin-left:0;
     }
