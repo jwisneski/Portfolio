@@ -367,7 +367,7 @@ a.external p:hover{
     background-color:#474647;
     color:#fff;
     border-color:#474647;
-    bottom:-50px;
+    bottom:-100px;
 }
 
 .sendoff a, a.sendoffButton{
@@ -1368,7 +1368,7 @@ could be loaded after project is clicked */
     }
 
     .featured a{
-        bottom:-50px;
+        bottom:-100px;
     }
 
     .me h1, .me h2 {
@@ -1389,7 +1389,7 @@ could be loaded after project is clicked */
     }
 
     .featured a{
-        bottom:-50px;
+        bottom:-100px;
     }
 
     .channels svg{
