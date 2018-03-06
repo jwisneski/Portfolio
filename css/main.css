@@ -903,6 +903,7 @@ section.sendoff{
     justify-content: flex-end;
 
     font-weight:500;
+    padding-bottom:50px;
 }
 
 .footer > p{
@@ -1521,6 +1522,10 @@ could be loaded after project is clicked */
 
     .music{
         width:150px;
+    }
+
+    .footer{
+        padding-bottom:0;
     }
 }
 
