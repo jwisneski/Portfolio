@@ -154,10 +154,10 @@ function toggleContact(shown, newSection){
         //this has to be old section to register properly in the pageScroll function
         oldSection='contact';
 
-        $('.mainContainer').addClass('hideOverflow');
+        // $('.mainContainer').addClass('hideOverflow');
         // $('body').addClass('hideOverflow');
-        // $('html').addClass('hideOverflow');
-        $('.overlayContainer').addClass('overlayContainerShown');
+        $('html').addClass('hideOverflow');
+        // $('.overlayContainer').addClass('overlayContainerShown');
     } else{
         // close contact
         $('.contact').removeClass('contactShown');
@@ -168,9 +168,9 @@ function toggleContact(shown, newSection){
                 $('.overlayContainer').removeClass('overlayContainerShown');
             }, 500);
 
-            $('.mainContainer').removeClass('hideOverflow');
+            // $('.mainContainer').removeClass('hideOverflow');
             // $('body').removeClass('hideOverflow');
-            // $('html').removeClass('hideOverflow');
+            $('html').removeClass('hideOverflow');
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
@@ -228,7 +228,8 @@ function toggleProject(element){
 
         // keep body from scrolling while a project is open
         // $('body').addClass('hideOverflow');
-        $('.mainContainer').addClass('hideOverflow');
+        $('html').addClass('hideOverflow');
+        // $('.mainContainer').addClass('hideOverflow');
 
     } else{
         // close project
@@ -247,7 +248,8 @@ function toggleProject(element){
         $('.me .downArrow').removeClass('downArrowMeHide');
 
         // $('body').removeClass('hideOverflow');
-        $('.mainContainer').removeClass('hideOverflow');
+        $('html').removeClass('hideOverflow');
+        // $('.mainContainer').removeClass('hideOverflow');
     }
 }
 
