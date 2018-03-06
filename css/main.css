@@ -928,8 +928,7 @@ section.sendoff{
     z-index:3;
 }
 
-.contact .downArrow{
-    margin-bottom:50px;
+.contact .downArrow, .me .downArrow{
 }
 
 .me .downArrow, .featured .downArrow{
