@@ -157,7 +157,7 @@ function toggleContact(shown, newSection){
         // $('.mainContainer').addClass('hideOverflow');
         $('body').addClass('hideOverflow');
         // $('html').addClass('hideOverflow');
-        // $('.overlayContainer').addClass('overlayContainerShown');
+        $('.overlayContainer').addClass('overlayContainerShown');
     } else{
         // close contact
         $('.contact').removeClass('contactShown');
