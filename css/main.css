@@ -835,6 +835,7 @@ section.sendoff{
     top:120%;
     min-height:100%;
     height:auto;
+    display:block;
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x:hidden;
