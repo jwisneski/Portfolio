@@ -35,11 +35,11 @@ html{
     color:#000;
 }
 
-body{
+/* body{
     height:100%;
     overflow:visible;
     -webkit-overflow-scrolling: touch;
-}
+} */
 
 h1, h2, h3, p,  .projectInfo .title{
     line-height:1.25em;
