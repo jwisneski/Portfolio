@@ -155,6 +155,7 @@ function toggleContact(shown, newSection){
         oldSection='contact';
 
         $('body').addClass('hideOverflow');
+        $('html').addClass('hideOverflow');
         $('.overlayContainer').addClass('overlayContainerShown');
     } else{
         // close contact
@@ -165,8 +166,9 @@ function toggleContact(shown, newSection){
             setTimeout(function(){
                 $('.overlayContainer').removeClass('overlayContainerShown');
             }, 500);
-            
+
             $('body').removeClass('hideOverflow');
+            $('html').removeClass('hideOverflow');
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
