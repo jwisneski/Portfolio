@@ -1143,11 +1143,11 @@ section.sendoff{
     padding-left:50px;
     padding-right:50px;
     height:auto;
-    margin-top:80px;
+    padding-top:80px;
 }
 
 .mobileSection:nth-of-type(2){
-    margin-top:30px;
+    padding-top:30px;
 }
 
 .wrap{
@@ -1359,6 +1359,7 @@ section.sendoff{
     align-items: center;
     margin:0 auto;
     padding-top:30px;
+    background-color:#fff;
 }
 
 .iconShowcase svg{
