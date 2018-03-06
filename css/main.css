@@ -35,6 +35,11 @@ html{
     color:#000;
 }
 
+body{
+    height:100%;
+    overflow:visible;
+}
+
 h1, h2, h3, p,  .projectInfo .title{
     line-height:1.25em;
 }
@@ -828,7 +833,7 @@ section.sendoff{
 .projectContainer{
     top:120%;
     height:auto;
-    overflow-y:scroll;
+    overflow-y:auto;
     -webkit-overflow-scrolling-y: touch;
     overflow-x:hidden;
 
