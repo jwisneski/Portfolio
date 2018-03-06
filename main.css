@@ -26,6 +26,14 @@
     transition:all .5s ease;
 }
 
+.overlayContainer{
+    -ms-transition:none;
+    -moz-transition:none;
+    -webkit-transition:none;
+    -o-transition:none;
+    transition:none;
+}
+
 /* Fonts */
 
 html{
@@ -33,6 +41,14 @@ html{
     font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size:18px;
     color:#000;
+    height:100vh;
+    overflow:hidden;
+}
+
+body{
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+    height:100%;
 }
 
 h1, h2, h3, p,  .projectInfo .title{
@@ -390,7 +406,10 @@ a.external p:hover{
     color:#fff;
     top:0;
     margin-top:0;
-    margin-bottom:50px;
+}
+
+.iconsProject .mobileSection:last-of-type{
+    padding-bottom:100px;
 }
 
 .iconsProject a:hover{
@@ -820,18 +839,17 @@ section.sendoff{
     position:fixed;
     top:-120%;
 
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     border-bottom:1px solid #474647;
 }
 
 .projectContainer{
+    position:fixed;
     top:120%;
-    height:calc(100% + 50px);
     height:auto;
-    overflow-y:scroll;
-    -webkit-overflow-scrolling-y: touch;
-    overflow-x:hidden;
+    min-height:100vh;
+    display:block;
 
     border-top:1px solid #474647;
     border-bottom:0px;
@@ -840,7 +858,11 @@ section.sendoff{
 
 .contactShown, .projectContainerShown{
     top:0;
-    bottom:0;
+}
+
+.projectContainerShown{
+    position:absolute;
+    top:0;
 }
 
 .overlayContainer{
@@ -849,11 +871,24 @@ section.sendoff{
     left:0;
     width:100%;
     height:100%;
+
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x:hidden;
+}
+
+.overlayContainerShown{
+    top:0;
+    bottom:0;
 }
 
 .emailPlaceholder{
     position:fixed;
     top:-150%;
+}
+
+.projectContainer .mobileSection{
+    background-color:#fff;
 }
 
 /* End Contact Information ********************/
@@ -868,6 +903,7 @@ section.sendoff{
     justify-content: flex-end;
 
     font-weight:500;
+    padding-bottom:50px;
 }
 
 .footer > p{
@@ -893,6 +929,10 @@ section.sendoff{
     z-index:3;
 }
 
+.contact .downArrow{
+    margin-bottom:60px;
+}
+
 .me .downArrow, .featured .downArrow{
     z-index:auto;
 }
@@ -906,8 +946,6 @@ section.sendoff{
 }
 
 .downArrow:hover, .downArrow.hovered{
-    padding-top:20px;
-    margin-bottom:-10px;
     cursor:pointer;
 }
 
@@ -1105,11 +1143,11 @@ section.sendoff{
     padding-left:50px;
     padding-right:50px;
     height:auto;
-    margin-top:80px;
+    padding-top:80px;
 }
 
 .mobileSection:nth-of-type(2){
-    margin-top:30px;
+    padding-top:30px;
 }
 
 .wrap{
@@ -1316,11 +1354,14 @@ section.sendoff{
 /* needs update for mobile screens*/
 .iconShowcase{
     width:90%;
+    padding-left:5%;
+    padding-right:5%;
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
     margin:0 auto;
     padding-top:30px;
+    background-color:#fff;
 }
 
 .iconShowcase svg{
@@ -1481,6 +1522,10 @@ could be loaded after project is clicked */
 
     .music{
         width:150px;
+    }
+
+    .footer{
+        padding-bottom:0;
     }
 }
 
