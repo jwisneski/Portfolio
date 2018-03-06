@@ -161,12 +161,12 @@ function toggleContact(shown, newSection){
         $('.contact').removeClass('contactShown');
 
         if(!project){
-            $('body').removeClass('hideOverflow');
-
             // wait for contact to animate up
             setTimeout(function(){
                 $('.overlayContainer').removeClass('overlayContainerShown');
             }, 500);
+            
+            $('body').removeClass('hideOverflow');
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
