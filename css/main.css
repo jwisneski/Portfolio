@@ -265,7 +265,7 @@ section.lineBreakOne{
     flex-direction:row;
     justify-content: space-around;
     align-items: flex-start;
-    padding-bottom:100px;
+    padding-bottom:70px;
 }
 
 section.linebreakOne{
@@ -273,6 +273,7 @@ section.linebreakOne{
     padding-bottom:0;
     font-style:italic;
     justify-content: center;
+    display:none;
 }
 
 section.miniBag, section.imageMatters{
@@ -377,11 +378,19 @@ a.external p:hover{
     border-color: #EA7E0D;
 }
 
+.iconsProject .timeframe, .gamesProject .timeframe{
+    text-align:center;
+    margin-right:0;
+    width:100%;
+}
+
 .iconsProject a{
     background-color:#EA7E0D;
     border:1px solid #EA7E0D !important;
     color:#fff;
+    top:0;
     margin-top:0;
+    margin-bottom:50px;
 }
 
 .iconsProject a:hover{
@@ -884,7 +893,7 @@ section.sendoff{
     z-index:3;
 }
 
-.me .downArrow{
+.me .downArrow, .featured .downArrow{
     z-index:auto;
 }
 
@@ -1036,18 +1045,57 @@ section.sendoff{
 } */
 
 .statement{
-    flex-direction:row;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
-    margin-bottom:100px;
+    margin-bottom:50px;
 }
 
 .statement .content{
     align-self:center !important;
 }
 
-.hobbies, .lineBreakOne{
-    display:none;
+.hobbies{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.hobbies h2{
+    text-align:center;
+    flex-basis:100%;
+}
+
+.hobbies div{
+    cursor:pointer;
+}
+
+.statement .icon{
+    width:50px;
+    height:50px;
+    margin-top:50px;
+}
+
+.hobbies .music{
+    cursor:default;
+}
+
+.icons, .games, .music{
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url('https://jwisneski.github.io/portfolio/images/carbon.png');
+}
+
+.games{
+    background-image:url('https://jwisneski.github.io/portfolio/images/kurt.png');
+}
+
+.music{
+    width:100px !important;
+    background-image:url('https://jwisneski.github.io/portfolio/images/strat.png');
 }
 
 .mobileSection{
@@ -1419,6 +1467,23 @@ could be loaded after project is clicked */
     }
 }
 
+@media(min-width:450px){
+    .hobbies h2{
+        text-align:center;
+        flex-basis:100%;
+    }
+
+    .statement .icon{
+        width:75px;
+        height:75px;
+        margin-top:50px;
+    }
+
+    .music{
+        width:150px;
+    }
+}
+
 @media(min-width: 660px){
     .mainContainer > section.me{
         min-height:90vh;
@@ -1531,9 +1596,8 @@ could be loaded after project is clicked */
     }
 
     .statement{
-        margin-bottom:0;
         flex-direction:column;
-        margin-bottom:200px;
+        margin-bottom:100px;
     }
 
     .hobbies, .lineBreakOne{
@@ -1648,6 +1712,17 @@ could be loaded after project is clicked */
 
     .iconShowcase .timeframe{
         margin-right:0 !important;
+    }
+
+    .iconsProject .timeframe, .gamesProject .timeframe{
+        text-align:left;
+        margin-right:50px;
+        width:auto;
+    }
+
+    .iconsProject a{
+        top:100px;
+        margin-top:0;
     }
 }
 
@@ -1774,15 +1849,11 @@ could be loaded after project is clicked */
     }
 
     .desktopProject .miniBagScreen{
-        height:300px !important;
+        height:300px;
     }
 
     .savings a, .nationwide a{
         align-self:flex-start;
-    }
-
-    .savings a{
-        bottom:-20;
     }
 
     .miniBag a{
@@ -1850,6 +1921,10 @@ could be loaded after project is clicked */
         left:70px;
     }
 
+    .desktopProject .miniBagScreen{
+        height:350px;
+    }
+
     .mobileProject{
         margin-right:50px;
         width: 500px;
@@ -1894,6 +1969,23 @@ could be loaded after project is clicked */
         min-height:750px;
         max-height:none;
     }
+
+    .hobbies{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:nowrap;
+    }
+
+    .hobbies h2{
+        flex-basis:auto;
+        text-align:left;
+    }
+
+    .statement .icon{
+        margin-top:0;
+    }
 }
 
 @media(min-width:1100px){
@@ -1907,10 +1999,6 @@ could be loaded after project is clicked */
         font-size:30px;
     }
 
-    .miniBag .desktopProject{
-        height:50vh;
-    }
-
     .timeframe{
         margin-right:120px;
     }
@@ -1922,6 +2010,10 @@ could be loaded after project is clicked */
     .projectInfo .main{
         line-height:35px;
         font-size: 30px;
+    }
+
+    .desktopProject .miniBagScreen{
+        height:500px;
     }
 }
 
