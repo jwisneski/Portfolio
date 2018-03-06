@@ -876,7 +876,6 @@ section.sendoff{
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x:hidden;
-    background-color:#fff;
 }
 
 .overlayContainerShown{
