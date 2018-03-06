@@ -41,8 +41,8 @@ html{
     font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size:18px;
     color:#000;
-    /* height:100vh;
-    overflow:hidden; */
+    /* height:100vh; */
+    /* overflow:hidden; */
 }
 
 /* used for ios to stop scrolling when project is open*/
