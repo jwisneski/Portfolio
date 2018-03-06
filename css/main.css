@@ -41,15 +41,16 @@ html{
     font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size:18px;
     color:#000;
-    height:100vh;
-    overflow:hidden;
+    /* height:100vh;
+    overflow:hidden; */
 }
 
-body{
+/* used for ios to stop scrolling when project is open*/
+/* body{
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
     height:100%;
-}
+} */
 
 h1, h2, h3, p,  .projectInfo .title{
     line-height:1.25em;
@@ -568,8 +569,11 @@ section.sendoff{
 .mainContainer{
     width:100%;
     width:100vw;
-    min-height:calc(500%+160px);
-    overflow:hidden;
+    /* min-height:calc(500%+160px);
+    overflow:hidden; */
+
+    height:auto;
+    /*maybe this is what needs to be position:fixed?*/
 }
 
 /* End page section overrides **************/
@@ -1508,6 +1512,17 @@ could be loaded after project is clicked */
 }
 
 @media(min-width:450px){
+    /* html{
+        height:100%;
+        position:relative;
+    } */
+
+    /* body{
+        overflow:auto;
+        height:auto;
+        position:relative;
+    } */
+
     .hobbies h2{
         text-align:center;
         flex-basis:100%;
