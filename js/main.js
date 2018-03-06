@@ -155,8 +155,8 @@ function toggleContact(shown, newSection){
         oldSection='contact';
 
         // $('.mainContainer').addClass('hideOverflow');
-        // $('body').addClass('hideOverflow');
-        $('html').addClass('hideOverflow');
+        $('body').addClass('hideOverflow');
+        // $('html').addClass('hideOverflow');
         // $('.overlayContainer').addClass('overlayContainerShown');
     } else{
         // close contact
@@ -169,8 +169,8 @@ function toggleContact(shown, newSection){
             }, 500);
 
             // $('.mainContainer').removeClass('hideOverflow');
-            // $('body').removeClass('hideOverflow');
-            $('html').removeClass('hideOverflow');
+            $('body').removeClass('hideOverflow');
+            // $('html').removeClass('hideOverflow');
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
@@ -227,8 +227,8 @@ function toggleProject(element){
         oldSection=project;
 
         // keep body from scrolling while a project is open
-        // $('body').addClass('hideOverflow');
-        $('html').addClass('hideOverflow');
+        $('body').addClass('hideOverflow');
+        // $('html').addClass('hideOverflow');
         // $('.mainContainer').addClass('hideOverflow');
 
     } else{
@@ -247,8 +247,8 @@ function toggleProject(element){
         // enable .me .downArrow hover
         $('.me .downArrow').removeClass('downArrowMeHide');
 
-        // $('body').removeClass('hideOverflow');
-        $('html').removeClass('hideOverflow');
+        $('body').removeClass('hideOverflow');
+        // $('html').removeClass('hideOverflow');
         // $('.mainContainer').removeClass('hideOverflow');
     }
 }
