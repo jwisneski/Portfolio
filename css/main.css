@@ -26,6 +26,14 @@
     transition:all .5s ease;
 }
 
+.overlayContainer{
+    -ms-transition:none;
+    -moz-transition:none;
+    -webkit-transition:none;
+    -o-transition:none;
+    transition:none;
+}
+
 /* Fonts */
 
 html{
@@ -826,14 +834,16 @@ section.sendoff{
     position:fixed;
     top:-120%;
 
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     border-bottom:1px solid #474647;
 }
 
 .projectContainer{
+    position:fixed;
     top:120%;
     height:auto;
+    min-height:100vh;
     display:block;
 
     border-top:1px solid #474647;
@@ -842,6 +852,11 @@ section.sendoff{
 }
 
 .contactShown, .projectContainerShown{
+    top:0;
+}
+
+.projectContainerShown{
+    position:absolute;
     top:0;
 }
 
@@ -855,6 +870,10 @@ section.sendoff{
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x:hidden;
+}
+
+.overlayContainerShown{
+    top:0;
 }
 
 .emailPlaceholder{
