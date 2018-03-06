@@ -858,7 +858,6 @@ section.sendoff{
 
 .contactShown, .projectContainerShown{
     top:0;
-    bottom:0;
 }
 
 .projectContainerShown{
@@ -1354,6 +1353,8 @@ section.sendoff{
 /* needs update for mobile screens*/
 .iconShowcase{
     width:90%;
+    padding-left:5%;
+    padding-right:5%;
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
