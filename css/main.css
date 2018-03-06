@@ -832,8 +832,8 @@ section.sendoff{
 
 .projectContainer{
     top:120%;
-    overflow-y:auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch !important;
     overflow-x:hidden;
 
     border-top:1px solid #474647;
@@ -843,7 +843,6 @@ section.sendoff{
 
 .contactShown, .projectContainerShown{
     top:0;
-    /* bottom:0; */ 
 }
 
 .overlayContainer{
