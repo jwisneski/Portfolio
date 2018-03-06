@@ -138,24 +138,11 @@ function toggleContact(shown, newSection){
             }
         }
 
-        $('.contact h1').removeClass('fromMe');
-        $('.contact h1').removeClass('fromWho');
-        $('.contact h1').removeClass('fromWhat');
-        $('.contact h1').removeClass('fromHow');
-        $('.contact h1').removeClass('fromWhy');
-
         $('.contact h2').removeClass('hideCopy');
 
-        if(newSection=='Joel Wisneski'){
-            $('.contact h1').addClass('fromMe');
-        }else if(newSection=='Who I work for'){
-            $('.contact h1').addClass('fromWho');
-        }else if(newSection=='What I do'){
-            $('.contact h1').addClass('fromWhat');
-        }else if(newSection=='How I do it'){
-            $('.contact h1').addClass('fromHow');
-        }else if(newSection='Why I do it'){
-            $('.contact h1').addClass('fromWhy');
+        //hide arrow if need be
+        if(project){
+            $('.upArrow').removeClass('upArrowShown');
         }
 
         // show contact
@@ -168,10 +155,22 @@ function toggleContact(shown, newSection){
         oldSection='contact';
 
         $('body').addClass('hideOverflow');
+        $('.overlayContainer').addClass('overlayContainerShown');
     } else{
         // close contact
         $('.contact').removeClass('contactShown');
-        $('body').removeClass('hideOverflow');
+
+        if(!project){
+            $('body').removeClass('hideOverflow');
+
+            // wait for contact to animate up
+            setTimeout(function(){
+                $('.overlayContainer').removeClass('overlayContainerShown');
+            }, 500);
+        }else{
+            $('.upArrow').addClass('upArrowShown');
+        }
+
         pageScroll( );
     }
 
@@ -189,6 +188,7 @@ function toggleProject(element){
         // display appropriate content? or fade in/slide up one by one?
         //show project container (slide up)
         $('.projectContainer.'+project+'Project').addClass('projectContainerShown');
+        $('.overlayContainer').addClass('overlayContainerShown');
         $('.upArrow').addClass('upArrowShown');
 
         // set 'top' of shown class to scroll position with absolute position
@@ -226,11 +226,20 @@ function toggleProject(element){
         $('body').addClass('hideOverflow');
 
     } else{
-        // close contact
+        // close project
         pageScroll( );
         $('.projectContainer').removeClass('projectContainerShown');
+
+        // wait for project to animate down
+        setTimeout(function(){
+            $('.overlayContainer').removeClass('overlayContainerShown');
+        }, 500);
+
         $('.upArrow').removeClass('upArrowShown');
         project='';
+
+        // enable .me .downArrow hover
+        $('.me .downArrow').removeClass('downArrowMeHide');
 
         $('body').removeClass('hideOverflow');
     }
@@ -459,10 +468,12 @@ $(document).ready(function () {
 
     $('.me .downArrow').on('click', function(e){
         // scroll down on home page
-        var position = $('.me').height( );
-        $('html, body').animate({
-            scrollTop: position
-        }, 400, 'swing');
+        if(!contact){
+            var position = $('.me').height( );
+            $('html, body').animate({
+                scrollTop: position
+            }, 400, 'swing');
+        }
     });
 
     $('.featured .downArrow').on('click', function(e){
