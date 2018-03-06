@@ -41,6 +41,13 @@ html{
     font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size:18px;
     color:#000;
+    height:100vh;
+    overflow:hidden;
+}
+
+body{
+    overflow:scroll;
+    height:100%;
 }
 
 h1, h2, h3, p,  .projectInfo .title{
@@ -934,8 +941,6 @@ section.sendoff{
 }
 
 .downArrow:hover, .downArrow.hovered{
-    padding-top:20px;
-    margin-bottom:-10px;
     cursor:pointer;
 }
 
