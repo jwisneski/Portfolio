@@ -43,12 +43,6 @@ html{
     color:#000;
 }
 
-/* body{
-    height:100%;
-    overflow:visible;
-    -webkit-overflow-scrolling: touch;
-} */
-
 h1, h2, h3, p,  .projectInfo .title{
     line-height:1.25em;
 }
@@ -919,6 +913,10 @@ section.sendoff{
     top:20px;
     right:calc(50vw - 35px);
     z-index:3;
+}
+
+.contact .downArrow{
+    margin-bottom:50px;
 }
 
 .me .downArrow, .featured .downArrow{
