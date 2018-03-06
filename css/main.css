@@ -834,6 +834,7 @@ section.sendoff{
 .projectContainer{
     top:120%;
     min-height:100%;
+    height:auto;
     overflow-y:scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x:hidden;
