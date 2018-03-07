@@ -160,10 +160,17 @@ function toggleContact(shown, newSection){
         //this has to be old section to register properly in the pageScroll function
         oldSection='contact';
 
-        // $('.mainContainer').addClass('hideOverflow');
         $('body').addClass('hideOverflow');
-        // $('html').addClass('hideOverflow');
         $('.overlayContainer').addClass('overlayContainerShown');
+
+        setTimeout(function(){
+            // still trying to stop the scrtolling - this keeps
+            // top of the page from flashing before the container shows up
+            $('body').addClass('bodyFixed');
+
+            // add white background to overlay container to covery body text
+            $('.overlayContainer').addClass('overlayContainerWhiteSpace');
+        }, 500);
 
         //get the browser to check for mobile
         var browser = detectBrowser( );
@@ -178,14 +185,14 @@ function toggleContact(shown, newSection){
         $('.contact').removeClass('contactShown');
 
         if(!project){
+            $('body').removeClass('hideOverflow');
+            $('body').removeClass('bodyFixed');
+            $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
+
             // wait for contact to animate up
             setTimeout(function(){
                 $('.overlayContainer').removeClass('overlayContainerShown');
             }, 500);
-
-            // $('.mainContainer').removeClass('hideOverflow');
-            $('body').removeClass('hideOverflow');
-            // $('html').removeClass('hideOverflow');
 
             var browser = detectBrowser( );
 
@@ -225,8 +232,20 @@ function toggleProject(element){
         // display appropriate content? or fade in/slide up one by one?
         //show project container (slide up)
         $('.projectContainer.'+project+'Project').addClass('projectContainerShown');
-        $('.overlayContainer').addClass('overlayContainerShown');
         $('.upArrow').addClass('upArrowShown');
+
+        // keep body from scrolling while a project is open
+        $('body').addClass('hideOverflow');
+        $('.overlayContainer').addClass('overlayContainerShown');
+
+        setTimeout(function(){
+            // still trying to stop the scrtolling - this keeps
+            // top of the page from flashing before the container shows up
+            $('body').addClass('bodyFixed');
+
+            // add white background to overlay container to covery body text
+            $('.overlayContainer').addClass('overlayContainerWhiteSpace');
+        }, 500);
 
         // get the right project container
         var projectName=document.querySelector('section.projectContainer.' + project);
@@ -256,9 +275,6 @@ function toggleProject(element){
         //this has to be old section to register properly in the pageScroll function
         oldSection=project;
 
-        // keep body from scrolling while a project is open
-        $('body').addClass('hideOverflow');
-
         // get browser to check for mobile
         var browser = detectBrowser( );
 
@@ -275,6 +291,14 @@ function toggleProject(element){
         pageScroll( );
 
         $('body').removeClass('hideOverflow');
+        $('body').removeClass('bodyFixed');
+        $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
+
+        // wait for contact to animate up
+        setTimeout(function(){
+            $('.overlayContainer').removeClass('overlayContainerShown');
+        }, 500);
+
         var browser = detectBrowser( );
 
         //scroll to last section
