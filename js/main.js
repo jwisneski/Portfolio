@@ -189,8 +189,8 @@ function toggleContact(shown, newSection){
 
             var browser = detectBrowser( );
 
-            //scroll to last section
-             if(browser=='Android' || browser=='iOS'){
+            // scroll to last section
+             // if(browser=='Android' || browser=='iOS'){
                 //remove the HTML posiiton fixed style
                 $('html').removeClass('mobileOverflowFix');
 
@@ -199,7 +199,7 @@ function toggleContact(shown, newSection){
                 $('html, body').animate({
                     scrollTop: mobileStop
                 }, 0);
-            }
+            // }
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
@@ -263,10 +263,10 @@ function toggleProject(element){
         var browser = detectBrowser( );
 
         //scroll to last section
-         if(browser=='Android' || browser=='iOS'){
+         // if(browser=='Android' || browser=='iOS'){
             //add the HTML posiiton fixed style
             $('html').addClass('mobileOverflowFix');
-        }
+        // }
 
     } else{
         // close project
@@ -278,7 +278,7 @@ function toggleProject(element){
         var browser = detectBrowser( );
 
         //scroll to last section
-         if(browser=='Android' || browser=='iOS'){
+         // if(browser=='Android' || browser=='iOS'){
             //remove the HTML posiiton fixed style
             $('html').removeClass('mobileOverflowFix');
 
@@ -286,7 +286,7 @@ function toggleProject(element){
             $('html, body').animate({
                 scrollTop: mobileStop
             }, 0);
-        }
+        // }
 
         $('.projectContainer').removeClass('projectContainerShown');
 
