@@ -220,7 +220,7 @@ function toggleProject(element){
         stop = Math.round($(window).scrollTop());
 
         // add for mobile
-        mobileStop='stop';
+        mobileStop=stop;
 
         // display appropriate content? or fade in/slide up one by one?
         //show project container (slide up)
