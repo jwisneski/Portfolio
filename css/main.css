@@ -71,6 +71,11 @@ h1, h2, h3, p,  .projectInfo .title{
     overflow:hidden;
 }
 
+.bodyFixed{
+    position:fixed;
+
+}
+
 h1{
     font-size:60px;
     font-size:6vw;
@@ -890,6 +895,10 @@ section.sendoff{
 .overlayContainerShown{
     top:0;
     bottom:0;
+}
+
+.overlayContainerWhiteSpace{
+    background-color:#fff;
 }
 
 .emailPlaceholder{
