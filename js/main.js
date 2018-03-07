@@ -14,6 +14,8 @@ stop=0;
 lastStop=0;
 scrollDistance=0;
 
+mobileStop=0;
+
 function getScrollPositions(){
     // get direct children of body and turn that into an array
     var sectionParkingLot=document.querySelector('.mainContainer').children;
@@ -132,6 +134,15 @@ function toggleContact(shown, newSection){
         var newPosition;
         stop = Math.round($(window).scrollTop());
 
+        //hide arrow if need be
+        if(project){
+            $('.upArrow').removeClass('upArrowShown');
+        }else{
+            // setup mobile stop for later
+            // does not overwrite if a project is open
+            mobileStop=stop;
+        }
+
         for(var key in positions){
             if(stop>positions[key]){
                 newSection=key;
@@ -139,11 +150,6 @@ function toggleContact(shown, newSection){
         }
 
         $('.contact h2').removeClass('hideCopy');
-
-        //hide arrow if need be
-        if(project){
-            $('.upArrow').removeClass('upArrowShown');
-        }
 
         // show contact
         $('.contact').addClass('contactShown');
@@ -158,6 +164,15 @@ function toggleContact(shown, newSection){
         $('body').addClass('hideOverflow');
         // $('html').addClass('hideOverflow');
         $('.overlayContainer').addClass('overlayContainerShown');
+
+        //get the browser to check for mobile
+        var browser = detectBrowser( );
+
+        //For mobile devices add a fixed position on HTML
+        if(browser=='Android' || browser=='iOS'){
+            //add the HTML posiiton fixed style
+            $('html').addClass('mobileOverflowFix');
+       }
     } else{
         // close contact
         $('.contact').removeClass('contactShown');
@@ -171,10 +186,25 @@ function toggleContact(shown, newSection){
             // $('.mainContainer').removeClass('hideOverflow');
             $('body').removeClass('hideOverflow');
             // $('html').removeClass('hideOverflow');
+
+            var browser = detectBrowser( );
+
+            //scroll to last section
+             if(browser=='Android' || browser=='iOS'){
+                //remove the HTML posiiton fixed style
+                $('html').removeClass('mobileOverflowFix');
+
+                //scroll to last seen section on the page
+                //scrollto:stop
+                $('html, body').animate({
+                    scrollTop: mobileStop
+                }, 0);
+            }
         }else{
             $('.upArrow').addClass('upArrowShown');
         }
 
+        // change the page name to the last seen section
         pageScroll( );
     }
 
@@ -189,14 +219,14 @@ function toggleProject(element){
         // get the screen position
         stop = Math.round($(window).scrollTop());
 
+        // add for mobile
+        mobileStop='stop';
+
         // display appropriate content? or fade in/slide up one by one?
         //show project container (slide up)
         $('.projectContainer.'+project+'Project').addClass('projectContainerShown');
         $('.overlayContainer').addClass('overlayContainerShown');
         $('.upArrow').addClass('upArrowShown');
-
-        // set 'top' of shown class to scroll position with absolute position
-        //$('.projectContainerShown').css('top', stop + 'px');
 
         // get the right project container
         var projectName=document.querySelector('section.projectContainer.' + project);
@@ -228,12 +258,36 @@ function toggleProject(element){
 
         // keep body from scrolling while a project is open
         $('body').addClass('hideOverflow');
-        // $('html').addClass('hideOverflow');
-        // $('.mainContainer').addClass('hideOverflow');
+
+        // get browser to check for mobile
+        var browser = detectBrowser( );
+
+        //scroll to last section
+         if(browser=='Android' || browser=='iOS'){
+            //add the HTML posiiton fixed style
+            $('html').addClass('mobileOverflowFix');
+        }
 
     } else{
         // close project
+
+        // set link title to last section
         pageScroll( );
+
+        $('body').removeClass('hideOverflow');
+        var browser = detectBrowser( );
+
+        //scroll to last section
+         if(browser=='Android' || browser=='iOS'){
+            //remove the HTML posiiton fixed style
+            $('html').removeClass('mobileOverflowFix');
+
+            //scroll to last seen section on the page
+            $('html, body').animate({
+                scrollTop: mobileStop
+            }, 0);
+        }
+
         $('.projectContainer').removeClass('projectContainerShown');
 
         // wait for project to animate down
@@ -246,10 +300,6 @@ function toggleProject(element){
 
         // enable .me .downArrow hover
         $('.me .downArrow').removeClass('downArrowMeHide');
-
-        $('body').removeClass('hideOverflow');
-        // $('html').removeClass('hideOverflow');
-        // $('.mainContainer').removeClass('hideOverflow');
     }
 }
 
