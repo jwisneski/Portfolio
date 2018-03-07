@@ -67,6 +67,8 @@ h1, h2, h3, p,  .projectInfo .title{
 
 .mobileOverlayFix{
     position:fixed;
+    top:0;
+    bottom:0;
     overflow:hidden;
 }
 
