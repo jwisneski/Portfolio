@@ -321,10 +321,12 @@ section.imageMatters{
 
 section.savings{
     margin-top:100px;
+    overflow:hidden;
 }
 
  section.nationwide{
      margin-top:0;
+     overflow:hidden;
  }
 
 section.featured{
@@ -533,9 +535,11 @@ a.toExternal{
 
 /* End Page Link overrides ******************/
 
+/* Flexboxes */
 section, section > div, .pagination, .pagination > div, section.whatProject, .footer section,
 .projects > div, .close, .projectInfo, .projectInfo div, .mobileSection, .mobileContent,
-.channels, .askMe, .projectTitle{
+.channels, .askMe, .projectTitle, .statusBar .time, .statusBar .service,
+.imageMatters .desktopProject{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -696,7 +700,7 @@ section.sendoff{
 
 .mobileProject{
     width:100%;
-    height:100%;
+    height:110%;
 
     display:none;
 
@@ -722,23 +726,56 @@ section.sendoff{
 }
 
 .miniBag .desktopProject, .miniBagProject .desktopProject{
-    background-image:url('https://jwisneski.github.io/portfolio/images/BatmanVSuperman.jpg');
+    /* background-image:url('https://jwisneski.github.io/portfolio/images/BatmanVSuperman.jpg'); */
     background-size:cover;
     background-position:top center;
 
     border-top:2px solid #474647;
+}
+
+.miniBag .screen{
+}
+
+.minibag .miniBagOverlay{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#fff;
+    opacity:0;
+
+    /* background-image:url('../images/BatmanVSupermanOverlay.png'); */
+    background-size:cover;
+    background-position:top center;
 }
 
 .imageMatters .desktopProject, .imageMattersProject .desktopProject{
-    background-image:url('https://jwisneski.github.io/portfolio/images/imHomeC.jpg');
+    /* background-image:url('https://jwisneski.github.io/portfolio/images/imHomeC.jpg'); */
     background-size:cover;
     background-position:top center;
+
+    flex-direction:row;
 
     border-top:2px solid #474647;
 }
 
-.nationwide .mobileProject, .nationwideAppProject .mobileProject{
-    background-color:#efefef;
+.imBefore, .imAfter{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imHomeBefore.jpg');
+    background-size:cover;
+    background-position:top center;
+    width:50%;
+    left:0;
+    top:0;
+}
+
+.imAfter{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imHomeD.jpg');
+}
+
+.imBefore h3, .imAfter h3{
+    padding-left:20px;
 }
 
 .mobileProject > .screen{
@@ -749,16 +786,8 @@ section.sendoff{
     background-position:top center;
 }
 
-.nationwideScreen{
-    background-image:url('https://jwisneski.github.io/portfolio/images/NWIDCard.jpg');
-}
-
 .nationwideAppProject .nationwideScreen, .savingsProject .savingsLauncherScreen{
     background-size:contain;
-}
-
-.savingsLauncherScreen{
-    background-image:url('https://jwisneski.github.io/portfolio/images/savingsLauncherOn.jpg');
 }
 
 .projectInfo{
@@ -1800,22 +1829,88 @@ could be loaded after project is clicked */
     }
 }
 
-@media(min-width:720px){
+@media(min-width:800px){
+    .row{
+        width:70vw;
+    }
+}
+
+@media(min-width:820px){
     section.savings, section.nationwide{
         min-height:600px;
-        max-height:650px;
+        max-height:700px;
+        padding-top:100px;
     }
 
     /*show full project previews*/
     .mobileProject{
         width:350px;
         background-color:#454545;
-        border:2px solid #000;
+        border:2px solid #454545;
         border-bottom:0;
         border-radius:30px 30px 0 0;
         order:0;
 
         display:block;
+    }
+
+    .statusBar{
+        height:30px;
+        width:calc(100% - 12px);
+        position:absolute;
+        margin-top:6px;
+        margin-left:6px;
+        border:none;
+    }
+
+    .statusBar .time, .statusBar .service{
+        width:50%;
+        height:calc(100% + 10px);
+        position:absolute;
+        left:0;
+        top:0;
+        background-color:#efefef;
+        border-radius:22px 0 0 0;
+
+        flex-direction:row;
+        justify-content: flex-start;
+
+        text-align:center;
+        font-weight:500;
+        color:#000;
+    }
+
+    .statusBar .time p{
+        margin-top:10px;
+        padding-left:20%;
+    }
+
+    .nationwide .statusBar .time, .nationwide .statusBar .service{
+        background-color:#0072CF;
+        color:#fff;
+    }
+
+    .statusBar .service{
+        right:0;
+        left:auto;
+        justify-content: flex-end;
+        border-radius:0 22px 0 0;
+    }
+
+    .service div{
+        margin-top:0px;
+        margin-right:3px;
+    }
+
+    .statusBar .notch{
+        background-color:#454545;
+        width:50%;
+        height:100%;
+        position:absolute;
+        left:25%;
+        top:0;
+        border-radius:0 0 30px 30px;
+        z-index:1;
     }
 
     .savingsProject .mobileProject, .nationwideAppProject .mobileProject{
@@ -1827,12 +1922,18 @@ could be loaded after project is clicked */
     }
 
     .mobileProject > .screen{
-        background-color:white;
-        width:95%;
-        height:calc(100% - 70px);
-        margin-left:calc(2.5% - 2px);
-        margin-top:70px;
-        border:2px solid #000;
+        width:calc(100% - 12px);
+        height:100%;
+        margin-left:6px;
+        margin-top:45px;
+    }
+
+    .savingsLauncherScreen{
+        background-color:#fff;
+    }
+
+    .nationwideScreen{
+        background-color:#0072CF;
     }
 
     .savingsProject .mobileProject > .screen, .nationwideAppProject .mobileProject >.screen{
@@ -1922,8 +2023,9 @@ could be loaded after project is clicked */
         height:auto;
     }
 
-    .desktopProject .miniBagScreen{
+    .desktopProject .screen{
         height:300px;
+        overflow:hidden;
     }
 
     .savings a, .nationwide a{
@@ -1969,12 +2071,6 @@ could be loaded after project is clicked */
     }
 }
 
-@media(min-width:800px){
-    .row{
-        width:70vw;
-    }
-}
-
 @media(min-width: 1000px){
     /* Large Screen size ***********************************************************/
     /* L */
@@ -1995,21 +2091,20 @@ could be loaded after project is clicked */
         left:70px;
     }
 
-    .desktopProject .miniBagScreen{
+    .desktopProject .screen{
         height:350px;
     }
 
     .mobileProject{
         margin-right:50px;
         width: 500px;
-        border: 4px solid #000;
         border-bottom:0;
         border-radius: 50px 50px 0 0;
         max-height: 700px;
     }
 
     .mobileProject .screen{
-        margin-top:100px;
+        /* margin-top:100px; */
         background-size:cover;
     }
 
@@ -2060,6 +2155,41 @@ could be loaded after project is clicked */
     .statement .icon{
         margin-top:0;
     }
+
+    .statusBar{
+        height:44px;
+    }
+
+    .statusBar .time, .statusBar .service{
+        width:31%;
+        border-radius:40px 0 0 0;
+        justify-content: center;
+    }
+
+    .statusBar .time p{
+        padding-left:0;
+        padding-right:15px;
+    }
+
+    .statusBar .service{
+        border-radius:0 40px 0 0;
+        justify-content: flex-end;
+    }
+
+    .service div{
+        margin-top:-10px;
+        margin-right:5px;
+    }
+
+    .service .batteryService{
+        margin-right:15px;
+    }
+
+    .statusBar .notch{
+        width:50%;
+        left:25%;
+        border-radius:0 0 50px 50px;
+    }
 }
 
 @media(min-width:1100px){
@@ -2086,8 +2216,13 @@ could be loaded after project is clicked */
         font-size: 30px;
     }
 
-    .desktopProject .miniBagScreen{
+    .desktopProject .screen{
         height:500px;
+    }
+
+    .service div{
+        margin-top:-10px;
+        margin-right:8px;
     }
 }
 
@@ -2130,6 +2265,45 @@ could be loaded after project is clicked */
         width:600px;
         max-height:800px;
     }
+
+    .statusBar{
+        height:50px;
+    }
+
+    .statusBar .time, .statusBar .service{
+        width:50%;
+        height:calc(100% + 10px);
+        left:0;
+        top:0;
+        border-radius:42px 0 0 0;
+
+        text-align:center;
+        font-weight:500;
+        color:#000;
+    }
+
+    .statusBar .time p{
+        margin-top:10px;
+        padding-left:0;
+        padding-right:120px;
+    }
+
+    .statusBar .service{
+        right:0;
+        left:auto;
+        border-radius:0 42px 0 0;
+    }
+
+    .service div{
+        margin-right:15px;
+    }
+
+    .statusBar .notch{
+        width:50%;
+        height:100%;
+        left:25%;
+        border-radius:0 0 30px 30px;
+    }
 }
 
 @media(min-width: 2400px){
@@ -2148,13 +2322,46 @@ could be loaded after project is clicked */
 
     .mobileProject {
         width: 700px;
-        border: 4px solid #000;
+        border: 4px solid;
         border-bottom:0;
         border-radius: 50px 50px 0 0;
         max-height: 1000px;
     }
 
     .mobileProject .screen{
-        margin-top:100px;
+        margin-top:80px;
+    }
+
+    .statusBar{
+        height:70px;
+    }
+
+    .statusBar .notch{
+        border-radius:0 0 50px 50px;
+    }
+
+    .statusBar .time, .statusBar .service{
+        height:calc(100% + 10px);
+    }
+
+    .statusBar .time p{
+        margin-top:15px;
+        padding-left:0;
+        padding-right:150px;
+        font-size:24px;
+    }
+
+    .statusBar .service{
+        right:0;
+        left:auto;
+        border-radius:0 42px 0 0;
+    }
+
+    .service div{
+        margin-right:25px;
+    }
+
+    .desktopProject .screen{
+        height:800px;
     }
 }
