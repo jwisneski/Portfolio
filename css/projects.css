@@ -1,0 +1,829 @@
+/* projects .css */
+
+/* Flexboxes */
+.savingsLauncherScreen, .webAddress, .header, .titleRow, .autoPilotRow, .discount,
+.baseOffer, .service, .nationwideScreen, .nationwideScreen .pagination, .miniBagScreen,
+.nationwideScreen .back, .miniBagScreen .navBar, .navBar div, .products, .kohlsBagButton,
+.product .back, .product .productDetails, .product .stepper{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    position:relative;
+}
+
+.miniBagScreen{
+    flex-direction:row;
+    align-items: flex-start;
+}
+
+.miniBagScreen .pageArea{
+    width:60%;
+    min-width:800px;
+    height:100%;
+    background-color:#fff;
+    overflow:hidden;
+    position:relative;
+}
+
+.miniBagScreen .adLeft{
+    background-image:url('https://jwisneski.github.io/portfolio/images/adLeft.jpg');
+    background-size:cover;
+    background-position:top right;
+
+    width:20%;
+    height:100%;
+}
+
+.miniBag .adRight{
+    background-image:url('https://jwisneski.github.io/portfolio/images/adRight.jpg');
+    background-size:cover;
+    background-position:top left;
+
+    width:20%;
+    height:100%;
+}
+
+.miniBag .adCenter{
+    background-image:url('https://jwisneski.github.io/portfolio/images/adCenter.jpg');
+    background-size:cover;
+    background-position:bottom center;
+    width:100%;
+    height:calc(60vw / 6.25);
+}
+
+.miniBag .adBelow{
+    background-image:url('https://jwisneski.github.io/portfolio/images/kohlsHome.jpg');
+    background-size:cover;
+    background-position:top center;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:calc((60vw / 6.25) + 50px);
+}
+
+.miniBag .navBar{
+    background-color:#454545;
+    width:100%;
+    height:50px;
+    flex-direction:row;
+    justify-content: space-between;
+    font-size:14px;
+}
+
+.kohlsLogo{
+    background-image:url('https://jwisneski.github.io/portfolio/images/kohlsLogo.png');
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    margin-left:20px;
+    width:120px;
+    height:100%;
+}
+
+.kohlsSearch{
+    width:30%;
+    height:30px;
+    background-color:#fff;
+    border-radius:2px;
+    align-items:flex-start !important;
+    padding-left:20px;
+    color:##999;
+}
+
+.kohlsAccount{
+    font-size:10px;
+    color:#fff;
+}
+
+.kohlsAccount > .accountIcon{
+    width:20px;
+    height:20px;
+    border-radius:100%;
+    border:2px solid #fff;
+    overflow:hidden;
+}
+
+.accountIcon::before{
+    content:'';
+    width:10px;
+    height:10px;
+    border-radius:100%;
+    background-color:#fff;
+    position:absolute;
+    left:5px;
+    top:5px;
+}
+
+.accountIcon::after{
+    content:'';
+    width:18px;
+    height:18px;
+    border-radius:100%;
+    background-color:#fff;
+    position:absolute;
+    left:1px;
+    top:14px;
+}
+
+.kohlsAccount >p{
+    margin-bottom:0;
+}
+
+.navBar .buttons{
+    flex-direction:row;
+}
+
+.kohlsBagButton{
+    width:150px;
+    height:100%;
+    color:#fff;
+    border-left:1px solid #000;
+    font-weight:500;
+}
+
+.kohlsBagButton .bagImage{
+    height:40px;
+    width:36px;
+    margin-left:10px;
+    align-self:flex-start;
+
+    -ms-transition:none;
+    -moz-transition:none;
+    -webkit-transition:none;
+    -o-transition:none;
+    transition:none;
+}
+
+.kohlsBagButton .bagImage::after{
+    content:'$301.28';
+    position:absolute;
+    left:150%;
+}
+
+.kohlsBagButton p{
+    margin-bottom:0;
+}
+
+.kohlsBagButtonOpen{
+    background-color:#F0F0F0;
+    color:#000;
+}
+
+.kohlsCheckout{
+    margin-right:20px;
+    width:120px;
+    height:100%;
+    background-color:#00AD46;
+    color:#fff;
+    font-weight:500;
+}
+
+.miniBagContainer{
+    width:100%;
+    height:150px;
+    position:relative;
+    overflow:hidden;
+}
+
+.miniBagBackground{
+    position:absolute;
+    top:-100%;
+    height:100%;
+    width:100%;
+    background-color:#F0F0F0;
+}
+
+.miniBagOpen{
+    top:0;
+}
+
+.bagSummary{
+    position:absolute;
+    width:35%;
+    height:90%;
+    top:5%;
+    right:10px;
+    background-image:url('https://jwisneski.github.io/portfolio/images/bagSummary.jpg');
+    background-position:top right;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.products{
+    position:absolute;
+    width:60%;
+    height:90%;
+    top:5%;
+    left:10px;
+    background-color:#fff;
+    flex-direction:row;
+    justify-content: space-around; */
+}
+
+.product{
+    position:relative;
+    width:18%;
+    height:90%;
+}
+
+.product p{
+    margin-bottom:0;
+}
+
+.productPhoto{
+    width:100%;
+    height:70%;
+
+    background-position:center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.productPhoto.mixer{
+    background-image:url('https://jwisneski.github.io/portfolio/images/mixer.jpg');
+}
+
+.productPhoto.shirt{
+    background-image:url('https://jwisneski.github.io/portfolio/images/shirt.jpg');
+}
+
+.productPhoto.towel{
+    background-image:url('https://jwisneski.github.io/portfolio/images/towel.jpg');
+}
+
+.salePrice{
+    color:#E01B22;
+    font-weight:500;
+}
+
+.regPrice{
+    text-decoration:line-through;
+    font-size:12px;
+}
+
+.blank{
+    border-color:#fff;
+    background:#fff;
+}
+
+.fullBag{
+    background-color:#fff;
+    border:1px solid #00AD46;
+}
+
+.fullBag .bagImage{
+    width:50%;
+    height:62%;
+    position:relative;
+    margin:0 auto;
+    margin-top:5px;
+}
+
+.bagImage div.strap{
+    position:absolute;
+    top:3%;
+    left:calc(15% - 1px);
+    border-radius:100%;
+    width:70%;
+    height:70%;
+    border:2px solid #00AD46;
+}
+
+.bagImage div.bag{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:60%;
+    background-color:#00AD46;
+    border:1px solid #00AD46;
+    text-align:center;
+    font-weight:500;
+    color:#fff;
+}
+
+.fullBag p{
+    margin-bottom:0;
+    margin-top:5px;
+    text-align:center;
+    font-weight:500;
+    font-size:12px;
+}
+
+.product.flipped{
+    perspective: 1000px;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.product .front, .product .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+/* front pane, placed above back */
+.product .front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.product .back {
+	transform: rotateY(180deg);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+    border:1px solid #999;
+    justify-content: space-between;
+}
+
+.product .productDetails{
+    width:90%;
+    margin-top:10px;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.product .swatch{
+    width:20px;
+    height:20px;
+    background-color:#2B5D85;
+}
+
+.product .size{
+    width:20px;
+    height:20px;
+    line-height:20px;
+}
+
+.product .rightArrow{
+    width:10px;
+    height:20px;
+    line-height:17px;
+}
+
+.product .stepper{
+    flex-direction:row;
+    width:90%;
+    height:40px;
+    margin-top:-20px;
+}
+
+.product .plus, .product .minus, .product .qty{
+    border:1px solid #454545;
+    width:33%;
+    text-align:center;
+    font-weight:400;
+}
+
+.product .remove{
+    font-weight:500;
+    text-align:center;
+    font-size:14px;
+}
+
+
+/* End of MInibag screen *********************************************/
+
+.savingsLauncherScreen{
+    justify-content: flex-start;
+}
+
+.savingsLauncherScreen p{
+    margin-bottom:0;
+    align-self:auto;
+}
+
+.savingsLauncherScreen .webAddress{
+    width:100%;
+    background-color:#efefef;
+}
+
+.webAddress p{
+    background-color:#fff;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:10px;
+    width:90%;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align:center;
+    align-self:center;
+}
+
+.savingsLauncherScreen .titleRow{
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.titleRow .title{
+    font-size:20px;
+    font-weight:500;
+}
+
+.titleRow .back{
+    width:20%;
+    color:#007AFF;
+    font-weight:500;
+    margin-left:10px;
+    font-size:14px;
+}
+
+.back p{
+    display:inline-block;
+}
+
+.leftArrow{
+    width:15px;
+    height:15px;
+    overflow:visible;
+}
+
+.savingsLauncherScreen .savingTotal{
+    text-align:center;
+    font-size:30px;
+    color:#00AD46;
+    margin-bottom:20px;
+}
+
+.savingTotal span{
+    font-size:16px;
+    color:#454545;
+}
+
+.savingHidden{
+    opacity:0;
+}
+
+.savingsLauncherScreen .autoPilotRow{
+    border-top:1px solid #454545;
+    border-bottom:1px solid #454545;
+    height:60px;
+    width:100%;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.autoPilotRow p{
+    font-size:16px;
+    font-weight:400;
+    margin-left:10px;
+}
+
+.switch, .switchBackground, .switchKnob{
+    /* box-sizing:border-box; */
+
+    -ms-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -webkit-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    transition:all .2s ease;
+}
+
+.switch{
+    width:55px;
+    height:30px;
+    position:relative;
+    margin-right:10px;
+}
+
+.switchHidden{
+    opacity:0;
+}
+
+.switchLarge{
+    width:40%;
+    height:20vw;
+}
+
+.switch:hover{
+    cursor:pointer;
+}
+
+.switchBackground, .switchKnob{
+    border-radius:10vw;
+    position:absolute;
+    border:1px solid #00AD46;
+}
+
+.switchBackground{
+    width:90%;
+    height:95%;
+    background-color:#00AD46;
+    left:0;
+    top:0;
+}
+
+.switchOff .switchBackground{
+    background-color:lightGrey;
+    border-color:darkGrey;
+}
+
+.switchKnob{
+    width:48%;
+    padding-bottom:48%;
+    background-color:#fff;
+    border-color:rgba(0, 0, 0, 0.5);
+    right:-2%;
+    left:50%;
+    top:4%;
+    border-radius:100%;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+    box-sizing:border-box;
+}
+
+.switchLarge .switchKnob{
+    top:3%;
+    box-shadow: .6vw .5vw 1vw .3vw rgba(80, 80, 80, .5);
+    border-width:.3vw;
+}
+
+.switchOff .switchKnob{
+    left:2%;
+    right:50%;
+}
+
+.switchLarge.switchOff .switchKnob{
+    left:2%;
+    right:49%;
+}
+
+.savingsLauncherScreen .stackingDivider{
+    margin-top:30px;
+    margin-bottom:30px;
+    color:#999;
+}
+
+.savingsLauncherScreen .discount{
+    border-bottom:1px solid #454545;
+    height:60px;
+    width:100%;
+    flex-direction:row;
+    justify-content: flex-start;
+    position:relative;
+}
+
+.savingsLauncherScreen .discount.first{
+    border-top:1px solid #454545;
+}
+
+.discount .baseOffer{
+    border-radius:100%;
+    width:40px;
+    height:40px;
+    background-color:#00AD46;
+    border-color:#00AD46;
+    margin-left:10px;
+    color:#fff;
+    font-size:28px;
+    line-height:40px;
+    text-align:center;
+    font-weight:200;
+}
+
+.baseOffer.kohlsCash{
+    background-color:#00AD46;
+    border:1px solid #44DB5E;
+}
+
+.baseOffer.dollarOff{
+    background-color:#7E2C79;
+    border:1px solid #CB187C;
+}
+
+.baseOffer.percentOff{
+    background-color:#F2942A;
+    border:1px solid #BA8D4E;
+}
+
+.baseOffer.disabled{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.discount .details{
+    margin-left:20px;
+}
+
+p.offerDetails{
+    padding-top:6px;
+    font-size:18px;
+    line-height:20px;
+    font-weight:500;
+}
+
+p.restrictions{
+    font-size:12px;
+    color:#999;
+    font-weight:300;
+}
+
+.discount .switch{
+    position:absolute;
+    top:15px;
+    right:0;
+}
+
+/* Nationwide app project styles */
+.nationwideScreen{
+    justify-content: flex-start;
+}
+
+.nationwideScreen .pagination{
+    margin-top:20px;
+    margin-bottom:10px;
+    width:10%;
+    height:10px;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+.nationwideScreen .paginationDot{
+    width:10px;
+    height:10px;
+    background-color:#fff;
+    border-radius:5px;
+}
+
+.paginationDot.disabled{
+    background-color:#2A5D88;
+}
+
+.nationwideScreen .header{
+    font-size:30px;
+    font-weight:200;
+    color:#fff;
+}
+
+.nationwideScreen .shareButton{
+
+}
+
+.nationwideScreen .IDCard{
+    width:95%;
+    height:90%;
+    position:absolute;
+    top:120px;
+    background-color:#003B5B;
+    border-radius:15px;
+    background-image:url('https://jwisneski.github.io/portfolio/images/NWIDCard.png');
+    background-repeat:no-repeat;
+    background-size:100% auto;
+}
+
+.IDCard.minimized{
+    top:550px;
+}
+
+@media(min-width:1000px){
+    .titleRow .title{
+        font-size:24px;
+    }
+
+    .titleRow .back{
+        font-size:inherit;
+    }
+
+    .leftArrow{
+        height:17px;
+    }
+
+    .savingsLauncherScreen .savingTotal{
+        font-size:50px;
+    }
+
+    .savingTotal span{
+        font-size:22px;
+    }
+
+    .discount .baseOffer{
+        width:60px;
+        height:60px;
+        margin-left:20px;
+        font-size:38px;
+        line-height:60px;
+    }
+
+    .autoPilotRow p{
+        font-size:22px;
+        margin-left:20px;
+    }
+
+    .switch{
+        width:74px;
+        height:40px;
+    }
+
+    .savingsLauncherScreen .discount{
+        height:80px;
+    }
+
+    p.offerDetails{
+        font-size:22px;
+        line-height:20px;
+    }
+
+    p.restrictions{
+        font-size:16px;
+    }
+
+    .discount .switch{
+        top:20px;
+    }
+}
+
+@media(min-width:2400px){
+    .webAddress p{
+        padding-top:5px;
+        padding-bottom:5px;
+        border-radius:10px;
+        margin-top:10px;
+        margin-bottom:10px;
+        font-size:28px;
+    }
+
+    .titleRow .title{
+        font-size:40px;
+    }
+
+    .titleRow .back{
+        font-size:25px;
+    }
+
+    .leftArrow{
+        height:19px;
+    }
+
+    .savingsLauncherScreen .savingTotal{
+        font-size:70px;
+    }
+
+    .savingTotal span{
+        font-size:30px;
+    }
+
+    .discount .baseOffer{
+        width:80px;
+        height:80px;
+        margin-left:40px;
+        font-size:58px;
+        line-height:80px;
+    }
+
+    .savingsLauncherScreen .autoPilotRow{
+        border-top:2px solid #454545;
+        border-bottom:2px solid #454545;
+        height:100px;
+    }
+
+    .autoPilotRow p{
+        font-size:30px;
+        margin-left:40px;
+    }
+
+    .switch{
+        width:111px;
+        height:60px;
+    }
+
+    .savingsLauncherScreen .discount{
+        height:120px;
+    }
+
+    p.offerDetails{
+        font-size:30px;
+        line-height:28px;
+    }
+
+    p.restrictions{
+        font-size:24px;
+    }
+
+    .discount .switch{
+        top:30px;
+    }
+
+    .savingsLauncherScreen .stackingDivider{
+        font-size:30px;
+        color:#999;
+    }
+}
