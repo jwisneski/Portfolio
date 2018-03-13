@@ -49,6 +49,32 @@ function getScrollPositions(){
     }
 }
 
+function getFirstPageScroll( ){
+    stop = Math.round($(window).scrollTop());
+
+    for(var key in positions){
+        if(stop>positions[key]){
+            newSection=key;
+
+            if(newSection=='the savings launcher'){
+                animateSavings(true);
+            }
+
+            if(newSection=='the mini bag'){
+                animateMiniBag(true);
+            }
+
+            if(newSection=='Nationwide mobile'){
+                animateNW(true);
+            }
+
+            if(newSection=='company website'){
+                animateIM(true);
+            }
+        }
+    }
+}
+
 function pageScroll( ){
     // we round here to reduce a little workload
     lastStop=stop;
@@ -70,6 +96,143 @@ function pageScroll( ){
         // update link with #id and update title with data-section-name
         //history.pushState(null, null, '#'+hash);
         changeTitle(newSection, '#'+hash);
+    }
+
+    // Check if examples should update
+    if(newSection=='featured projects'){
+        // scroll from savings launcher
+        if(stop<lastStop){
+            animateSavings(false);
+        }
+
+    }else if(newSection=='the savings launcher'){
+        // scroll to savings launcher
+        if(stop>lastStop){
+            animateSavings(true);
+
+            // check if within 200px of minibag
+            if((stop+200) > positions['the mini bag']){
+                var overlayOpacity=((stop-positions['the mini bag'])/2);
+
+                $('.adLeft').css('opacity', overlayOpacity);
+                $('.adRight').css('opacity', overlayOpacity);
+                $('.adCenter').css('opacity', overlayOpacity);
+                $('.adBelow').css('opacity', overlayOpacity);
+            }
+
+        // scroll to savings launcher from mini bag
+        }else if(stop<lastStop){
+            animateMiniBag(false);
+
+            if((stop+200) > positions['the mini bag']){
+                var overlayOpacity=((stop-positions['the mini bag'])/2);
+
+                $('.adLeft').css('opacity', 1-(overlayOpacity * .01));
+                $('.adRight').css('opacity', 1-(overlayOpacity * .01));
+                $('.adCenter').css('opacity', 1-(overlayOpacity * .01));
+                $('.adBelow').css('opacity', 1-(overlayOpacity * .01));
+            }
+        }
+
+    }else if(newSection=='the mini bag'){
+        // scroll to mini bag
+        if(stop>lastStop){
+            animateMiniBag(true);
+
+        // scroll from NW to mini bag
+        }else if(stop<lastStop){
+            animateNW(false);
+        }
+
+    }else if(newSection=='Nationwide mobile'){
+        // scroll to nationwide app
+        if(stop>lastStop){
+            animateNW(true);
+
+            if((stop+200) > positions['company website']){
+                var topOffset=((stop-positions['company website'])/-100);
+
+                $('.imAfter').css('top', topOffset+positions['company website']);
+            }
+
+        // scroll from company website to NW
+        }else if(stop<lastStop){
+            animateIM(false);
+        }
+    }
+
+    else if(newSection=='company website'){
+        // scroll to the company website
+        if(stop>lastStop){
+            animateIM(true);
+        }
+    }
+}
+
+function animateSavings(down){
+    if(!down){
+        // update the mobile example
+        $('.autoPilotRow .switch').addClass('switchOff');
+
+        $('.savingTotal').addClass('savingHidden');
+
+        setTimeout(function(){
+            $('.discount .baseOffer').addClass('disabled');
+            $('.discount .switch').removeClass('switchHidden');
+        }, 300);
+    }else{
+        // update the mobile example
+        $('.autoPilotRow .switch').removeClass('switchOff');
+        $('.savingTotal').removeClass('savingHidden');
+
+        setTimeout(function(){
+            $('.discount.first .baseOffer').removeClass('disabled');
+            $('.discount.first .switch').addClass('switchHidden');
+
+            setTimeout(function(){
+                $('.discount.second .baseOffer').removeClass('disabled');
+                $('.discount.second .switch').addClass('switchHidden');
+
+                setTimeout(function(){
+                    $('.discount.third .baseOffer').removeClass('disabled');
+                    $('.discount.third .switch').addClass('switchHidden');
+                }, 200);
+            }, 200);
+        }, 300);
+    }
+}
+
+function animateMiniBag(down){
+    if(!down){
+        $('.flipProduct').removeClass('flipped');
+        setTimeout(function(){
+            //$('.discount .switch').removeClass('switchOff');
+            $('.miniBagBackground').removeClass('miniBagOpen');
+            $('.kohlsBagButton').removeClass('kohlsBagButtonOpen');
+        }, 450);
+
+    }else{
+        $('.miniBagBackground').addClass('miniBagOpen');
+        $('.kohlsBagButton').addClass('kohlsBagButtonOpen');
+        setTimeout(function(){
+            $('.flipProduct').addClass('flipped');
+        }, 450);
+    }
+}
+
+function animateNW(down){
+    if(!down){
+        $('.nationwideScreen .IDCard').addClass('minimized');
+    }else{
+        $('.nationwideScreen .IDCard').removeClass('minimized');
+    }
+}
+
+function animateIM(down){
+    if(!down){
+
+    }else{
+
     }
 }
 
@@ -459,58 +622,10 @@ $(document).ready(function () {
     oldSection='Joel Wisneski';
 
     getScrollPositions( );
-    stripProjectContainer( )
+    stripProjectContainer( );
 
-    // for smaller screens, show ',well' on home
-    // var width=$(window).width();
-    // if(width<601){
-    //     setTimeout(showText, 800);
-    // }
-
-    // Highlights for pagination dots/sections
-    $('.pagination>div').on('mouseenter', function(e){
-        if(e.target.className!='selected'){
-            $(this).children('p').addClass('hovered');
-            $(this).addClass('hoveredPage');
-        }else{
-            e.preventDefault( );
-        }
-    });
-
-    $('.pagination>div').on('mouseleave', function(e){
-        $(this).children('p').removeClass('hovered');
-        $(this).removeClass('hoveredPage');
-    });
-
-    $('.pagination>div').on('click', function(e){
-        //scroll to that section
-        var pageSection = $(this).children('p').text();
-        scrollPage(pageSection);
-    });
-
-    $('.pagination div').on('click tap', function (event) {
-        // this one needs some work
-        var linkName = event.target.className.split(' ')[0];
-
-        // get the section name
-        linkName = linkName.replace('Link', ' ');
-        linkName = '#' + linkName;
-
-        $('html, body').animate({
-            scrollTop: $(linkName).offset().top - 60
-        }, 500, 'swing');
-    });
-
-    $('.projects>div').on('mouseenter', function(e){
-        if(e.currentTarget.className=='guitar' || e.currentTarget.className=='furniture'){
-        }else{
-            $(this).addClass('projectHovered');
-        }
-    });
-
-    $('.projects>div').on('mouseleave', function(e){
-        $(this).removeClass('projectHovered');
-    });
+    // check for animation start points
+    getFirstPageScroll( );
 
     $('.contactBtn').on('mouseenter', function(e){
         $(this).children('.downArrow').addClass('hovered')
@@ -572,6 +687,7 @@ $(document).ready(function () {
 
     $( window ).resize(function(){
         getScrollPositions( );
+        getFirstPageScroll( );
     });
 
     // scroll function changes "active" based on scrolling
