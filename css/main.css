@@ -368,7 +368,7 @@ a.external p:hover{
     color:#474647;
 }
 
-.me a{
+.me a, .sendOff a{
     bottom:-250px;
 }
 
