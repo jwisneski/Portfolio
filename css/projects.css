@@ -138,6 +138,7 @@
 
 .navBar .buttons{
     flex-direction:row;
+    height:100%;
 }
 
 .kohlsBagButton{
