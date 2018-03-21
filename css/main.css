@@ -366,13 +366,17 @@ a.external p:hover{
 .me a, .contact a{
     background-color:#fff;
     color:#474647;
-    bottom:50px;
+}
+
+.me a{
+    bottom:-250px;
 }
 
 .contact a{
     border-color:#474647;
     background-color:#474647;
     color:#fff;
+    bottom:50px;
 }
 
 .contact a::selection{
