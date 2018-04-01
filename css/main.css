@@ -379,7 +379,8 @@ a.external p:hover{
 }
 
 .me a, .sendOff a{
-    bottom:-100px;
+    bottom:auto;
+    margin-top:200px;
 }
 
 .contact a{
