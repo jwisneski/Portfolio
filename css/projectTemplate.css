@@ -1,0 +1,551 @@
+/*scrollTest for mobile, watch and laptops*/
+*{
+    /* reset styles*/
+    margin:0;
+    padding:0;
+}
+
+html, body{
+    height:100%;
+}
+
+.projectTitle{
+    margin-top:50px;
+}
+
+.mobileProject::after{
+    content:'';
+    position:relative;
+    top:100%;
+    left:-10%;
+    width:120%;
+    height:3px;
+    border-bottom:3px solid #454545;
+}
+
+.projectSection, .contentContainer, .productCardDemo, .gift, .offerAnatomy, .laptopAnimation,
+.nwRoleMap, .nwRoleMap .row, .nwRoleMap .interaction, .contentOnly{
+    width:100%;
+
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+
+    position:relative;
+}
+
+.contentContainer, .contentUp, .contentDown, .centerLong, .fullWidthTop, .fullWidthBottom{
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+
+    width:80%;
+    height:auto;
+    margin-top:50px;
+    position:relative;
+}
+
+.contentOnly{
+    min-height:0;
+}
+
+.contentUp, .contentDown, .fullWidthTop, .fullWidthBottom, .imageRight, .imageLeft{
+    width:100%;
+    justify-content: space-around;
+    margin-bottom:50px;
+}
+
+.imageRight, .imageLeft{
+    flex-direction:column;
+}
+
+.quoteRight .imageContent{
+    background-color:#fff;
+    height:auto;
+}
+
+.quote{
+    width:100%;
+    font-size:36px;
+    font-style:italic;
+    line-height:1.5;
+}
+
+.quote span{
+    font-weight:500;
+}
+
+.contentUp .contentContainer, .contentDown .contentContainer{
+    flex-direction:row;
+    justify-content: space-around;
+    width:auto;
+    max-width:90%;
+    height:auto;
+}
+
+.contentUp .imageContainer, .contentDown .imageContainer{
+    width:100%;
+    max-width:100%;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+.contentUp .imageContent, .contentDown .imageContent{
+    margin-top:50px;
+}
+
+.centerLong{
+    width:100%;
+    margin-bottom:100px;
+}
+
+.fullWidthContent{
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin-bottom:100px;
+}
+
+.fullWidthTop, .fullWidthBottom{
+    justify-content: flex-start;
+    margin-bottom:100px;
+}
+
+section{
+    min-height:80%;
+}
+
+section.deviceDemo{
+    height:auto;
+    min-height:100%;
+    align-items:flex-start;
+}
+
+.projectContent{
+    width:100%;
+}
+
+.deviceDemo .projectContent{
+    margin-bottom:100px;
+}
+
+.phoneDemo{
+    height:700px;
+    width:450px;
+    margin-top:50px;
+    display:none;
+}
+
+.containerAtBottom{
+    align-self:flex-end;
+    margin-bottom:50px;
+}
+
+.phone{
+    width:100%;
+    height:100%;
+    /* background-color:#454545; */
+    border-radius:30px;
+}
+
+.phonePartial{
+    position:relative;
+    width:100%;
+    height:650px;
+    border-radius:30px 30px 0 0;
+    background-color:#454545;
+    margin-top:100px;
+}
+
+.phonePartial .screen{
+    position:absolute;
+    width:90%;
+    height:90%;
+    left:5%;
+    top:10%;
+    background-color:#fff;
+}
+
+.phoneDemo .mobileProject{
+    margin-left:0;
+}
+
+.testPhone{
+    width:inherit;
+    height:inherit;
+}
+
+.phoneDemo .placeholder{
+    width:100%;
+    height:100%;
+    opacity:0;
+}
+
+.fixedPhone{
+    position:fixed;
+    width:inherit;
+    height:inherit;
+}
+
+.imageContent{
+    width:300px;
+    height:300px;
+    background-color:blue;
+}
+
+/* changes order of containers for quick updates*/
+.imageRight .contentContainer, .imageLeft .imageContainer,
+.contentUp .imageContainer, .contentDown .contentContainer,
+.fullwidthTop .imageContainer, .fullWidthBottom .contentContainer{
+    order:1;
+}
+
+.imageLeft .contentContainer, .imageRight .imageContainer,
+.contentUp .contentContainer, .contentDown .imageContainer,
+.fullWidthTop .contentContainer, .fullWidthBottom .imageContainer{
+    order:2;
+}
+
+.centerLong .imageLong{
+    height:800px;
+    width:100%;
+}
+
+.fullWidthTop .imageContainer, .fullWidthBottom .imageContainer{
+    width:100%;
+    height:60vh;
+}
+
+.fullWidthContent .imageContent,
+.fullWidthTop .imageContent, .fullWidthBottom .imageContent{
+    width:100%;
+    height:100%;
+}
+
+.projectInformation{
+    flex-direction:row;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    height:auto;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+/*Laptop.css**********************************/
+.laptopAnimation{
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    height:auto;
+}
+
+.replayAnimation{
+    position:absolute;
+    top: 100%;
+    padding: 20px;
+    cursor: default;
+    opacity:0;
+}
+
+.replayAnimation p{
+    color:#CB187C;
+    cursor:default;
+    margin-bottom:0;
+    font-weight:400;
+}
+
+.showReplay, .showReplay p{
+    opacity:1;
+    cursor:pointer;
+}
+
+.laptop{
+    position:relative;
+    width:600px;
+    height:350px;
+
+    overflow:hidden;
+
+    -webkit-transform:scale(1);
+}
+
+.under{
+    border-radius:100px;
+    background-color:#9B9B9B;
+
+    width:100%;
+    height:25%;
+
+    margin:0 auto;
+    position:absolute;
+
+    bottom:0px;
+}
+
+.keyboard{
+    background-color:#CFCFCF;
+    width:95%;
+    height:5px;
+
+    margin-left:2.5%;
+    position:absolute;
+
+    bottom:10px;
+}
+
+.thumbSpace{
+    border-radius: 100px;
+    background-color: #4A4A4A;
+    width: 90px;
+    height: 10px;
+    position: absolute;
+    margin-left: calc(50% - 45px);
+    bottom: 12px;
+}
+
+.laptopSpaceL{
+    background-color:#fff;
+    width:21px;
+    height:200%;
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+
+.laptopSpaceMid{
+    background-color:#fff;
+    width:100%;
+    height:96%;
+    position:absolute;
+}
+
+.laptopSpaceR{
+    background-color:#fff;
+    width:20px;
+    height:200%;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+.backlight{
+    border-radius:25px 25px 0 0;
+    border:2px solid #CFCFCF;
+    background-color:#4A4A4A;
+    width:82%;
+    height:96%;
+    margin-left:9%;
+    position:absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.laptopScreen{
+    background-color:white;
+    position:absolute;
+    width:94%;
+    height:88%;
+    left:3%;
+    top:7%;
+}
+
+/* Watch.css *************************/
+.watchWire{
+    width:270px;
+    height:580px;
+
+    overflow:hidden;
+    margin-top:50px;
+
+    -webkit-transform:scale(1.3);
+}
+
+.upperBand{
+    /*no styles needed*/
+}
+
+.band{
+    /*use this to change band color*/
+    background-color:#19A8FF;
+    width: 170px;
+    height: 140px;
+    margin-left:50px;
+    border-radius:40px 40px 0px 0px;
+}
+
+.band:before{
+    content:'';
+    position:absolute;
+
+    /*use this to change band color*/
+    border-top: 70px solid transparent;
+    border-bottom: 65px solid #19A8FF;
+    border-left:26px solid transparent;
+    border-right: 28px solid #19A8FF;
+
+    border-radius: 40px 40px 10px 0px;
+    top:5px;
+    left:8px;
+}
+
+.band:after{
+    content:'';
+    position:absolute;
+
+    /*use this to change band color*/
+    border-top: 70px solid transparent;
+    border-bottom: 65px solid #19A8FF;
+    border-left:26px solid transparent;
+    border-right: 28px solid #19A8FF;
+
+    border-radius: 40px 40px 10px 0px;
+    top:5px;
+    left:208px;
+
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.bandSpaceL{
+    position:absolute;
+    left:-88px;
+    top:-80px;
+
+    background-color:white;
+    border-radius: 50px;
+
+    transform:rotate(14deg);
+
+    width:136px;
+    height:231px;
+}
+
+.bandSpaceR{
+    position:absolute;
+    right:-88px;
+    top:-80px;
+
+    background-color:white;
+    border-radius: 50px;
+
+    transform:rotate(-14deg);
+
+    width:136px;
+    height:231px;
+}
+
+.lowerBand{
+    margin-top:280px;
+    transform:rotate(180deg);
+}
+
+.watch{
+    position:absolute;
+    top:130px;
+    left:0px;
+
+    width:260px;
+    height:290px;
+
+    background-color:#454545;
+    border: 5px solid #ccc;
+    border-radius:40px;
+}
+
+.watchScreen{
+    position:absolute;
+    top:30px;
+    left:30px;
+
+    width:calc(100% - 60px);
+    height:calc(100% - 60px);
+
+    background-color:#4a4a4a;
+}
+
+.backToHome{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width:100%;
+    height:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border:none;
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.upArrowFade{
+    opacity:0.2;
+}
+
+@media(min-width:550px){
+    .thumbSpace{
+        margin-left: calc(50% - 45px);
+    }
+}
+
+@media(min-width:820px){
+    .phoneDemo{
+        display:block;
+    }
+
+    .phonePartial{
+        display:none;
+    }
+
+    .watchPartial{
+        display:none;
+    }
+
+    .laptopPartial{
+        display:none;
+    }
+
+    .contentContainer, .contentUp .contentContainer, .contentDown .contentContainer{
+        width:auto;
+    }
+
+    .contentUp .imageContainer, .contentDown .imageContainer{
+        width:100%;
+        flex-direction:row;
+    }
+
+    .deviceDemo .projectContent{
+        margin-bottom:500px;
+    }
+
+    .imageRight, .imageLeft{
+        flex-direction:row;
+    }
+
+    .imageRight p, .imageLeft p, .deviceDemo p, .phoneLeft p{
+        max-width:400px !important;
+    }
+
+    .fixedPhone, .testPhone{
+        width:350px;
+    }
+}
+
+@media(min-width:1000px){
+    .imageRight p, .imageLeft p, .deviceDemo p, .phoneLeft p{
+        max-width:600px !important;
+    }
+
+    .fixedPhone, .testPhone{
+        width:inherit;
+    }
+}

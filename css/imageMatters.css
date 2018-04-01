@@ -1,0 +1,49 @@
+/* imagematters */
+.fullWidthBottom .imageContent, .fullWidthBottom .imageContainer{
+    height:auto !important;
+    background-color:#fff;
+}
+
+img{
+    margin-left:20%;
+    width:60%;
+    height:auto;
+}
+
+.imageMattersPattern1, .imageMattersPattern2, .imageMattersPattern3,
+.imHead, .imCard, .imShare{
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-color:#fff;
+}
+
+.imHead{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imHeadPattern.jpg');
+}
+
+.imCard{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imCardPattern.jpg');
+}
+
+.imShare{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imSharePattern.jpg');
+}
+
+.imageMattersPattern1{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imageMattersPattern1.jpg');
+}
+
+.imageMattersPattern2{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imageMattersPattern2.jpg');
+}
+
+.imageMattersPattern3{
+    background-image:url('https://jwisneski.github.io/portfolio/images/imageMattersPattern3.jpg');
+}
+
+@media(min-width:820px){
+    .imageMattersPattern1, .imageMattersPattern2, .imageMattersPattern3{
+        width:30%;
+    }
+}

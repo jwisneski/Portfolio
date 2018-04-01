@@ -1,0 +1,301 @@
+/*nwApp.css*/
+.nwUsability .imageContainer{
+    height:auto !important;
+}
+
+.nwUsability .imageContent{
+    background-color:#fff;
+}
+
+.nwRoleMap{
+    width:90% !important;
+    flex-direction:column;
+    align-self:flex-start;
+    align-items:flex-start;
+    background-color:#fff;
+    margin-left:20px;
+}
+
+.nwRoleMap .row, .nwRoleMap .interaction{
+    justify-content: flex-start;
+    align-items: center;
+    max-width:none;
+    flex-wrap:wrap;
+}
+
+.nwRoleMap .row{
+    height:auto !important;
+    padding-bottom:50px;
+}
+
+.nwRoleMap .row div{
+    height:10px;
+    border-radius:5px;
+}
+
+.nwRoleMap .row .roleTitle{
+    height:auto;
+    margin-top:30px;
+    flex-basis:100%;
+}
+
+.nwRoleMap .roleTitle{
+    width:90%;
+    text-align:left;
+    margin-right:0;
+}
+
+.roleTitle p{
+    font-weight:500;
+    line-height:normal;
+}
+
+.roleTitle span{
+    font-weight:300;
+}
+
+.roleTitle span.break{
+    display:none;
+}
+
+.nwRoleMap .interaction{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.nwRoleMap .lead{
+    background-color:#1F76DB;
+    width:100%;
+}
+
+.nwRoleMap .interactionDesigner{
+    background-color:#EA7E0D;
+    width:60%;
+}
+
+.nwRoleMap .visualDesigner{
+    background-color:#66B60E;
+    width:60%;
+    margin-left:20%;
+}
+
+.nwRoleMap .copyWriter{
+    background-color:#1CCAD8;
+    width:30%;
+    margin-left:15%;
+}
+
+.nwRoleMap .creativeTechnologist{
+    background-color:#FFCA3A;
+    width:60%;
+    margin-left:40%;
+}
+
+.nwRoleMap .researcher{
+    background-color: #6A4C93;
+    width:12%;
+    margin-right:10%;
+}
+
+.nwRoleMap .researcher:last-of-type{
+    margin-right:0;
+}
+
+.nationwideScreen{
+    overflow:hidden;
+}
+
+.nwLoadingScreen, .nwLoginScreen, .nwUnauthIDCardsScreen, .nwPoliciesScreen,
+.nwAuthIDCardsScreen, .nwClaimsSketchScreen, .nwClaimsWireScreen{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+}
+
+.nwLoadingScreen{
+    background-color:#0072CF;
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwloading.jpg');
+    background-size:60% auto;
+    background-position:center center;
+}
+
+.nwLoginScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwLogin.jpg');
+}
+
+.nwUnauthIDCardsScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwPreAuth.jpg');
+}
+
+.nwPoliciesScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwPolicies.jpg');
+}
+
+.nwAuthIDCardsScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwIDCards.jpg');
+}
+
+.nwClaimsSketchScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwClaimsSketch.jpg');
+}
+
+.nwClaimsWireScreen{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwClaimsWire.jpg');
+}
+
+.nwPoliciesScreen.screenHidden, .nwAuthIDCardsScreen.screenHidden{
+    top:100%;
+}
+
+.nwLoadingScreen.screenHidden, .nwLoginScreen.screenHidden{
+    opacity:0;
+}
+
+.nwLoginScreen.screenLeft{
+    left:-100%;
+}
+
+.nwLoginScreen.screenLeft.screenHidden{
+    left:0;
+    opacity:0;
+}
+
+.nwUnauthIDCardsScreen.screenHidden{
+    left:100%;
+}
+
+.nwClaimsWireScreen.screenHidden, .nwClaimsSketchScreen.screenHidden{
+    top:100%;
+}
+
+.nwDevTeams, .nwUXTeam, .nwStakeholders, .solving{
+    background-color:#fff;
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.nwDevTeams{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwDevTeams.jpg');
+}
+
+.nwUXTeam{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwUXTeam.jpg');
+}
+
+.nwStakeholders{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwStakeholders.jpg');
+}
+
+.nwBillFlow{
+    height:auto !important;
+}
+
+.nwBillFlow div{
+    background-color:#fff;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projectDiagram{
+    width:100%;
+    height:100%;
+    flex-direction:row;
+    align-items:flex-start;
+    background-color:#fff;
+}
+
+.projectDiagram .projectColumn{
+    /* flex-direction:column;
+    justify-content: flex-start;
+    align-items: center; */
+    height:100%;
+    width:20%;
+}
+
+.projectDiagram .project{
+    width:100%;
+}
+
+.project.a1{
+    height:30%;
+    margin-top:40%;
+    background-color:#1F76DB;
+}.project.a2{
+    height:30%;
+    margin-top:50%;
+    background-color:#fff;
+}.project.b1{
+    height:40%;
+    margin-top:40%;
+    background-color:#00AD46;
+}.project.b2{
+    height:20%;
+    margin-top:40%;
+    background-color:#fff;
+}.project.c1{
+    height:20%;
+    margin-top:0;
+    background-color:#fff;
+}.project.c2{
+    height:40%;
+    margin-top:50%;
+    background-color:#126152;
+}.project.c3{
+    height:20%;
+    margin-top:50%;
+    background-color:#fff;
+}.project.d1{
+    height:40%;
+    margin-top:0;
+    background-color:#fff;
+}.project.d2{
+    height:40%;
+    margin-top:20%;
+    background-color:#235789;
+}.project.e1{
+    height:20%;
+    margin-top:0;
+    background-color:#fff;
+}.project.e2{
+    height:40%;
+    margin-top:20%;
+    background-color:#275F94;
+}
+
+.solving{
+    background-image:url('https://jwisneski.github.io/portfolio/images/solvingProblems.jpg');
+}
+
+@media(min-width:800px){
+    .nwRoleMap .row, .nwRoleMap .interaction{
+        flex-wrap:nowrap;
+    }
+
+    .nwRoleMap .row .roleTitle{
+        margin-top:15px;
+        flex-basis:17%;
+    }
+
+    .nwRoleMap .roleTitle{
+        width:17%;
+        text-align:right;
+        margin-right:3%;
+    }
+
+    .nwRoleMap .row{
+        margin-bottom:0;
+    }
+
+    .nwRoleMap .interaction{
+        width:80%;
+    }
+
+    .roleTitle span.break{
+        display:inline;
+    }
+}
