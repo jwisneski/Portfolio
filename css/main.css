@@ -364,7 +364,9 @@ a.external p:hover{
     margin:auto;
     bottom:0;
     top:auto;
+}
 
+.featured a, .sendoff a{
     margin-top:30px;
 }
 
@@ -379,7 +381,7 @@ a.external p:hover{
 }
 
 .me a, .sendOff a{
-    margin-top:300px;
+    bottom:-100%;
 }
 
 .contact a{
@@ -1620,7 +1622,7 @@ could be loaded after project is clicked */
         font-size:25px;
     }
 
-    .me a, .contact a{
+    .me a, .contact a, .sendOff a{
         bottom:auto;
     }
 
