@@ -195,8 +195,8 @@ section.deviceDemo{
 
 .imageContent{
     width:300px;
-    height:300px;
-    background-color:blue;
+    min-height:300px;
+    height:auto;
 }
 
 /* changes order of containers for quick updates*/

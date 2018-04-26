@@ -161,6 +161,11 @@
     background-image:url('https://jwisneski.github.io/portfolio/images/savingsPatterns.jpg');
 }
 
+.SLFlow{
+    align-self:center;
+    width:auto !important;
+}
+
 @media(min-width:700px){
     .anatomyBreakdown{
         width:45%;
