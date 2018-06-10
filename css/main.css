@@ -274,21 +274,17 @@ a:hover{
     padding-top:150px;
 }
 
-/* .projectContainer .sendOff .pageTitle{
-    padding-top:100px;
-} */
-
-.miniBag .pageTitle, .imageMatters .pageTitle{
+.desktopPreview .pageTitle{
     width:60%;
     align-self:center;
 }
 
 .projectPreview .pageTitle{
     margin-top:30px;
+    width:100%;
 }
 
-section.savings, section.nationwide, section.miniBag, section.imageMatters,
-section.linebreakOne{
+section.desktopPeview, section.savings, section.nationwide, section.linebreakOne{
     width:100%;
     flex-direction:row;
     justify-content: space-around;
@@ -314,19 +310,21 @@ section.linebreakOne{
     font-size:16px;
 }
 
-section.miniBag, section.imageMatters{
-    color:#fff;
+section.desktopPreview{
     flex-direction:column;
     padding-bottom:50px;
+}
+
+section.inverted{
+    color:#fff;
 }
 
 section.miniBag{
     background-color:#CB187C; /*magenta*/
 }
 
-section.imageMatters{
-    background-color:#00247D; /*yellow*/
-    color:#fff;
+section.nationwideLead{
+    background-color:#0072CF; /*NW blue*/
 }
 
 section.savings{
@@ -401,11 +399,6 @@ a.external p:hover{
     color:#fff;
 }
 
-.me a:hover{
-    background-color:rgba(0,0,0,0);
-    color:#fff !important;
-}
-
 .contact a:hover{
     background-color:#fff;
     color:#474647;
@@ -465,7 +458,7 @@ a.external p:hover{
     border-color:#EA7E0D;
 }
 
-.savings a, .miniBag a, .nationwide a, .imageMatters a{
+.projectPreview a{
     top:auto;
     bottom:-50px;
     color:#fff;
@@ -506,15 +499,25 @@ a.external p:hover{
 }
 
 .imageMatters a{
-    border-color:#fff;
-    background-color:#fff;
-    color:#00247D; /*yellow*/
+    border-color:#F2C924;
+    background-color:#F2C924;
+    color:#fff;
     position:relative;
 }
 
 .imageMatters a:hover{
-    border-color:#F2C924;
-    background-color:#F2C924;
+    background-color:#fff;
+    color:#F2C924;
+}
+
+.nationwideLead a{
+    border-color:#fff;
+    background-color:#fff;
+    color:#0072CF;
+}
+
+.nationwideLead a:hover{
+    background-color:#0072CF;
     color:#fff;
 }
 
@@ -531,14 +534,6 @@ a.external p:hover{
 .imageMatters a::selection{
     background-color:#1F76DB;
     color:#fff;
-}
-
-.me a:hover{
-    color:#474647;
-}
-
-.me a:hover span{
-    opacity:0;
 }
 
 a.toExternal{
@@ -760,14 +755,11 @@ section.sendoff{
     background-position:top center;
 }
 
-.imageMatters .desktopProject, .imageMattersProject .desktopProject{
-    /* background-image:url('https://jwisneski.github.io/portfolio/images/imHomeC.jpg'); */
+.desktopPreview .desktopProject{
     background-size:cover;
     background-position:top center;
 
     flex-direction:row;
-
-    border-top:2px solid #474647;
 }
 
 .imBefore, .imAfter{
@@ -961,6 +953,8 @@ section.sendoff{
     justify-content: flex-end;
 
     font-weight:500;
+
+    width:100%;
 }
 
 .footer > p{
@@ -1105,8 +1099,6 @@ section.sendoff{
 
 .leadWork{
     order:2;
-    /* background-image:url('https://jwisneski.github.io/portfolio/images/MapSliceDarkGreyOptimized.jpg'); */
-    /* background-image:url('../images/process.png'); */
     background-repeat:no-repeat;
     vertical-align: middle;
 }
@@ -1120,24 +1112,9 @@ section.sendoff{
 
 .indyWork{
     order:1;
-    /* background-image:url('https://jwisneski.github.io/portfolio/images/MapSliceDarkGreyOptimized.jpg'); */
-    /*background-image:url('../images/process.png');*/
     background-repeat:no-repeat;
     vertical-align: middle;
 }
-
-/* unremove this when photos are ready*/
-/* .leadWork::after{
-    content:'and a UX Lead at Nationwide';
-    position:relative;
-    top:100%;
-} */
-
-/* .indyWork::after{
-    content:"I'm an Experience Designer";
-    position:relative;
-    top:100%;
-} */
 
 .statement{
     flex-direction:column;
@@ -1447,9 +1424,6 @@ section.sendoff{
 .gameGuitar{
     background-image:url('https://jwisneski.github.io/portfolio/images/gameGuitar.png');
 }
-
-/* styles for project pages
-could be loaded after project is clicked */
 
 .projectNav{
     flex-direction:row;
@@ -1953,16 +1927,11 @@ could be loaded after project is clicked */
         padding-bottom:0;
     }
 
-    section.miniBag{
-        background-color:#fff;
-        color:#000;
-    }
-
     section.nationwide{
         padding-top:50px;
     }
 
-    section.imageMatters{
+    section.desktopPreview{
         background-color:#fff;
         color:#000;
     }
@@ -1971,7 +1940,7 @@ could be loaded after project is clicked */
         width:60%;
     }
 
-    .miniBag .pageTitle, .imageMatters .pageTitle{
+    .desktopPreview .pageTitle{
         flex-direction:row;
         align-items: center;
         justify-content: center;
@@ -2025,6 +1994,7 @@ could be loaded after project is clicked */
 
     .desktopProject{
         height:auto;
+        border-top:2px solid #474647;
     }
 
     .desktopProject .screen{
@@ -2059,6 +2029,19 @@ could be loaded after project is clicked */
         border-color:#C3AC0F;
         background-color:#fff;
         color:#C3AC0F;
+    }
+
+    .nationwideLead a{
+        border-color:#0072CF;
+        background-color:#0072CF;
+        color:#fff;
+        margin-top:-30px;
+    }
+
+    .nationwideLead a:hover{
+        color:#0072CF;
+        border-color:#0072CF;
+        background-color:#fff;
     }
 
     .projectPreview .pageTitle{
