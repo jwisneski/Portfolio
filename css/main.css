@@ -550,7 +550,7 @@ a.toExternal{
 section, section > div, .pagination, .pagination > div, section.whatProject, .footer section,
 .projects > div, .close, .projectInfo, .projectInfo div, .mobileSection, .mobileContent,
 .channels, .askMe, .projectTitle, .statusBar .time, .statusBar .service,
-.imageMatters .desktopProject{
+.imageMatters .desktopProject, .nationwideLead .desktopProject{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -760,6 +760,29 @@ section.sendoff{
     background-position:top center;
 
     flex-direction:row;
+}
+
+.nationwideLead .desktopProject{
+    justify-content: space-around;
+}
+
+.nwLeadStakeholders, .nwLeadDevs, .nwLeadUX{
+    background-size:contain;
+    background-position:center;
+    width:20%;
+    background-repeat:no-repeat;
+}
+
+.nwLeadStakeholders{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwStakeholders.jpg');
+}
+
+.nwLeadUX{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwUXTeam.jpg');
+}
+
+.nwLeadDevs{
+    background-image:url('https://jwisneski.github.io/portfolio/images/nwDevTeams.jpg');
 }
 
 .imBefore, .imAfter{
