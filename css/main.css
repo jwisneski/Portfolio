@@ -1672,7 +1672,7 @@ section.sendoff{
         justify-content:center;
     }
 
-    .me a, .contact a, .featured a, .sendoff a{
+    .me a, .contact a, .featured a{
         position:inherit;
         align-self:flex-end;
         margin:0;

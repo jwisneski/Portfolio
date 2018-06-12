@@ -1,3 +1,8 @@
+body{
+    width:100vw;
+    overflow-x:hidden;
+}
+
 .me{
     min-height:70vh !important;
     color:#000;
@@ -10,8 +15,8 @@
     position:relative;
     text-align:left;
     align-items: flex-start;
-    width:calc(100% - 40px);
-    margin-left:20px;
+    justify-content: space-around;
+    width:100%;
     flex-direction:row;
     padding-top:20px !important;
 }
@@ -60,6 +65,22 @@
     align-items:flex-start;
 }
 
+.featured .leftContent{
+    align-self:flex-end;
+    margin-right:15px;
+}
+
+.rightContent{
+    margin-left:10px;
+    margin-right:10px;
+    max-width:600px;
+    align-self:center;
+}
+
+.rightContent .content{
+    margin-left:15px;
+}
+
 .me .leftContent, .featured .leftContent{
     align-items:center;
 }
@@ -94,17 +115,18 @@
 }
 
 .sendoff h2{
-    margin-top:calc(20vw - 25px);
     font-size:5vw;
 }
 
 .sendoff a{
-    margin-left:15px;
-    width:calc(100%-30px);
-    align-self:flex-start;
+    position:absolute;
+    left:0;
+    margin-left:calc(5vw - 5px);
+    width:90vw;
+    padding:10px;
 }
 
-.buttonContainer{
+.buttonContainer, .sendoff .rightContent{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -119,6 +141,16 @@
 
     margin-top:20px; /*Buttons already have 30px of margin*/
 }
+
+.sendoff .rightContent{
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:flex-start;
+    height:100%;
+    width: auto;
+    margin-top: -60px;
+}
+
 
 .buttonContainer a:first-of-type{
     margin-left:10px;
@@ -189,10 +221,6 @@ section.sendoff{
     padding-top:200px;
 }
 
-.sendoff a{
-    margin-right:10px;
-}
-
 @media(min-width:600){
     .featured h1{
         margin-left:auto;
@@ -210,6 +238,19 @@ section.sendoff{
     .me .buttonContainer a.contactBtn{
         margin-bottom:0px;
     }
+
+    .sendoff a{
+        position:inherit;
+        align-self:center;
+        width:300px;
+    }
+}
+
+@media(min-width:660px){
+    .sendoff a{
+        margin-left:calc(50vw - 155px);
+        width:300px;
+    }
 }
 
 @media(min-width:840px){
@@ -218,12 +259,11 @@ section.sendoff{
     }
 
     .titleUpdateLeft, .titleUpdateRight{
-        width:calc(100% - 100px);
         margin-left:50px;
     }
 
     .titleUpdateLeft .leftContent{
-        width:calc(100% - 400px);
+        width:60%;
         margin-right:50px;
     }
 
@@ -256,12 +296,13 @@ section.sendoff{
     }
 
     .featured .content{
-        margin-top:100px;
         max-width:400px;
     }
 
     .featured .leftContent{
-        width:calc(100% - 400px);
+        width:500px;
+        align-self:inherit;
+        margin-right:inherit
     }
 
     .buttonContainer{
@@ -288,11 +329,6 @@ section.sendoff{
         margin-left:20px;
     }
 
-    .sendoff a{
-        margin-right:50px;
-        align-self:flex-end;
-    }
-
     .featured h1{
         margin-left:0;
     }
@@ -305,5 +341,16 @@ section.sendoff{
 @media(min-width:1200px){
     .sendoff h2{
         font-size:30px;
+    }
+
+    .sendoff .rightContent{
+        position:relative;
+        min-height:100%;
+        width:40%;
+    }
+
+    .sendoff a{
+        position:relative;
+        margin-left:0;
     }
 }
