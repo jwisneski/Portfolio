@@ -1,14 +1,14 @@
-body{
-    width:100vw;
-    overflow-x:hidden;
-}
-
 .me{
     min-height:70vh !important;
     color:#000;
     background-image:none;
     background-color:#fff;
     margin-bottom:30px;
+}
+
+.me, .featured, .sendoff{
+    width:100vw;
+    overflow-x:hidden;
 }
 
 .titleUpdateLeft, .titleUpdateRight{
