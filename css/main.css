@@ -2042,8 +2042,8 @@ section.sendoff{
     }
 
     .imageMatters a{
-        border-color:#C3AC0F;
-        background-color:#C3AC0F;
+        border-color:##F2C924;
+        background-color:##F2C924;
         color:#fff;
         margin-top:-30px;
     }
@@ -2233,6 +2233,10 @@ section.sendoff{
     .service div{
         margin-top:-10px;
         margin-right:8px;
+    }
+
+    .projectInfo{
+        width:600px;
     }
 }
 
