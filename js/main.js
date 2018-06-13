@@ -66,6 +66,7 @@ function getFirstPageScroll( ){
 
             if(newSection=='Nationwide mobile'){
                 animateNW(true);
+                console.log(stop);
             }
 
             if(newSection=='company website'){
@@ -323,12 +324,12 @@ function toggleContact(shown, newSection){
         //this has to be old section to register properly in the pageScroll function
         oldSection='contact';
 
-        $('body').addClass('hideOverflow');
         $('.overlayContainer').addClass('overlayContainerShown');
 
         setTimeout(function(){
             // still trying to stop the scrtolling - this keeps
             // top of the page from flashing before the container shows up
+            $('body').addClass('hideOverflow');
             $('body').addClass('bodyFixed');
 
             // add white background to overlay container to covery body text
@@ -635,7 +636,7 @@ $(document).ready(function () {
         $(this).children('.downArrow').removeClass('hovered')
     });
 
-    $('.contactBtn').on('click', function(e){
+    $('.contactBtn').on('click tap', function(e){
         //check for browser
         updateEmailText( );
 
@@ -784,4 +785,14 @@ $(document).ready(function () {
     // $('div.music').on('click tap', function(e){
     //     toggleProject('music');
     // });
+
+    $('.mobileProject').on('click tap', function(e){
+        $('.nationwideAppProject .mobileProjectAnimation').each(function() {
+            var elementPosition=$(this).position().top + $('.nationwideAppProject').scrollTop();
+            elementPosition=(elementPosition + $(window).height() + $('.nationwideTop').height());
+
+            var topOfContainer=$('.nationwideAppProject .nationwideTop').offsetParent().offset().top;
+            topOfContainer=topOfContainer*-1;
+        });
+    });
 });
