@@ -66,7 +66,6 @@ function getFirstPageScroll( ){
 
             if(newSection=='Nationwide mobile'){
                 animateNW(true);
-                console.log(stop);
             }
 
             if(newSection=='company website'){
@@ -79,7 +78,7 @@ function getFirstPageScroll( ){
 function pageScroll( ){
     // we round here to reduce a little workload
     lastStop=stop;
-    stop = Math.round($(window).scrollTop());
+    stop = Math.round($('body').scrollTop());
 
     for(var key in positions){
         if(stop>positions[key]){
@@ -692,7 +691,7 @@ $(document).ready(function () {
     });
 
     // scroll function changes "active" based on scrolling
-    $(window).on('scroll',function(){
+    $('body').on('scroll',function(){
         //figure out where we are starting on the page (in window.load)
         if(project==''){
             pageScroll( );
