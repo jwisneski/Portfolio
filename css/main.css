@@ -107,7 +107,6 @@ h2{ /* need a smaller screen version to scale (probably)*/
     font-weight:300;
     margin-top:20px;
     margin-bottom:0;
-    align-self:flex-start;
 
     cursor:default;
 }
@@ -146,7 +145,6 @@ h3{
     font-size:40px;
     font-size:8vw;
     font-weight:500;
-    align-self:flex-start;
     cursor:default;
 }
 
@@ -224,13 +222,11 @@ a{
     font-weight:300;
 
     border:2px solid #fff;
-    align-self:center;
     left:auto;
     right:auto;
     margin:0;
 
     position:absolute;
-    align-self:center;
     top:200px;
 
     letter-spacing: 2px;
@@ -264,7 +260,6 @@ a:hover{
 }
 
 .pageTitle p{
-    align-self:flex-start;
     margin-bottom:20px;
     min-width:0;
 }
@@ -629,7 +624,6 @@ section.sendoff{
     height:15%;
     height:calc((100vh - (16vw + 150px))/3);
     flex-direction:row;
-    align-self:flex-start;
     align-items:center;
     justify-content: flex-start;
     padding-top:30px;
@@ -818,11 +812,9 @@ section.sendoff{
     position:relative;
     width:100%;
     flex-direction:row;
-    align-self:flex-start;
     margin-top:20px;
     margin-bottom:20px;
     flex-wrap:wrap;
-    justify-content:flex-start;
 }
 
 .titleContainer{
