@@ -291,7 +291,6 @@ function toggleContact(shown, newSection){
         //get position
         var newPosition;
         stop = Math.round($(window).scrollTop());
-        console.log(stop);
 
         mobileStop=stop;
 
@@ -354,8 +353,6 @@ function toggleContact(shown, newSection){
             scrollTop: mobileStop
         }, 0);
 
-        console.log(mobileStop);
-
         // change the page name to the last seen section
         pageScroll( );
     }
@@ -364,7 +361,6 @@ function toggleContact(shown, newSection){
 }
 
 function toggleProject(element){
-    conosle.log('toggleProject');
     if(element!=''){
         project=element;
 
