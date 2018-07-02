@@ -23,6 +23,7 @@ section.introduction, section.contact, section#icons, section#games {
 
 /* Three Down sections*/
 section.threeDown {
+  padding: 0;
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: .5fr auto .5fr auto auto auto;
   grid-column-gap: 20px;
