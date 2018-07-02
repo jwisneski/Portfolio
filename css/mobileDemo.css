@@ -1,0 +1,271 @@
+.phoneStatus, .phoneTime {
+  width: calc(25% - 8px);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  text-align: center;
+  font-weight: 500; }
+
+.phoneStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  position: absolute;
+  top: 10px;
+  left: auto;
+  right: 3px; }
+
+.phoneStatus svg {
+  height: 100%; }
+
+#nationwide figure {
+  background-color: #0072CF;
+  color: #fff; }
+
+#nationwide g, #nationwide rect {
+  fill: #fff;
+  stroke: #fff; }
+
+#nationwide figure h1 {
+  font-size: 30px;
+  font-weight: 200;
+  position: absolute;
+  top: 50px; }
+
+.IDCard {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 100px;
+  left: 5%;
+  background-image: url("../images/NWIDCard.png");
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.IDCard.minimized {
+  top: 80% !important; }
+
+.webAddress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  background-color: #efefef;
+  position: absolute;
+  top: 40px; }
+
+.webAddress p {
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  align-self: center; }
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 90px;
+  font-size: 30px;
+  font-weight: 500; }
+
+.titleRow svg {
+  width: 20px;
+  height: 20px; }
+
+.savingTotal {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #00AD46;
+  margin-bottom: 20px; }
+  .savingTotal span {
+    font-size: 16px;
+    color: #555; }
+
+.savingHidden {
+  opacity: 0; }
+
+.autoPilotRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 220px; }
+  .autoPilotRow p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px; }
+
+.switch, .switchBackground, .switchKnob {
+  /* box-sizing:border-box; */
+  -ms-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
+
+.switch {
+  width: 55px;
+  height: 30px;
+  position: relative;
+  margin-right: 10px; }
+
+.switchHidden {
+  opacity: 0; }
+
+.switchLarge {
+  width: 40%;
+  height: 20vw; }
+
+.switch:hover {
+  cursor: pointer; }
+
+.switchBackground, .switchKnob {
+  border-radius: 10vw;
+  position: absolute;
+  border: 1px solid #00AD46; }
+
+.switchBackground {
+  width: 90%;
+  height: 95%;
+  background-color: #00AD46;
+  left: 0;
+  top: 0; }
+
+.switchOff .switchBackground {
+  background-color: lightGrey;
+  border-color: darkGrey; }
+
+.switchKnob {
+  width: 48%;
+  padding-bottom: 48%;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.5);
+  right: -2%;
+  left: 50%;
+  top: 4%;
+  border-radius: 100%;
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box; }
+
+.switchLarge .switchKnob {
+  top: 3%;
+  box-shadow: 0.6vw 0.5vw 1vw 0.3vw rgba(80, 80, 80, 0.5);
+  border-width: .3vw; }
+
+.switchOff .switchKnob {
+  left: 2%;
+  right: 50%; }
+
+.switchLarge.switchOff .switchKnob {
+  left: 2%;
+  right: 49%; }
+
+.stackingDivider {
+  position: absolute;
+  top: 280px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #555; }
+
+.discount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 1px solid #555;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 360px; }
+
+.discount.first {
+  border-top: 1px solid #555; }
+
+.discount.second {
+  margin-top: 80px; }
+
+.discount.third {
+  margin-top: 160px; }
+
+.discount .baseOffer {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: #00AD46;
+  border-color: #00AD46;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 200; }
+
+.baseOffer.kohlsCash {
+  background-color: #00AD46;
+  border: 1px solid #44DB5E; }
+
+.baseOffer.dollarOff {
+  background-color: #7E2C79;
+  border: 1px solid #CB187C; }
+
+.baseOffer.percentOff {
+  background-color: #F2942A;
+  border: 1px solid #BA8D4E; }
+
+.baseOffer.disabled {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%); }
+
+.discount .details {
+  margin-left: 20px; }
+  .discount .details p {
+    margin: 0; }
+
+p.offerDetails {
+  padding-top: 6px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500; }
+
+p.restrictions {
+  font-size: 12px;
+  color: #999;
+  font-weight: 300; }
+
+.discount .switch {
+  position: absolute;
+  top: calc($intentionalSpace + 5px);
+  right: 0; }
+
+/*# sourceMappingURL=mobileDemo.css.map */

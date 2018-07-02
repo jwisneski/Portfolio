@@ -1,0 +1,356 @@
+/* Flexboxes */
+.miniBagScreen, .miniBagScreen .navBar, .navBar div, .products, .kohlsBagButton,
+.product .back, .product .productDetails, .product .stepper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative; }
+
+.miniBagScreen {
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%; }
+
+.miniBagScreen .pageArea {
+  width: 60%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative; }
+
+.miniBagScreen .adLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://jwisneski.github.io/portfolio/images/adLeft.jpg");
+  background-size: cover;
+  background-position: top right;
+  width: 20%;
+  height: 100%; }
+
+.miniBagScreen .adRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("https://jwisneski.github.io/portfolio/images/adRight.jpg");
+  background-size: cover;
+  background-position: top left;
+  width: 20%;
+  height: 100%; }
+
+.miniBagScreen .adCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://jwisneski.github.io/portfolio/images/adCenter.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  width: 100%;
+  height: calc(60vw / 6.25); }
+
+.miniBagScreen .adBelow {
+  background-image: url("https://jwisneski.github.io/portfolio/images/kohlsHome.jpg");
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: calc((60vw / 6.25) + 50px); }
+
+.miniBagScreen .navBar {
+  position: absolute;
+  top: calc(60vw / 6.25);
+  background-color: #454545;
+  width: 100%;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px; }
+
+.kohlsLogo {
+  background-image: url("https://jwisneski.github.io/portfolio/images/kohlsLogo.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 20px;
+  width: 120px;
+  height: 100%; }
+
+.kohlsSearch {
+  width: 30%;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  align-items: flex-start !important;
+  padding-left: 20px;
+  color: #999; }
+
+.kohlsAccount {
+  font-size: 10px;
+  color: #fff; }
+
+.kohlsAccount > .accountIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  overflow: hidden; }
+
+.accountIcon::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  top: 5px; }
+
+.accountIcon::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 1px;
+  top: 12px; }
+
+.kohlsAccount > p {
+  margin-bottom: 0; }
+
+.navBar .buttons {
+  flex-direction: row;
+  height: 100%; }
+
+.kohlsBagButton {
+  width: 150px;
+  height: 100%;
+  color: #fff;
+  border-left: 1px solid #000;
+  font-weight: 500; }
+
+.kohlsBagButton .bagImage {
+  height: 40px;
+  width: 36px;
+  margin-left: 10px;
+  align-self: flex-start;
+  -ms-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+.kohlsBagButton .bagImage::after {
+  content: '$301.28';
+  position: absolute;
+  left: 150%; }
+
+.kohlsBagButton p {
+  margin-bottom: 0; }
+
+.kohlsBagButtonOpen {
+  background-color: #F0F0F0;
+  color: #000; }
+
+.kohlsCheckout {
+  margin-right: 20px;
+  width: 120px;
+  height: 100%;
+  background-color: #00AD46;
+  color: #fff;
+  font-weight: 500; }
+
+.miniBagContainer {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: calc((60vw / 6.25) + 50px);
+  left: 0;
+  overflow: hidden; }
+
+.miniBagContainer p {
+  margin: 0; }
+
+.miniBagBackground {
+  position: absolute;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #F0F0F0; }
+
+.miniBagOpen {
+  top: 0; }
+
+.bagSummary {
+  position: absolute;
+  width: 35%;
+  height: 90%;
+  top: 5%;
+  right: 10px;
+  background-image: url("https://jwisneski.github.io/portfolio/images/bagSummary.jpg");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.products {
+  position: absolute;
+  width: 60%;
+  height: 90%;
+  top: 5%;
+  left: 10px;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.product {
+  position: relative;
+  width: 18%;
+  height: 90%; }
+
+.product p {
+  margin-bottom: 0; }
+
+.productPhoto {
+  width: 100%;
+  height: 70%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.productPhoto.mixer {
+  background-image: url("https://jwisneski.github.io/portfolio/images/mixer.jpg"); }
+
+.productPhoto.shirt {
+  background-image: url("https://jwisneski.github.io/portfolio/images/shirt.jpg"); }
+
+.productPhoto.towel {
+  background-image: url("https://jwisneski.github.io/portfolio/images/towel.jpg"); }
+
+.salePrice {
+  color: #E01B22;
+  font-weight: 500; }
+
+.regPrice {
+  text-decoration: line-through;
+  font-size: 12px; }
+
+.blank {
+  border-color: #fff;
+  background: #fff; }
+
+.fullBag {
+  background-color: #fff;
+  border: 1px solid #00AD46; }
+
+.fullBag .bagImage {
+  width: 50%;
+  height: 62%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5px; }
+
+.bagImage div.strap {
+  position: absolute;
+  top: 3%;
+  left: calc(15% - 1px);
+  border-radius: 100%;
+  width: 70%;
+  height: 70%;
+  border: 2px solid #00AD46; }
+
+.bagImage div.bag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: #00AD46;
+  border: 1px solid #00AD46;
+  text-align: center;
+  font-weight: 500;
+  color: #fff; }
+
+.fullBag p {
+  margin-bottom: 0;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px; }
+
+.product.flipped {
+  perspective: 1000px;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d; }
+
+.product .front, .product .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden; }
+
+/* front pane, placed above back */
+.product .front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.product .back {
+  transform: rotateY(180deg);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #999;
+  justify-content: space-between; }
+
+.product .productDetails {
+  width: 90%;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.product .swatch {
+  width: 20px;
+  height: 20px;
+  background-color: #2B5D85; }
+
+.product .size {
+  width: 20px;
+  height: 20px;
+  line-height: 20px; }
+
+.product .rightArrow {
+  width: 10px;
+  height: 20px;
+  line-height: 17px; }
+
+.product .stepper {
+  flex-direction: row;
+  width: 90%;
+  height: 40px;
+  margin-top: -20px; }
+
+.product .plus, .product .minus, .product .qty {
+  border: 1px solid #454545;
+  width: 33%;
+  text-align: center;
+  font-weight: 400; }
+
+.product .remove {
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px; }
+
+/*# sourceMappingURL=desktopDemo.css.map */

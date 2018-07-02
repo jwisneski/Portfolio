@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-weight: 200;
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  cursor: default; }
+
+body {
+  position: relative;
+  height: auto;
+  overflow-x: hidden; }
+
+main {
+  width: 100vw;
+  height: auto;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.25em; }
+
+h1 {
+  font-weight: 500;
+  font-size: 10vw; }
+
+h2 {
+  font-weight: 200;
+  font-size: 6vw; }
+
+h3 {
+  font-weight: 300;
+  font-size: 22px; }
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 0;
+  margin-bottom: 0; }
+
+h4 span {
+  font-weight: 500; }
+
+h5 {
+  font-size: 22px;
+  font-weight: 200;
+  margin-bottom: 0; }
+
+h5 span {
+  font-size: 14px; }
+
+h6 {
+  font-weight: 300;
+  font-size: 14px; }
+
+p {
+  /* adds a readable width and some spacing below paragraphs */
+  max-width: 600px;
+  margin: 10px 0; }
+
+blockquote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  font-style: italic;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  display: none;
+  height: auto;
+  width: 100%;
+  padding: 50px 20px; }
+
+blockquote p {
+  max-width: 400px; }
+
+blockquote span {
+  font-size: 14px; }
+
+a {
+  text-decoration: none;
+  color: #1F76DB; }
+
+button a {
+  color: inherit;
+  font-weight: inherit; }
+
+button {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* removes the 1990's affordances */
+  text-decoration: none;
+  /* adds the 2010's affordances */
+  padding: 10px;
+  width: 100%;
+  /* used to make links expand from the center */
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 200;
+  font-size: 18px;
+  border-width: 2px;
+  border-style: solid;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #fff;
+  grid-area: mainAction; }
+  button:hover {
+    background-color: #fff; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  grid-area: header; }
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  color: #000;
+  grid-area: spaceBelow;
+  margin: 10px 0;
+  align-self: end; }
+
+footer p {
+  font-size: 14px; }
+
+footer span {
+  font-weight: 500; }
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 50px 50px 10px;
+  grid-column-gap: 0;
+  grid-row-gap: 10px;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  grid-auto-flow: dense;
+  grid-template-areas: "header header" "subhead subhead" "contentTop contentTop" "contentBottom contentBottom" "mainAction mainAction" "secondAction secondAction" "bottomMargin bottomMargin";
+  height: auto;
+  padding: 0 10px; }
+
+main > section:first-of-type {
+  margin-top: 0; }
+
+main > section:last-of-type {
+  margin-bottom: 0; }
+
+body > section {
+  margin: 0; }
+
+article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  grid-area: subhead; }
+
+aside {
+  width: 100%;
+  grid-area: contentTop;
+  display: none; }
+
+figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%; }
+
+img {
+  width: 50%;
+  height: auto; }
+
+svg {
+  width: auto;
+  height: 80px; }
+
+@media (max-height: 560px) {
+  section {
+    max-height: none !important; } }
+@media (min-width: 370px) {
+  button {
+    width: 300px;
+    justify-self: center; } }
+@media (min-width: 660px) {
+  header {
+    width: 100%; }
+
+  hgroup {
+    width: 100%; }
+
+  aside {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block; }
+
+  section {
+    margin: 50px 0;
+    padding: 0; } }
+@media (min-width: 930px) {
+  header {
+    align-self: start;
+    width: auto; }
+
+  hgroup {
+    width: auto;
+    align-items: flex-start; }
+
+  h1 {
+    font-size: 4vw; }
+
+  h4 {
+    font-size: 18px; }
+
+  h5 {
+    font-size: 25px; }
+
+  header h5 {
+    font-size: 50px; }
+
+  h6 {
+    font-size: 16px; }
+
+  blockquote {
+    display: flex;
+    margin: 0 0 100px 0; }
+
+  article {
+    width: auto; }
+
+  button {
+    justify-self: auto; } }
+
+/*# sourceMappingURL=global.css.map */
