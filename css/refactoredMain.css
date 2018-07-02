@@ -19,8 +19,7 @@ section.imageMattersYellow {
   fill: #fff; }
 
 section.introduction, section.contact, section#icons, section#games {
-  min-height: 80vh !important;
-  padding-bottom: 20vh; }
+  min-height: 80vh !important; }
 
 /* Three Down sections*/
 section.threeDown {
@@ -60,7 +59,8 @@ section.threeDown#games, section.threeDown#icons, section.threeDown#contact {
   height: 100px; }
 
 section#contact {
-  min-height: 90vh; }
+  min-height: 90vh !important;
+  padding-bottom: 10vh !important; }
 
 section#games, section#icons {
   overflow-y: scroll;
