@@ -19,7 +19,7 @@ section.imageMattersYellow {
   fill: #fff; }
 
 section.introduction, section.contact, section#icons, section#games {
-  min-height: 80vh; }
+  min-height: 80vh !important; }
 
 /* Three Down sections*/
 section.threeDown {
