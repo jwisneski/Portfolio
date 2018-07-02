@@ -18,8 +18,8 @@ section.imageMattersYellow {
   color: #fff;
   fill: #fff; }
 
-section.introduction {
-  max-height: 90vh; }
+section.introduction, section.contact, section#icons, section#games {
+  min-height: 80vh; }
 
 /* Three Down sections*/
 section.threeDown {
