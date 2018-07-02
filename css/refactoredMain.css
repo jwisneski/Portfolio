@@ -185,6 +185,9 @@ p.centered {
 @media (min-width: 930px) {
   p.centered {
     text-align: left; } }
+main.fixed {
+  height: 10vh; }
+
 section.fixedHeight {
   min-height: 100vh;
   max-height: 100vh; }

@@ -251,9 +251,6 @@ input {
     align-self: start;
     width: auto; }
 
-  footer {
-    grid-area: spaceBelow; }
-
   hgroup {
     width: auto;
     align-items: flex-start; }
