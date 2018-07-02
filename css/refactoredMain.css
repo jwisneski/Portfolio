@@ -81,7 +81,7 @@ section.threeDown#games, section.threeDown#icons, section.threeDown#contact {
     grid-template-areas: "marginLeft spaceTop spaceTop spaceTop marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; }
 
   section.threeDown#sendoff {
-    grid-template-areas: "marginLeft spaceLeft backButton spaceRight marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceBelow spaceBelow spaceBelow marginRight"; } }
+    grid-template-areas: "marginLeft space space space marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; } }
 button.primaryBlue {
   border-color: #1F76DB;
   background-color: #1F76DB; }
@@ -292,6 +292,9 @@ svg.close {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+
+h3.hideCopy {
+  opacity: 0; }
 
 @media (min-width: 660px) {
   .mobileProject, .desktopProject {

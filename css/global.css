@@ -216,6 +216,12 @@ svg {
   width: auto;
   height: 80px; }
 
+input {
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  opacity: 0; }
+
 @media (max-height: 560px) {
   section {
     max-height: none !important; } }
@@ -244,9 +250,9 @@ svg {
   header {
     align-self: start;
     width: auto; }
-  
-  footer{
-    grid-area:spaceBelow;}
+
+  footer {
+    grid-area: spaceBelow; }
 
   hgroup {
     width: auto;
