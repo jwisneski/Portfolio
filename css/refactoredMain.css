@@ -58,7 +58,8 @@ section.threeDown#games, section.threeDown#icons, section.threeDown#contact {
   height: 100px; }
 
 section#games, section#icons {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  height: 100vh; }
 
 @media (min-width: 660px) {
   section.kohlsMagenta, section.kohlsGreen,
@@ -270,7 +271,7 @@ aside.portrait {
 svg.close {
   width: 50px !important;
   height: 50px !important;
-  padding: 10px;
+  padding: 10px 10px 50px 10px;
   z-index: 11;
   cursor: pointer;
   grid-area: backButton;
