@@ -1,0 +1,453 @@
+section.kohlsMagenta {
+  background-color: #CB187C;
+  color: #fff;
+  fill: #fff; }
+
+section.kohlsGreen {
+  background-color: #00AD46;
+  color: #fff;
+  fill: #fff; }
+
+section.nationwideBlue {
+  background-color: #0072CF;
+  color: #fff;
+  fill: #fff; }
+
+section.imageMattersYellow {
+  background-color: #F2C924;
+  color: #fff;
+  fill: #fff; }
+
+section.introduction, section.contact, section#icons, section#games {
+  min-height: 90vh; }
+
+/* Three Down sections*/
+section.threeDown {
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: .5fr auto .5fr auto auto auto;
+  grid-column-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: "marginLeft backButton marginRight" "marginLeft header marginRight" "marginLeft spaceMiddle marginRight" "marginLeft contentTop marginRight" "marginLeft contentMiddle marginRight" "marginLeft contentBottom marginRight"; }
+
+section.threeDown#sendoff {
+  grid-template-areas: "marginLeft spaceAbove marginRight" "marginLeft header marginRight" "marginLeft spaceMiddle marginRight" "marginLeft contentTop marginRight" "marginLeft mainAction marginRight" "marginLeft backButton marginRight"; }
+
+section.threeDown#games, section.threeDown#icons, section.threeDown#contact {
+  grid-template-areas: "marginLeft header marginRight" "marginLeft contentTop marginRight" "marginLeft contentMiddle marginRight" "marginLeft contentBottom marginRight" "marginLeft mainAction marginRight" "marginLeft backButton marginRight";
+  overflow-y: scroll; }
+
+.threeDown .contentTop, .threeDown .contentMiddle, .threeDown .contentBottom {
+  flex-direction: column;
+  width: auto; }
+
+.threeDown .contentTop {
+  grid-area: contentTop; }
+
+.threeDown .contentMiddle {
+  grid-area: contentMiddle; }
+
+.threeDown .contentBottom {
+  grid-area: contentBottom; }
+
+.threeDown .backButton {
+  grid-area: backButton; }
+
+.threeDown svg {
+  width: 100px;
+  height: 100px; }
+
+section#games, section#icons {
+  overflow-y: scroll;
+  height: 100vh; }
+
+@media (min-width: 660px) {
+  section.kohlsMagenta, section.kohlsGreen,
+  section.nationwideBlue, section.imageMattersYellow {
+    background-color: #fff;
+    color: #000;
+    fill: #000; }
+
+  section.introduction {
+    max-height: none;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-rows: 1fr auto auto 1fr;
+    align-items: center;
+    grid-template-areas: "marginLeft spaceTop spaceTop spaceTop marginRight" "marginLeft header header mainAction marginRight" "marginLeft space space secondAction marginRight" "marginLeft spaceBelow spaceBelow spaceBelow marginRight"; } }
+@media (min-width: 930px) {
+  section.threeDown, section.threeDown#games, section.threeDown#icons,
+  section.threeDown#contact {
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-rows: .5fr auto .5fr auto 1fr;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft spaceTop spaceTop spaceTop marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; }
+
+  section.threeDown#sendoff {
+    grid-template-areas: "marginLeft space space space marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; } }
+button.primaryBlue {
+  border-color: #1F76DB;
+  background-color: #1F76DB; }
+  button.primaryBlue:hover {
+    background-color: #fff;
+    color: #1F76DB; }
+
+button.primaryOrange {
+  border-color: #EA7E0D;
+  background-color: #EA7E0D; }
+  button.primaryOrange:hover {
+    background-color: #fff;
+    color: #EA7E0D; }
+
+button.disabled {
+  background-color: #fff;
+  border-color: #555;
+  color: #555; }
+  button.disabled:hover {
+    background-color: #fff;
+    border-color: #555;
+    color: #555; }
+
+button.secondary {
+  border: none;
+  background-color: #fff;
+  color: #1F76DB; }
+  button.secondary:hover {
+    border-color: #1F76DB; }
+
+button.kohlsGreen {
+  border-color: #00AD46;
+  background-color: #00AD46; }
+  button.kohlsGreen:hover {
+    background-color: #fff;
+    color: #00AD46; }
+
+button.kohlsMagenta {
+  border-color: #CB187C;
+  background-color: #CB187C; }
+  button.kohlsMagenta:hover {
+    background-color: #fff;
+    color: #CB187C; }
+
+button.kohlsMagenta.light {
+  border-color: #CB187C;
+  background-color: #fff;
+  color: #CB187C; }
+  button.kohlsMagenta.light:hover {
+    border-color: #fff;
+    background-color: #CB187C;
+    color: #fff; }
+
+button.nationwideBlue {
+  border-color: #0072CF;
+  background-color: #0072CF; }
+  button.nationwideBlue:hover {
+    background-color: #fff;
+    color: #0072CF; }
+
+button.nationwideBlue.light {
+  border-color: #0072CF;
+  background-color: #fff;
+  color: #0072CF; }
+  button.nationwideBlue.light:hover {
+    border-color: #fff;
+    background-color: #0072CF;
+    color: #fff; }
+
+button.imageMattersYellow {
+  border-color: #F2C924;
+  background-color: #F2C924; }
+  button.imageMattersYellow:hover {
+    background-color: #fff;
+    color: #F2C924; }
+
+button.secondAction {
+  grid-area: secondAction; }
+
+@media (min-width: 660px) {
+  button.kohlsMagenta.light {
+    border-color: #CB187C;
+    background-color: #CB187C;
+    color: #fff; }
+    button.kohlsMagenta.light:hover {
+      border-color: #CB187C;
+      background-color: #fff;
+      color: #CB187C; }
+
+  button.nationwideBlue.light {
+    border-color: #0072CF;
+    background-color: #0072CF;
+    color: #fff; }
+    button.nationwideBlue.light:hover {
+      border-color: #0072CF;
+      background-color: #fff;
+      color: #0072CF; } }
+.centered {
+  text-align: center; }
+
+@media (min-width: 660px) {
+  .centered {
+    text-align: left; } }
+main.fixed {
+  height: 10vh; }
+
+section.fixedHeight {
+  min-height: 100vh;
+  max-height: 100vh; }
+
+section.autoHeight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 50px 50px 10px;
+  grid-column-gap: 0;
+  grid-row-gap: 10px;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  grid-auto-flow: dense;
+  grid-template-areas: "header header" "subhead subhead" "contentTop contentTop" "contentBottom contentBottom" "mainAction mainAction" "secondAction secondAction" "bottomMargin bottomMargin";
+  grid-template-rows: 1fr 1fr 1fr !important;
+  grid-template-areas: "header header" "subhead subhead" "contentTop contentTop" !important; }
+
+section.autoHeight.smallSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 50px 50px 10px;
+  grid-column-gap: 0;
+  grid-row-gap: 10px;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  grid-auto-flow: dense;
+  grid-template-areas: "header header" "subhead subhead" "contentTop contentTop" "contentBottom contentBottom" "mainAction mainAction" "secondAction secondAction" "bottomMargin bottomMargin";
+  grid-template-rows: 1fr 1fr !important;
+  grid-template-areas: "header header" "subhead subhead" !important; }
+
+section.hiddenBelow {
+  position: fixed;
+  top: 120vh;
+  left: 0;
+  width: 100%;
+  background-color: #fff; }
+
+section.hiddenBelow.shown {
+  top: 0; }
+
+article.row {
+  flex-direction: row;
+  justify-content: space-around; }
+
+article.column {
+  flex-direction: column;
+  justify-content: space-around; }
+
+aside.portrait {
+  display: block; }
+
+.portrait img {
+  border-radius: 100%; }
+
+.projectInfo:nth-of-type(1n) {
+  grid-area: contentTop; }
+
+.projectInfo:nth-of-type(2n) {
+  grid-area: contentBottom; }
+
+.iconSmall img {
+  height: 50px;
+  width: auto; }
+
+#sideProjects .secondAction, #contact .secondAction {
+  grid-area: mainAction !important; }
+
+#sendoff button, #contact button {
+  grid-area: mainAction !important;
+  justify-self: center !important; }
+
+.introduction header {
+  grid-area: contentTop; }
+
+svg.close {
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px 10px 50px 10px;
+  z-index: 11;
+  cursor: pointer;
+  grid-area: backButton;
+  align-self: end;
+  justify-self: center; }
+
+#games img {
+  height: 100px;
+  width: auto; }
+
+.miniBagScreen *, .mobileProject figure * {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#contact, #icons, #games {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+h3.hideCopy {
+  opacity: 0; }
+
+.icons, .games {
+  cursor: pointer; }
+
+@media (min-width: 660px) {
+  .mobileProject, .desktopProject {
+    grid-template-columns: 20px 1fr 1fr 20px;
+    grid-template-rows: 0.5fr 100px 20px auto 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    grid-template-areas: "marginLeft header header marginRight" "marginLeft subhead subhead marginRight" "marginLeft spaceTop spaceTop marginRight" "marginLeft contentTop secondAction marginRight" "marginLeft contentBottom image marginRight" "space space image marginRight";
+    overflow: hidden; }
+
+  .desktopProject {
+    grid-template-columns: 20px 1fr 1fr 20px;
+    grid-template-rows: 0.5fr auto auto 20px 1fr;
+    align-items: center;
+    justify-items: start;
+    grid-template-areas: "marginLeft header header marginRight" "marginLeft subhead contentTop marginRight" "marginLeft secondAction contentBottom marginRight" "space space space space" "image image image image"; }
+
+  .desktopProject.short {
+    justify-items: center;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    grid-template-rows: auto auto 50px 50px;
+    grid-template-areas: "marginLeftTop header header header marginRightTop" "marginLeft contentTop contentBottom mainAction marginRight" "space space space space space" "image image image image image"; }
+
+  .mobileProject {
+    border-bottom: 1px solid #000; }
+
+  .projectInfo hgroup {
+    align-items: flex-start;
+    width: 60%; }
+
+  .mobileProject aside {
+    border-radius: 30px 30px 0 0;
+    border-radius: 5vw 5vw 0 0;
+    margin-top: 20px;
+    background-color: #555;
+    position: relative; }
+
+  .mobileProject figure {
+    width: calc(100% - 16px);
+    height: calc(100% - 8px);
+    border-radius: 25px 25px 0 0;
+    border-radius: 4.1vw 4.1vw 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    background-color: #fff; }
+
+  .mobileProject figure div.notch {
+    width: 50%;
+    height: 31px;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: -1px;
+    left: 25%;
+    background-color: #555; }
+
+  aside.portrait {
+    grid-area: contentBottom; }
+
+  .desktopProject figure {
+    align-items: flex-start;
+    height: 400px; }
+
+  .introduction header {
+    grid-area: header; } }
+@media (min-width: 930px) {
+  .fixedHeight.mobileProject, .fixedHeight.desktopProject {
+    min-height: 0;
+    max-height: none;
+    margin: 0; }
+
+  .fixedHeight.mobileProject {
+    max-height: 650px; }
+
+  .desktopProject {
+    grid-template-rows: 450px 20px 1fr 1fr 1fr;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    align-items: center;
+    justify-items: start;
+    grid-template-areas: "image image image image image" "marginLeft spaceBetween spaceBetween spaceBetween marginRight" "marginLeft header header subhead marginRight" "marginLeft contentTop contentBottom mainAction marginRight" "space space space space space";
+    grid-template-columns: .3fr 1fr 1fr 1fr .3fr;
+    grid-column-gap: 10px; }
+
+  .mobileProject {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    grid-template-areas: "marginLeft image marginMiddle header header margin margin" "marginLeft image marginMiddle subhead subhead margin margin" "marginLeft image marginMiddle contentTop contentBottom margin margin" "marginLeft image marginMiddle mainAction mainAction margin margin" "marginLeft image space space space space space";
+    grid-template-columns: 1fr 450px 20px 200px 200px 0 1fr;
+    grid-column-gap: 10px; }
+
+  .portrait img {
+    height: 250px;
+    width: auto; }
+
+  .desktopProject button, .mobileProject button {
+    align-self: center;
+    grid-area: mainAction !important; }
+
+  .projectInfo hgroup {
+    width: inherit; }
+
+  .mobileProject figure div.notch {
+    height: 41px;
+    border-radius: 0 0 30px 30px; }
+
+  .iconSmall img {
+    margin-top: 50px;
+    height: 100px; } }
+@media (min-width: 1120) {
+  .mobileProject {
+    grid-template-columns: 1fr 500px 50px 250px 250px 0 1fr; }
+
+  .fixedHeight.mobileProject {
+    max-height: 800px; }
+
+  .mobileProject aside {
+    border-radius: 4vw 4vw 0 0; }
+
+  .mobileProject figure {
+    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+    border-radius: 3.1vw 3.1vw 0 0;
+    left: 10px; } }
+@media (min-width: 1200px) {
+  .desktopProject {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+
+  .mobileProject aside {
+    border-radius: 3.5vw 3.5vw 0 0; }
+
+  .mobileProject figure {
+    border-radius: 2.75vw 2.75vw 0 0; } }
+@media (min-width: 1620px) {
+  .mobileProject aside {
+    border-radius: 50px 50px 0 0; }
+
+  .mobileProject figure {
+    width: calc(100% - 24px);
+    height: calc(100% - 12px);
+    border-radius: 40px 40px 0 0;
+    left: 12px; }
+
+  .mobileProject figure div.notch {
+    height: 31px;
+    border-radius: 0 0 20px 20px; } }
+
+/*# sourceMappingURL=refactoredMain.css.map */
