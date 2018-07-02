@@ -58,9 +58,14 @@ section.threeDown#games, section.threeDown#icons, section.threeDown#contact {
   width: 100px;
   height: 100px; }
 
+section#contact {
+  min-height: 90vh; }
+
 section#games, section#icons {
   overflow-y: scroll;
-  height: 100vh; }
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+  padding-bottom: 20px; }
 
 @media (min-width: 660px) {
   section.kohlsMagenta, section.kohlsGreen,
