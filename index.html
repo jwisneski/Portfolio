@@ -23,19 +23,11 @@
 
         <meta name='thumbnail' content='https://jwisneski.github.io/portfolio/images/linkPreview.jpg'/>
 
-        <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/main.css'>
-        <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/projects.css'>
-        <!-- <link rel='stylesheet' type='text/css' href='css/main.css'> -->
-        <!-- <link rel='stylesheet' type='text/css' href='css/projects.css'> -->
-
-        <link rel='stylesheet' type='text/css' href='css/homeUpdate.css'>
-        <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/homeUpdate.css'>
-
-        <!-- <link rel='stylesheet' type='text/css' href='css/projectTemplate.css'> -->
-        <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/projectTemplate.css'>
-
-        <!-- <link rel='stylesheet' type='text/css' href='css/miniBag.css'> -->
-        <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/miniBag.css'>
+        <link rel='stylesheet' type='text/css' href='scss/global.css'>
+        <link rel='stylesheet' type='text/css' href='scss/refactoredMain.css'>
+        <link rel='stylesheet' type='text/css' href='scss/mobileDemo.css'>
+        <link rel='stylesheet' type='text/css' href='scss/desktopDemo.css'>
+        <!-- <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/homeUpdate.css'> -->
 
         <!-- <link rel='shortcut icon' href='favicon.ico' type='images/x-icon'> -->
         <link rel='shortcut icon' href='https://jwisneski.github.io/portfolio/favicon.ico' type='image/x-icon'>
@@ -51,114 +43,134 @@
     </head>
 
     <body>
-        <section class='mainContainer'>
-            <section class='me' id='me' data-section-name='Joel Wisneski'>
-                <div class='pageTitle titleUpdateLeft'>
-                        <div class='leftContent'>
-                            <h1 class='bold'>Joel Wisneski</h1>
-                            <p class='content'>
-                                I ask questions, I sketch with pencil and paper and I craft solutions so
-                                customers can accomplish their goals quickly. My design process is a
-                                combination of creativity, ambition  and a little fun. I make digital experiences
-                                better.
-                            </p>
+        <main>
+            <section id='me' data-section-name='Joel Wisneski' class='me introduction fixedHeight'> <!--Me-->
+                <header>
+                    <hgroup>
+                        <h2>Joel Wisneski</h2>
+                        <h3>I'm a product designer.</h3>
+                    </hgroup>
+                </header>
 
-                            <div class='buttonContainer'>
-                                <a href='javascript:;' class='contactBtn bold'>Let&#39;s talk</a>
-                                <a href='https://jwisneski.github.io/portfolio/JoelWisneskiResume.pdf' target='_blank' class='resumeBtn'>
-                                    Check out my r&eacute;sum&eacute;</a>
-                            </div>
-                        </div>
-
-                        <div class='rightContent'>
-                            <h2 class='bold'>I'm a Product Designer</h2>
-                            <div class='portrait'></div>
-                        </div>
-                </div>
+                <button type='button' class='primaryOrange contactBtn'><a href='javascript:;'>Send me an email</a></button>
+                <button type='button' class='secondAction secondary'><a href='https://jwisneski.github.io/portfolio/JoelWisneskiResume.pdf' target='_blank'>Or view my resume</a></button>
             </section>
 
-            <!-- <section class='lineBreakOne'>
-                <p class='content'>Nationwide UX was recently featured on InVision's Design Genome Project.</p>
-                <a href='https://www.invisionapp.com/blog/nationwide-design/' target='_blank' style='display:inline;'>
-                    Take a look &nearr;</a>
-            </section> -->
+            <blockquote>
+                <p>Nationwide was recently featured on InVision's Design Genome Project.
+                        <a href='https://www.invisionapp.com/blog/nationwide-design/' target='_blank'>Check it out</a>.
+                </p>
+            </blockquote>
 
-            <section class='featured' id='featured' data-section-name='featured projects'>
-                <div class='pageTitle titleUpdateRight'>
-                    <div class='leftContent'>
-                        <h1 class='bold'>Featured</br>projects</h1>
-                    </div>
+            <section id='featured' data-section-name='featured projects' class='featured autoHeight smallSection'> <!--Featured-->
+                <header>
+                    <hgroup>
+                        <h2>Featured projects</h2>
+                        <h3>Shipped, for the customer.</h3>
+                    </hgroup>
+                </header>
 
-                    <div class='rightContent'>
-                         <p class='content'>Success is letting the customer make the decisions. Each of
-                             these projects did this while balancing business goals,
-                             technical constraints and tight deadlines.
-                          </p>
-
-                          <div class='pageTitle hobbies'>
-                              <h2>And side projects</h2>
-
-                              <div class='icons icon'></div>
-                              <div class='games icon'></div>
-                              <div class='music icon'></div>
-                          </div>
-                      </div>
-                </div>
+                <article>
+                    <p class='centered'>Leading a team at Nationwide I design how
+                        customers use the app and how designers work with stakeholders.</p>
+                </article>
             </section>
 
-            <section class='savings projectPreview' id='savings' data-section-name='the savings launcher'>
-                <div class='mobileProject'>
-                    <div class='statusBar'>
-                        <div class='time'><p>9:41</p></div>
-                        <div class='service'>
-                            <div class='cellService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20">
-                                  <g fill-rule="evenodd" fill='#000' stroke='#000'>
-                                    <rect width="3.6" height="4" x="1" y="12" rx=".4"/>
-                                    <rect width="3.6" height="7" x="6.5" y="9" rx=".4"/>
-                                    <rect width="3.6" height="10" x="11.9" y="6" rx=".4"/>
-                                    <rect width="3.6" height="13" x="17.4" y="3" rx=".4"/>
-                                  </g>
-                                </svg>
-                            </div>
-                            <div class='wifiService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                  <g fill-rule="evenodd" stroke="#000" stroke-width=".5" fill='#000'>
-                                    <path fill-rule="nonzero" d="M16.8 9A9.8 9.8 0 0 0 3 9l1 1.1a8.4 8.4 0 0 1 11.7 0l1-1.2z"/>
-                                    <path fill-rule="nonzero" d="M14.7 11a6.9 6.9 0 0 0-9.5.2l1 1a5.4 5.4 0 0 1 7.5 0l1-1.1z"/>
-                                    <path d="M12 13.7l-2.1 2.1-2-2a3.2 3.2 0 0 1 4-.1z"/>
-                                    <path fill-rule="nonzero" d="M18.9 6.8A12.8 12.8 0 0 0 1 6.8L2 8a11.3 11.3 0 0 1 15.8-.2l1-1z"/>
-                                  </g>
-                                </svg>
-                            </div>
-                            <div class='batteryService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
-                                  <g fill="fff" fill-rule="evenodd">
-                                    <path fill="#000" d="M21 7.2h.6c.4 0 .8.4.8.8v3.2c0 .4-.4.8-.8.8H21v3.1c0 .5-.4.8-.8.8H1.8a.8.8 0 0 1-.8-.8V4c0-.4.4-.8.8-.8h18.4c.4 0 .8.4.8.8v3.2z"/>
-                                    <rect width="18.8" height="11.6" x="1.6" y="3.8" fill="#fff" rx=".4"/>
-                                    <path fill="fff" d="M21 7.6h.6c.2 0 .4.2.4.4v3.2c0 .2-.2.4-.4.4H21v-4z"/>
-                                    <rect width="17.4" height="10.4" x="2.2" y="4.4" fill="#000" rx=".2"/>
-                                  </g>
-                                </svg>
-                            </div>
-                        </div>
+            <section id='savings' data-section-name='the savings launcher' class='savings fixedHeight mobileProject'> <!--The Savings Launcher-->
+                <header>
+                    <hgroup class='projectHeader'>
+                        <h4>Kohl's</h4>
+                        <h5>The savings launcher</h5>
+                        <h6>Shipped April 2017.</h6>
+                    </hgroup>
+                </header>
+
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
+                        1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
+                        5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
+                        0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
+                        2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
+                        .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
+                        0 0 0-.26.25z"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <g fill-rule="evenodd">
+                            <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
+                            3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
+                            92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
+                            1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
+                            <path d="M64 90h26v2H64z"/>
+                        </g>
+                    </svg>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4><span>Timeframe</span></h4>
+                        <h5>3 months<span> </span></h5>
+                        <h6>concepting and testing</h6>
+                    </hgroup>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4><span>Positive impact</span></h4>
+                        <h5>$100 million+<span> </span></h5>
+                        <h6>sales in the first year</h6>
+                    </hgroup>
+                </article>
+
+                <aside>
+                    <figure class='mobile'>
+                        <div class='phoneTime'><p>9:41</p></div>
                         <div class='notch'></div>
-                    </div>
+                        <div class='phoneStatus'>
+                            <svg class='cellService' xmlns="http://www.w3.org/2000/svg" width="23" height="20">
+                              <g fill-rule="evenodd" fill='#000' stroke='#000'>
+                                <rect width="3.6" height="4" x="1" y="12" rx=".4"/>
+                                <rect width="3.6" height="7" x="6.5" y="9" rx=".4"/>
+                                <rect width="3.6" height="10" x="11.9" y="6" rx=".4"/>
+                                <rect width="3.6" height="13" x="17.4" y="3" rx=".4"/>
+                              </g>
+                            </svg>
 
-                    <div class='screen savingsLauncherScreen'>
+                            <svg class='wifiService' xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                              <g fill-rule="evenodd" stroke="#000" stroke-width=".5" fill='#000'>
+                                <path fill-rule="nonzero" d="M16.8 9A9.8 9.8 0 0 0 3 9l1 1.1a8.4 8.4 0 0 1 11.7 0l1-1.2z"/>
+                                <path fill-rule="nonzero" d="M14.7 11a6.9 6.9 0 0 0-9.5.2l1 1a5.4 5.4 0 0 1 7.5 0l1-1.1z"/>
+                                <path d="M12 13.7l-2.1 2.1-2-2a3.2 3.2 0 0 1 4-.1z"/>
+                                <path fill-rule="nonzero" d="M18.9 6.8A12.8 12.8 0 0 0 1 6.8L2 8a11.3 11.3 0 0 1 15.8-.2l1-1z"/>
+                              </g>
+                            </svg>
+
+                            <svg class='batteryService' xmlns="http://www.w3.org/2000/svg" width="30" height="20">
+                              <g fill="fff" fill-rule="evenodd">
+                                <path fill="#000" d="M21 7.2h.6c.4 0 .8.4.8.8v3.2c0 .4-.4.8-.8.8H21v3.1c0 .5-.4.8-.8.8H1.8a.8.8 0 0 1-.8-.8V4c0-.4.4-.8.8-.8h18.4c.4 0 .8.4.8.8v3.2z"/>
+                                <rect width="18.8" height="11.6" x="1.6" y="3.8" fill="#fff" rx=".4"/>
+                                <path fill="fff" d="M21 7.6h.6c.2 0 .4.2.4.4v3.2c0 .2-.2.4-.4.4H21v-4z"/>
+                                <rect width="17.4" height="10.4" x="2.2" y="4.4" fill="#000" rx=".2"/>
+                              </g>
+                            </svg>
+                        </div>
+
                         <div class='webAddress'>
                             <p>www.kohls.com</p>
                         </div>
-                        <!-- <div class='header'></div> -->
+
                         <div class='titleRow'>
-                            <div class='back'>
-                                <svg class='leftArrow' xmlns="http://www.w3.org/2000/svg" width="11" height="20">
-                                  <path fill="none" stroke="#007AFF" d="M10.4 19.4L1 10 10.2.8"/>
-                                </svg>
-                                <p>Back</p>
-                            </div>
+                            <svg class='leftArrow' xmlns="http://www.w3.org/2000/svg" width="11" height="20">
+                              <path fill="none" stroke="#007AFF" d="M10.4 19.4L1 10 10.2.8"/>
+                            </svg>
+
                             <div class='title'>Launch savings</div>
-                            <div class='back'></div>
+
+                            <svg></svg>
                         </div>
 
                         <div class='savingTotal'>
@@ -177,6 +189,7 @@
                             <div class='dividerLine'></div>
                             <p>Stacking offers</p>
                         </div>
+
                         <div class='discount first'>
                             <div class='baseOffer kohlsCash disabled'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
@@ -230,655 +243,596 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class='pageTitle'>
-                    <h2 class='bold'>Kohl&#39;s</h2>
-                    <h3 class='bold'>The savings launcher</h3>
-                    <p class=''>Phase 1 shipped April 2017</p>
+                    </figure>
+                </aside>
 
-                    <div class='channels'>
-                        <div class='mobileIcon mobileFirst'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
-                        </div>
-
-                        <div class='tabletIcon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
-                                1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
-                                5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
-                                0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
-                                2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
-                                .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
-                                0 0 0-.26.25z"/>
-                            </svg>
-                        </div>
-
-                        <div class='laptopIcon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                <g fill-rule="evenodd">
-                                    <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
-                                    3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
-                                    92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
-                                    1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
-                                    <path d="M64 90h26v2H64z"/>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class='projectInfo'>
-                        <p class='timeframe'>
-                            <span class='title'>Positive impact</span><br/>
-                            <span class='main'>$100M+</span></br>
-                            <span class='secondary'>in sales since launch</span>
-                        </p>
-
-                        <p class='role'>
-                            <span class='title'>Timeframe</span><br/>
-                            <span class='main'>3 months</span><br/>
-                            <span class='secondary'>concepting and testing</span>
-                        </p>
-                    </div>
-
-                    <a href='https://jwisneski.github.io/portfolio/savingsLauncher.html'>Read the case study</a>
-                    <!-- <a class='savingsLink' href='javascript:;'>View the case study</a> -->
-                    <!-- <a href='https://jwisneski.github.io/portfolio/pdfs/WisneskiPortfolioSavingsLauncher.pdf' target='_blank'>View the case study</a> -->
-                </div>
+                <button type='button' class='secondAction kohlsGreen'><a href='https://jwisneski.github.io/portfolio/savingsLauncher.html'>Read the case study</a></button>
             </section>
 
-            <section class='miniBag desktopPreview projectPreview inverted' id='miniBag' data-section-name='the mini bag'>
-                <div class='desktopProject'>
-                    <div class='screen miniBagScreen'>
-                        <div class='adLeft'></div>
-                        <div class='pageArea'>
-                            <div class='adCenter'></div>
-                            <div class='navBar'>
-                                <div class='kohlsLogo'></div>
-                                <div class='kohlsSearch'>Search</div>
-                                <div class='kohlsAccount'>
-                                    <div class='accountIcon'>&Lfr;</div>
-                                    <p>Account</p>
-                                </div>
-                                <div class='buttons'>
-                                    <div class='kohlsBagButton'>
-                                        <div class='bagImage'>
-                                            <div class='strap'></div>
-                                            <div class='bag'>3</div>
-                                        </div>
-                                    </div>
-                                    <div class='kohlsCheckout'>Check out</div>
-                                </div>
-                            </div>
-                            <div class='adBelow'></div>
-                            <div class='miniBagContainer'>
-                                <div class='miniBagBackground'>
-                                    <div class='products'>
-                                        <div class='product'>
-                                            <div class='productPhoto mixer'></div>
-                                            <div class='price'>
-                                                <p class='salePrice'>$379.99</p>
-                                                <p class='regPrice'>$449.99</p>
-                                            </div>
-                                        </div>
-                                        <div class='product flipProduct'>
-                                            <div class='front'>
-                                                <div class='productPhoto towel'></div>
-                                                <div class='price'>
-                                                    <p class='salePrice'>$9.99</p>
-                                                    <p class='regPrice'>$12.99</p>
-                                                </div>
-                                            </div>
-                                            <div class='back'>
-                                                <div class='productDetails'>
-                                                    <div class='swatch'></div>
-                                                    <div class='size'>S</div>
-                                                    <div class='rightArrow'>&rang;</div>
-                                                </div>
-                                                <div class='stepper'>
-                                                    <div class='plus'>&plus;</div>
-                                                    <div class='qty'>1</div>
-                                                    <div class='minus'>&minus;</div>
-                                                </div>
-                                                <div class='remove'>Remove</div>
-                                            </div>
-                                        </div>
-                                        <div class='product'>
-                                            <div class='productPhoto shirt'></div>
-                                            <div class='price'>
-                                                <p class='salePrice'>$14.00</p>
-                                                <p class='regPrice'>$19.99</p>
-                                            </div>
-                                        </div>
-                                        <div class='product blank'></div>
-                                        <div class='product'>
-                                            <div class='productPhoto fullBag'>
-                                                <div class='bagImage'>
-                                                    <div class='strap'></div>
-                                                    <div class='bag'></div>
-                                                </div>
-                                                <p>View bag</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='bagSummary'></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='adRight'></div>
-                    </div>
-                </div>
+            <section id='miniBag'  data-section-name='the mini bag' class='miniBag fixedHeight kohlsMagenta desktopProject'> <!--The Mini Bag-->
+                <header>
+                    <hgroup class='projectHeader'>
+                        <h4>Kohl's</h4>
+                        <h5>The mini bag</h5>
+                        <h6>Shipped January 2017.</h6>
+                    </hgroup>
+                </header>
 
-                <div class='pageTitle'>
-                    <div class=titleContainer>
-                        <h2 class='bold'>Kohl&#39;s</h2>
-                        <h3 class='bold'>The mini bag</h3>
-                        <p class=''>Shipped January 2017</p>
-
-                        <div class='channels light'>
-                            <div class='laptopIcon'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                    <g fill-rule="evenodd">
-                                        <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
-                                        3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
-                                        92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
-                                        1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
-                                        <path d="M64 90h26v2H64z"/>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='title'>Positive impact</span><br/>
-                                <span class='main'>7%</span>
-                                <span class='secondary'>decrease<br/>in shopping bag views</span>
-                            </p>
-
-                            <p class='role'>
-                                <span class='title'>Timeframe</span><br/>
-                                <span class='main'>6 months</span><br/>
-                                <span class='secondary'>design and testing</span>
-                            </p>
-
-                            <!-- <a href='javascript:;' class='miniBagLink'>View the case study</a> -->
-                            <a href='https://jwisneski.github.io/portfolio/miniBag.html'>Read the case study</a>
-                            <!-- <a href="https://jwisneski.github.io/portfolio/pdfs/WisneskiPortfolioMiniBag.pdf" target="_blank">View the case study</a> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='linebreakOne'>
-                <p class='content'>
-                    <span>When in doubt,</span>the customer makes the decisions.
-                </p>
-            </section>
-
-            <section class='nationwide projectPreview' id='nationwide' data-section-name='Nationwide mobile'>
-                <div class='mobileProject'>
-                    <div class='statusBar'>
-                        <div class='time'><p>9:41</p></div>
-                        <div class='service'>
-                            <div class='cellService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20">
-                                  <g fill-rule="evenodd" fill='#fff' stroke='#fff'>
-                                    <rect width="3.6" height="4" x="1" y="12" rx=".4"/>
-                                    <rect width="3.6" height="7" x="6.5" y="9" rx=".4"/>
-                                    <rect width="3.6" height="10" x="11.9" y="6" rx=".4"/>
-                                    <rect width="3.6" height="13" x="17.4" y="3" rx=".4"/>
-                                  </g>
-                                </svg>
-                            </div>
-                            <div class='wifiService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                  <g fill-rule="evenodd" stroke="#fff" stroke-width=".5" fill='#fff'>
-                                    <path fill-rule="nonzero" d="M16.8 9A9.8 9.8 0 0 0 3 9l1 1.1a8.4 8.4 0 0 1 11.7 0l1-1.2z"/>
-                                    <path fill-rule="nonzero" d="M14.7 11a6.9 6.9 0 0 0-9.5.2l1 1a5.4 5.4 0 0 1 7.5 0l1-1.1z"/>
-                                    <path d="M12 13.7l-2.1 2.1-2-2a3.2 3.2 0 0 1 4-.1z"/>
-                                    <path fill-rule="nonzero" d="M18.9 6.8A12.8 12.8 0 0 0 1 6.8L2 8a11.3 11.3 0 0 1 15.8-.2l1-1z"/>
-                                  </g>
-                                </svg>
-                            </div>
-                            <div class='batteryService'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
-                                  <g fill="0072CF" fill-rule="evenodd">
-                                    <path fill="#fff" d="M21 7.2h.6c.4 0 .8.4.8.8v3.2c0 .4-.4.8-.8.8H21v3.1c0 .5-.4.8-.8.8H1.8a.8.8 0 0 1-.8-.8V4c0-.4.4-.8.8-.8h18.4c.4 0 .8.4.8.8v3.2z"/>
-                                    <rect width="18.8" height="11.6" x="1.6" y="3.8" fill="#0072CF" rx=".4"/>
-                                    <path fill="0072CF" d="M21 7.6h.6c.2 0 .4.2.4.4v3.2c0 .2-.2.4-.4.4H21v-4z"/>
-                                    <rect width="17.4" height="10.4" x="2.2" y="4.4" fill="#fff" rx=".2"/>
-                                  </g>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class='notch'></div>
-                    </div>
-                    <div class='screen nationwideScreen'>
-                        <div class='pagination'>
-                            <div class='paginationDot disabled'></div>
-                            <div class='paginationDot'></div>
-                        </div>
-                        <div class='header'>Insurance ID Cards</div>
-                        <div class='IDCard minimized'></div>
-                    </div>
-                </div>
-
-                <div class='pageTitle'>
-                    <h2 class='bold'>Nationwide</h2>
-                    <h3 class='bold'>The mobile app</h3>
-                    <p class=''>MVP shipped January 2018</p>
-
-                    <div class='channels'>
-                        <div class='watchIcon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                              <path fill-rule="evenodd" d="M65.9 26h.1a4 4 0 0 1 4 4v40a4 4 0 0 1-4 4h-.3c-3.4 6.4-4.3 17-4.3 17-.2 1.7-1.7 3-3.4 3H42a3.6 3.6 0 0 1-3.4-3S37.3 80.4 34 74a4 4 0 0 1-4-4V30a4 4 0 0 1 4-4h.3c3.4-6.4 4.3-17 4.3-17 .2-1.7 1.7-3 3.4-3h16c1.7 0 3.2 1.3 3.4 3 0 0 1.3 10.6 4.5 17zM34 30v40h32V30H34z"/>
-                            </svg>
-                        </div>
-
-                        <div class='mobileIcon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
-                        </div>
-
-                        <div class='tabletIcon'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
-                                1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
-                                5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
-                                0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
-                                2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
-                                .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
-                                0 0 0-.26.25z"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class='projectInfo'>
-                        <p class='timeframe'>
-                            <span class='title'>Positive impact</span><br/>
-                            <span class='main'>&#9733;</span>
-                            <span class='secondary'>improvement<br/>on the App Store</span>
-                        </p>
-
-                        <p class='role'>
-                            <span class='title'>Timeframe</span><br/>
-                            <span class='main'>8 months</span>
-                            <span class='secondary'>with <br/> ongoing improvements</span>
-                        </p>
-                    </div>
-
-                    <a href='https://jwisneski.github.io/portfolio/nwApp.html'>Read the case study</a>
-                    <!-- <a href='javascript:;' class='nationwideAppLink'>View the case study</a> -->
-                    <!-- <a href="https://jwisneski.github.io/portfolio/pdfs/WisneskiPortfolioNationwideMobile.pdf" target="_blank">View the case study</a> -->
-                </div>
-            </section>
-
-            <section class='nationwideLead desktopPreview imageMatters projectPreview inverted' id='NWLead' data-section-name='NW Lead'>
-                <div class='desktopProject'>
-                    <div class='screen nwLeadStakeholders'></div>
-
-                    <div class='screen nwLeadUX'></div>
-
-                    <div class='screen nwLeadDevs'></div>
-                </div>
-                </div>
-
-                <div class='pageTitle'>
-                    <div class=titleContainer>
-                        <h2 class='bold'>Nationwide</h2>
-                        <h3 class='bold'>Leading the app team</h3>
-                        <p class=''>August 2017 to now</p>
-
-                        <div class='channels light'>
-                            <div class='mobileIcon mobileFirst'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                    <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
-                            </div>
-                        </div>
-
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='title'>Timeframe</span><br/>
-                                <span class='main'>10 months+</span><br/>
-                                <span class='secondary'>with 6 development teams</span>
-                            </p>
-
-                            <p class='role'>
-                                <span class='title'>Positive impact</span><br/>
-                                <span class='main'>1 million+</span>
-                                <span class='secondary'></br>downloads</span>
-                            </p>
-
-                            <!-- <a href='https://jwisneski.github.io/portfolio/nwLead.html'>Read the case study</a> -->
-                            <!-- <a href='nwLead.html'>Read the case study</a> -->
-                            <!-- <a href='javascript:;' class='imageMattersLink'>View the case study</a> -->
-                            <!-- <a href="javascript:;" class="contactBtn">View the case study</a> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='linebreakOne'>
-                <p class='content'>
-                    My team is scrappy <span>we work without big budgets or long timelines.</span>
-                </p>
-            </section>
-
-            <section class='imageMatters desktopPreview projectPreview' id='imageMatters' data-section-name='company website'>
-                <div class='desktopProject'>
-                    <div class='screen imBefore'>
-                        <h3 class='bold'></h3>
-                    </div>
-
-                    <div class='screen imAfter'>
-                        <h3 class='bold'></h3>
-                    </div>
-                </div>
-
-                <div class='pageTitle'>
-                    <div class=titleContainer>
-                        <h2 class='bold'>Image Matters</h2>
-                        <h3 class='bold'>The company website</h3>
-                        <p class=''>Shipped August 2015</p>
-
-                        <div class='channels'>
-                            <div class='mobileIcon mobileFirst'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                    <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
-                            </div>
-
-                            <div class='tabletIcon'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                    <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
-                                    1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
-                                    5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
-                                    0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
-                                    2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
-                                    .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
-                                    0 0 0-.26.25z"/>
-                                </svg>
-                            </div>
-
-                            <div class='laptopIcon'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
-                                    <g fill-rule="evenodd">
-                                        <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
-                                        3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
-                                        92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
-                                        1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
-                                        <path d="M64 90h26v2H64z"/>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='title'>Timeframe</span><br/>
-                                <span class='main'>3 months</span><br/>
-                                <span class='secondary'>design and development</span>
-                            </p>
-
-                            <p class='role'>
-                                <span class='title'>Role</span><br/>
-                                <span class='main'>Designer</span>
-                                <span class='secondary'>and<br/> developer</span>
-                            </p>
-
-                            <a href='https://jwisneski.github.io/portfolio/imageMatters.html'>Read the case study</a>
-                            <!-- <a href='javascript:;' class='imageMattersLink'>View the case study</a> -->
-                            <!-- <a href="javascript:;" class="contactBtn">View the case study</a> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class='sendoff' id='sendoff' data-section-name="get in touch">
-                <div class='pageTitle titleUpdateRight'>
-                    <div class='leftContent'>
-                        <h1 class='bold'>Let&#39;s work</br>together</h1>
-                    </div>
-
-                    <div class='rightContent'>
-                        <h2 class='bold'>I&#39;m looking</br>for work.</h2>
-                        <a href='javascript:;' class='contactBtn'>Reach out</a>
-                    </div>
-                </div>
-
-                <div class='footer'>
-                    <p>&copy; Joel Wisneski 2018</p>
-                    <p><span>Designed in Sketch, built with code</span></p>
-                </div>
-            </section>
-        </section>
-
-        <section class='overlayContainer'>
-            <!-- icons project -->
-            <section class='projectContainer iconsProject'>
-                <div class='mobileSection centered'>
-                    <div class='projectTitle'>
-                        <div class='pageTitle'>
-                            <p>In my free time</p>
-                            <h3>I make icons</h3>
-                            <p>and I have over 17,000 downloads</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='iconShowcase'>
-                    <div>
-                        <svg class='periodicTable' xmlns="http://www.w3.org/2000/svg" width='100' height='100'>
-                          <g fill="none" fill-rule="evenodd">
-                            <circle cx="50" cy="50" r="8" fill="#000"/>
-                            <circle cx="71.5" cy="26.5" r="2.5" fill="#000"/>
-                            <circle cx="30.5" cy="24.5" r="2.5" fill="#000"/>
-                            <circle cx="18.5" cy="50.5" r="2.5" fill="#000"/>
-                            <circle cx="22.5" cy="66.5" r="2.5" fill="#000"/>
-                            <circle cx="20.5" cy="77.5" r="2.5" fill="#000"/>
-                            <circle cx="80.5" cy="75.5" r="2.5" fill="#000"/>
-                            <circle cx="56.5" cy="89.5" r="2.5" fill="#000"/>
-                            <circle cx="33.5" cy="13.5" r="2.5" fill="#000"/>
-                            <circle cx="85.5" cy="31.5" r="2.5" fill="#000"/>
-                            <circle cx="56.5" cy="10.5" r="2.5" fill="#000"/>
-                            <circle cx="28.5" cy="73.5" r="2.5" fill="#000"/>
-                            <circle cx="59.5" cy="80.5" r="2.5" fill="#000"/>
-                            <circle cx="81.5" cy="46.5" r="2.5" fill="#000"/>
-                            <circle cx="24.5" cy="30.5" r="2.5" fill="#000"/>
-                            <circle cx="69.5" cy="75.5" r="2.5" fill="#000"/>
-                            <circle cx="64.5" cy="21.5" r="2.5" fill="#000"/>
-                            <circle cx="77.5" cy="66.5" r="2.5" fill="#000"/>
-                            <circle cx="39.5" cy="19.5" r="2.5" fill="#000"/>
-                            <circle cx="81.5" cy="54.5" r="2.5" fill="#000"/>
-                            <circle cx="79.5" cy="38.5" r="2.5" fill="#000"/>
-                            <circle cx="55.5" cy="18.5" r="2.5" fill="#000"/>
-                            <circle cx="44.5" cy="81.5" r="2.5" fill="#000"/>
-                            <circle cx="13.5" cy="33.5" r="2.5" fill="#000"/>
-                            <circle cx="71.5" cy="16.5" r="2.5" fill="#000"/>
-                            <circle cx="35.5" cy="78.5" r="2.5" fill="#000"/>
-                            <circle cx="60.5" cy="28.5" r="2.5" fill="#000"/>
-                            <circle cx="71.5" cy="39.5" r="2.5" fill="#000"/>
-                            <circle cx="29.5" cy="37.5" r="2.5" fill="#000"/>
-                            <circle cx="27.5" cy="58.5" r="2.5" fill="#000"/>
-                            <circle cx="41.5" cy="72.5" r="2.5" fill="#000"/>
-                            <circle cx="32.5" cy="66.5" r="2.5" fill="#000"/>
-                            <circle cx="70.5" cy="62.5" r="2.5" fill="#000"/>
-                            <circle cx="43.5" cy="26.5" r="2.5" fill="#000"/>
-                            <circle cx="20.5" cy="37.5" r="2.5" fill="#000"/>
-                            <circle cx="58.5" cy="36.5" r="2.5" fill="#000"/>
-                            <circle cx="37.5" cy="59.5" r="2.5" fill="#000"/>
-                            <circle cx="50" cy="50" r="32" stroke="#000" stroke-width=".3"/>
-                            <circle cx="50" cy="50" r="40" stroke="#000" stroke-width=".3"/>
-                            <circle cx="50" cy="50" r="24" stroke="#000" stroke-width=".3"/>
-                            <circle cx="50" cy="50" r="16" stroke="#000" stroke-width=".3"/>
-                          </g>
-                        </svg>
-
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>118</span><br/>
-                                <span class='secondary'>periodic elements</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <svg class='devices' xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-                          <g fill="none" fill-rule="evenodd">
-                            <path fill="#000" d="M88.5 68l-.6 5H12l-.6-5H18v1h22v-1h20v1h22v-1h6.5zM57 53H43v-3.5H15V53h-4v-6c0-.6.4-1 1-1h76c.6 0 1 .4 1 1v6h-4v-3.5H57V53z"/>
-                            <path stroke="#000" stroke-width=".5" d="M60 68H40v1H18v-1H6l-1-7.5L6 53h12v-1h22v1h20v-1h22v1h12l1 7.5-1 7.5H82v1H60v-1zM27 29.2c0-.5.5-1 1-1h44c.6 0 1 .5 1 1v17H27v-17z"/>
-                            <circle cx="11.5" cy="60.5" r="1.5" fill="#000"/>
-                            <path fill="#000" d="M40 60.3h20v.5H40zm42 0h13v.5H82zm-77 0h13v.5H5z"/>
-                            <path stroke="#000" stroke-width=".5" d="M18 52h22v17H18z"/>
-                            <path fill="#000" d="M18 55.5h22v.5H18zm0 9.5h22v.5H18zm5.1-3h13.4v-3H23.1c-.9 0-1.6.7-1.6 1.5s.7 1.5 1.6 1.5zm-.1.5a2 2 0 1 1 0-4h14v4H23z"/>
-                            <path fill="#000" d="M28 58.5h.5v4H28z"/>
-                            <circle cx="22.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="24.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="26.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="29.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="31.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="33.5" cy="60.5" r=".5" fill="#000"/>
-                            <circle cx="35.5" cy="60.5" r=".5" fill="#000"/>
-                            <path stroke="#000" stroke-width=".5" d="M82 52H60v17h22z"/>
-                            <path fill="#000" d="M82 55.5H60v.5h22zm0 9.5H60v.5h22zm-5.1-3H63.5v-3h13.4c.9 0 1.6.7 1.6 1.5s-.7 1.5-1.6 1.5zm.1.5a2 2 0 1 0 0-4H63v4h14z"/>
-                            <path fill="#000" d="M72 58.5h-.5v4h.5z"/>
-                            <circle cx="77.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 155 0)"/>
-                            <circle cx="75.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 151 0)"/>
-                            <circle cx="73.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 147 0)"/>
-                            <circle cx="70.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 141 0)"/>
-                            <circle cx="68.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 137 0)"/>
-                            <circle cx="66.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 133 0)"/>
-                            <circle cx="64.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 129 0)"/>
-                          </g>
-                        </svg>
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>80</span><br/>
-                                <span class='secondary'>devices and consoles</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <svg class='otherStuff' xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-                          <g fill="none" fill-rule="evenodd">
-                            <path stroke="#000" stroke-width=".5" d="M44.5 88l1.9-.9V84l-1-1V57h13.2v26l-1 1v3.1l1.9.9v4l-1.9.7V95H46.4v-2.3l-1.9-.7z"/>
-                            <path fill="#000" d="M46.3 92.4h4v.5h-4zm7.4 0h4v.5h-4zm-7.3-5.6h3.9v.5h-3.9zm7.4 0h3.9v.5h-3.9zm-7.6-3h11.5v.5H46.2zm-3.7-24.3h3v14h-3v-14zm-2-.5h2v15h-2V59zm4.8-2.8h13.5V58H45.3v-1.8zm1.7-.9h10l1.8.9H45.3l1.7-.9zm0-10.8h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0 18.9h10l1 .9H46l1-.9zm0 2.7h10l1 .9H46l1-.9zm0-5.4h10l1 .9H46l1-.9zm10 8.1H47l-1-.9h12l-1 .9zm0-10.8H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0 16.2H47l-1-.9h12l-1 .9zm0 2.7H47l-1-.9h12l-1 .9zm0-5.4H47l-1-.9h12l-1 .9z"/>
-                            <path fill="#000" d="M49 26h6v5.5h-6zm0-8h6v4.5h-6z"/>
-                            <path stroke="#000" stroke-width=".5" d="M55 10V5h-6v5h-5v1h16v-1h-5zm-8 3l-1-1v-1h12v1l-1 1v4h-1v1h-8v-1h-1v-4z"/>
-                            <path fill="#000" d="M48 26h8v1h-8zm-1-4h10v3H47z"/>
-                            <path stroke="#000" stroke-width=".3" d="M46.4 25h11.2l.4 1H46z"/>
-                            <path fill="#000" d="M49 9.8h6v.5h-6zm-2 3h10v.5H47zm0 4h10v.5H47z"/>
-                            <path stroke="#000" stroke-width=".5" d="M50.8 86.6h2.5l1.2 1.2V92l-1.2 1.1h-2.5L49.5 92v-4.2z"/>
-                            <path fill="#000" d="M46.2 87h.5v5.5h-.5zm11.2 0h.5v5.5h-.5z"/>
-                          </g>
-                        </svg>
-
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>A bunch</span><br/>
-                                <span class='secondary'>of other stuff too</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='mobileSection centered'>
-                    <a class='toExternal' href='https://thenounproject.com/joelski/' target='_blank'>Check them out &nearr;</a>
-                </div>
-            </section>
-
-            <!-- games project-->
-            <section class='projectContainer gamesProject'>
-                <div class='mobileSection centered'>
-                    <div class='projectTitle'>
-                        <div class='pageTitle'>
-                            <p>I once made a video game</p>
-                            <h3>Starring Kurt Cobain</h3>
-                            <p>in the style of an 8-bit platformer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='iconShowcase'>
-                    <div>
-                        <div class='seattle'></div>
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>Travel</span><br/>
-                                <span class='secondary'>from Seattle to L.A.</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class='powerups'></div>
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>Power up</span><br/>
-                                <span class='secondary'>with flannels and cigarettes</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class='gameGuitar'></div>
-                        <div class='projectInfo'>
-                            <p class='timeframe'>
-                                <span class='main'>Find Nirvana</span><br/>
-                                <span class='secondary'>and save music</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- contact-->
-            <section class='contact' data-section-name='contact'>
-                <div class='pageTitle'>
-                    <h1 class='bold'>Hi@Joelski.design</h1>
-                    <h2 class='bold'>&#8984; + C to copy</h2>
-
-                    <a href='mailto:hi@joelski.design'>or open Mail</a>
-                </div>
-
-                <div class='contactBtn'>
-                    <p></p>
-
-                    <!--close button-->
-                    <svg class='downArrow' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
-                        <path d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <g fill-rule="evenodd">
+                            <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
+                            3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
+                            92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
+                            1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
+                            <path d="M64 90h26v2H64z"/>
+                        </g>
                     </svg>
-                </div>
+                </article>
 
-                <input class='emailPlaceholder' type='text' value='Hi@Joelski.design' readonly>
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Timeframe</h4>
+                        <h5>6 months<span> </span></h5>
+                        <h6>design and testing</h6>
+                    </hgroup>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Positive impact</h4>
+                        <h5>7%<span> decrease</span></h5>
+                        <h6>in extra page views</h6>
+                    </hgroup>
+                </article>
+
+                <aside>
+                    <figure class='desktop'>
+                        <div class='miniBagScreen'>
+                            <div class='adLeft'></div>
+                            <div class='pageArea'>
+                                <div class='adCenter'></div>
+                                <div class='navBar'>
+                                    <div class='kohlsLogo'></div>
+                                    <div class='kohlsSearch'>Search</div>
+                                    <div class='kohlsAccount'>
+                                        <div class='accountIcon'></div>
+                                        <p>Account</p>
+                                    </div>
+
+                                    <div class='buttons'>
+                                        <div class='kohlsBagButton'>
+                                            <div class='bagImage'>
+                                                <div class='strap'></div>
+                                                <div class='bag'>3</div>
+                                            </div>
+                                        </div>
+                                        <div class='kohlsCheckout'>Check out</div>
+                                    </div>
+                                </div>
+
+                                <div class='adBelow'></div>
+                                <div class='miniBagContainer'>
+                                    <div class='miniBagBackground miniBagOpen'>
+                                        <div class='products'>
+                                            <div class='product'>
+                                                <div class='productPhoto mixer'></div>
+                                                <div class='price'>
+                                                    <p class='salePrice'>$379.99</p>
+                                                    <p class='regPrice'>$449.99</p>
+                                                </div>
+                                            </div>
+
+                                            <div class='product flipProduct'>
+                                                <div class='front'>
+                                                    <div class='productPhoto towel'></div>
+                                                    <div class='price'>
+                                                        <p class='salePrice'>$9.99</p>
+                                                        <p class='regPrice'>$12.99</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class='back'>
+                                                    <div class='productDetails'>
+                                                        <div class='swatch'></div>
+                                                        <div class='size'>S</div>
+                                                        <div class='rightArrow'>&rang;</div>
+                                                    </div>
+
+                                                    <div class='stepper'>
+                                                        <div class='plus'>&plus;</div>
+                                                        <div class='qty'>1</div>
+                                                        <div class='minus'>&minus;</div>
+                                                    </div>
+                                                    <div class='remove'>Remove</div>
+                                                </div>
+                                            </div>
+
+                                            <div class='product'>
+                                                <div class='productPhoto shirt'></div>
+                                                <div class='price'>
+                                                    <p class='salePrice'>$14.00</p>
+                                                    <p class='regPrice'>$19.99</p>
+                                                </div>
+                                            </div>
+
+                                            <div class='product blank'></div>
+
+                                            <div class='product'>
+                                                <div class='productPhoto fullBag'>
+                                                    <div class='bagImage'>
+                                                        <div class='strap'></div>
+                                                        <div class='bag'></div>
+                                                    </div>
+                                                    <p>View bag</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='bagSummary'></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='adRight'></div>
+                        </div>
+                    </figure>
+                </aside>
+
+                <button type='button' class='secondAction kohlsMagenta light'><a href='https://jwisneski.github.io/portfolio/miniBag.html'>Read the case study</a></button>
             </section>
+
+            <blockquote>
+                <p><span>When in doubt,</span></br>
+                    the customer makes the decision.
+                </p>
+            </blockquote>
+
+            <section id='nationwide' data-section-name='the Nationwide app' class='nationwide fixedHeight mobileProject' > <!--The NW App-->
+                <header>
+                    <hgroup class='projectHeader'>
+                        <h4>Nationwide</h4>
+                        <h5>The flagship app</h5>
+                        <h6>Shipped January 2018.</h6>
+                    </hgroup>
+                </header>
+
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                      <path fill-rule="evenodd" d="M65.9 26h.1a4 4 0 0 1 4 4v40a4 4 0 0 1-4 4h-.3c-3.4 6.4-4.3 17-4.3 17-.2 1.7-1.7 3-3.4 3H42a3.6 3.6 0 0 1-3.4-3S37.3 80.4 34 74a4 4 0 0 1-4-4V30a4 4 0 0 1 4-4h.3c3.4-6.4 4.3-17 4.3-17 .2-1.7 1.7-3 3.4-3h16c1.7 0 3.2 1.3 3.4 3 0 0 1.3 10.6 4.5 17zM34 30v40h32V30H34z"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
+                        1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
+                        5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
+                        0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
+                        2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
+                        .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
+                        0 0 0-.26.25z"/>
+                    </svg>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Timeframe</h4>
+                        <h5>8 months<span> with</span></h5>
+                        <h6>ongoing improvements</h6>
+                    </group>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Positive impact</h4>
+                        <h5>&starf;<span> improvement</span></h5>
+                        <h6>on the App store</h6>
+                    </hgroup>
+                </article>
+
+                <aside>
+                    <figure class='mobile'>
+                        <div class='phoneTime'><p>9:41</p></div>
+                        <div class='notch'></div>
+                        <div class='phoneStatus'>
+                            <svg class='cellService' xmlns="http://www.w3.org/2000/svg" width="23" height="20">
+                              <g fill-rule="evenodd" fill='#000' stroke='#000'>
+                                <rect width="3.6" height="4" x="1" y="12" rx=".4"/>
+                                <rect width="3.6" height="7" x="6.5" y="9" rx=".4"/>
+                                <rect width="3.6" height="10" x="11.9" y="6" rx=".4"/>
+                                <rect width="3.6" height="13" x="17.4" y="3" rx=".4"/>
+                              </g>
+                            </svg>
+
+                            <svg class='wifiService' xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                              <g fill-rule="evenodd" stroke="#000" stroke-width=".5" fill='#000'>
+                                <path fill-rule="nonzero" d="M16.8 9A9.8 9.8 0 0 0 3 9l1 1.1a8.4 8.4 0 0 1 11.7 0l1-1.2z"/>
+                                <path fill-rule="nonzero" d="M14.7 11a6.9 6.9 0 0 0-9.5.2l1 1a5.4 5.4 0 0 1 7.5 0l1-1.1z"/>
+                                <path d="M12 13.7l-2.1 2.1-2-2a3.2 3.2 0 0 1 4-.1z"/>
+                                <path fill-rule="nonzero" d="M18.9 6.8A12.8 12.8 0 0 0 1 6.8L2 8a11.3 11.3 0 0 1 15.8-.2l1-1z"/>
+                              </g>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
+                              <g fill="fff" fill-rule="evenodd">
+                                <path fill="#000" d="M21 7.2h.6c.4 0 .8.4.8.8v3.2c0 .4-.4.8-.8.8H21v3.1c0 .5-.4.8-.8.8H1.8a.8.8 0 0 1-.8-.8V4c0-.4.4-.8.8-.8h18.4c.4 0 .8.4.8.8v3.2z"/>
+                                <rect class='batteryCenter' width="18.8" height="11.6" x="1.6" y="3.8" fill="#fff" rx=".4"/>
+                                <path fill="fff" d="M21 7.6h.6c.2 0 .4.2.4.4v3.2c0 .2-.2.4-.4.4H21v-4z"/>
+                                <rect width="17.4" height="10.4" x="2.2" y="4.4" fill="#000" rx=".2"/>
+                              </g>
+                            </svg>
+                        </div>
+
+                        <h1>Insurance ID cards</h1>
+
+                        <div class='IDCard minimized'></div>
+                    </figure>
+                </aside>
+
+                <button type='button' class='secondAction nationwideBlue'><a href='https://jwisneski.github.io/portfolio/nwApp.html'>Read the case study</a></button>
+            </section>
+
+            <section id='NWLead' data-section-name='being the lead' class='nationwideLead fixedHeight nationwideBlue desktopProject'> <!--Leading at NW-->
+                <header>
+                    <hgroup class='projectHeader'>
+                        <h4>Nationwide</h4>
+                        <h5>Leading the app</h5>
+                        <h6>In progress.</h6>
+                    </hgroup>
+                </header>
+
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Timeframe</h4>
+                        <h5>10 months<span> </span></h5>
+                        <h6>and ongoing</h6>
+                    </hgroup>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Positive impact</h4>
+                        <h5>1 million+<span> downloads</span></h5>
+                        <h6>in the first month</h6>
+                    </hgroup>
+                </article>
+
+                <aside>
+                    <figure class='desktop'>
+                    </figure>
+                </aside>
+
+                <button type='button' class='secondAction disabled light'><a href=''>Coming soon</a></button>
+            </section>
+
+            <blockquote>
+                <p><span>My team is scrappy,</span></br>
+                    we work without big budgets or timelines.
+                </p>
+            </blockquote>
+
+            <section id='imageMatters' data-section-name='company website' class='imageMatters fixedHeight desktopProject'> <!--ImageMatters website-->
+                <header>
+                    <hgroup class='projectHeader'>
+                        <h4>Image Matters</h4>
+                        <h5>The company website</h5>
+                        <h6>Shipped August 2015.</h6>
+                    </hgroup>
+                </header>
+
+                <article>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M25.41 17.37c0-.55.03-1 .57-1v-5.93a4.92 4.92 0 0 1 4.9-4.94h38.25c2.7 0 4.89 2.22 4.89 4.94V23.3c.54 0 .47.45.47.98V37.2c0 .55.08.99-.47.99v51.37a4.92 4.92 0 0 1-4.9 4.94H30.88a4.92 4.92 0 0 1-4.89-4.94v-45.5c-.54 0-.57-.44-.57-.98v-7.92c0-.54.03-.98.57-.98v-1c-.54 0-.57-.44-.57-.98v-7.92c0-.54.02-.98.57-.98v-1.98c-.54 0-.57-.44-.57-.99v-2.96zM37.01 7H31.5a4 4 0 0 0-4 4v78a4 4 0 0 0 4 4h37a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4H63c-.66 0-.72.69-.8 1a3.66 3.66 0 0 1-3.56 2.87H41.36a3.69 3.69 0 0 1-3.66-3.23c-.02-.15.01-.64-.7-.64z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <path fill-rule="evenodd" d="M19.25 25.25v-1a.5.5 0 0
+                        1-.5-.5v-4c0-.28.23-.5.5-.5v-1a.5.5 0 0 1-.5-.5v-2c0-.28.23-.5.5-.5v-4a5
+                        5 0 0 1 5-5h45s.5-.5 1-.5h4.99c.55 0 1.01.5 1.01.5a5 5 0 0 1 5 5v78a5 5
+                        0 0 1-5 5h-52a5 5 0 0 1-5-5v-59a.5.5 0 0 1-.5-.5v-4l.5-.5zm28.5 63.5a2.5
+                        2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0zm-24.5-75.5v70h54v-70h-54zm24-3.25c0
+                        .14.12.25.26.25h5.48c.16 0 .26-.11.26-.25a.26.26 0 0 0-.26-.25h-5.48a.25.25
+                        0 0 0-.26.25z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="155" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMax meet">
+                        <g fill-rule="evenodd">
+                            <path d="M9.8 90.2v-82C9.8 6.4 11.3 5 13 5h129c1.7 0 3.2 1.4
+                            3.2 3.2v82h4.8v2.4c0 1.3-1 2.4-2.4 2.4H7.4C6.1 95 5 94 5
+                            92.6v-2.4h4.8zm132.1 0V9.8H13.1v80.4h53.1l.6 1.6c.4.9 1.4 1.6 2.3
+                            1.6H86c.9 0 2-.7 2.3-1.6l.6-1.6H142z"/>
+                            <path d="M64 90h26v2H64z"/>
+                        </g></svg>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Timeframe</h4>
+                        <h5>3 months<span> </span></h5>
+                        <h6>design and development</h6>
+                    </hgroup>
+                </article>
+
+                <article  class='projectInfo'>
+                    <hgroup>
+                        <h4>Role</h4>
+                        <h5>Designer<span> and</span></h5>
+                        <h6>developer</h6>
+                    </hgroup>
+                </article>
+
+                <aside>
+                    <figure class='desktop'>
+                        <img src='images/imHomeBefore.jpg' width='50%' height='auto'/>
+                        <img src='images/imHomeD.jpg' width='50%' height='auto'/>
+                    </figure>
+                </aside>
+
+                <button type='button' class='secondAction imageMattersYellow'><a href='https://jwisneski.github.io/portfolio/imageMatters.html'>Read the case study</a></button>
+            </section>
+
+            <section id='sideProjects' data-section-name='side projects' class='sideProjects desktopProject short'> <!--Side projects-->
+                <header>
+                    <hgroup>
+                        <h2>Side projects</h2>
+                        <h3>the things I do in my free time.</h3>
+                    </hgroup>
+                </header>
+
+                <article class='projectInfo'>
+                    <figure class='icons iconSmall'>
+                        <img src='images/carbon.png'/>
+                    </figure>
+                </article>
+
+                <article class='projectInfo'>
+                    <figure class='games iconSmall'>
+                        <img src='images/kurt.png'/>
+                    </figure>
+                </article>
+
+                <article class='secondAction'>
+                    <figure class='iconSmall'>
+                        <img src='images/strat.png'/>
+                    </figure>
+                </article>
+            </section>
+
+            <section  id='sendoff' data-section-name='get in touch' class='sendoff fixedHeight threeDown'> <!--Footer-->
+                <header>
+                    <hgroup>
+                        <h2>Let's work together</h2>
+                        <h3>I'm looking to solve new problems.</h3>
+                    </hgroup>
+                </header>
+
+                <button type='button' class='primaryOrange contactBtn'><a href='javascript:;'>Send me an email</a></button>
+
+                <footer>
+                    <p><span>&copy; Joel Wisneski 2018</span></br>
+                    Designed with Sketch, built with code.</p>
+                </footer>
+            </section>
+        </main>
+
+        <section id='contact' data-section-name="Let's talk" class='hiddenBelow fixedHeight threeDown'> <!--Contact-->
+            <header>
+                <hgroup>
+                    <h2>Hi@Joelski.design</h2>
+                    <h3>&#8984; + C to copy</h3>
+                </hgroup>
+            </header>
+
+            <button type='button' class='secondAction secondary'><a href='mailto:hi@joelski.design'>Or open in Mail</a></button>
+
+            <svg class='downArrow close' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
+            </svg>
         </section>
 
-        <svg class='downArrow upArrow' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
-            <path class='' d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
-        </svg>
+        <section id='icons' data-section-name='Icons by Joel' class='hiddenBelow fixedHeight threeDown'> <!--Icons-->
+            <header>
+                <hgroup>
+                    <h2>I make icons</h2>
+                    <h3>And I have 17,000+ downloads on The Noun Project.</h3>
+                </hgroup>
+            </header>
 
-        <svg class='downArrow upArrow light' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
-            <path class='' d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
-        </svg>
+            <article class='contentTop'>
+                <figure>
+                    <svg class='periodicTable' xmlns="http://www.w3.org/2000/svg" width='100' height='100'>
+                      <g fill="none" fill-rule="evenodd">
+                        <circle cx="50" cy="50" r="8" fill="#000"/>
+                        <circle cx="71.5" cy="26.5" r="2.5" fill="#000"/>
+                        <circle cx="30.5" cy="24.5" r="2.5" fill="#000"/>
+                        <circle cx="18.5" cy="50.5" r="2.5" fill="#000"/>
+                        <circle cx="22.5" cy="66.5" r="2.5" fill="#000"/>
+                        <circle cx="20.5" cy="77.5" r="2.5" fill="#000"/>
+                        <circle cx="80.5" cy="75.5" r="2.5" fill="#000"/>
+                        <circle cx="56.5" cy="89.5" r="2.5" fill="#000"/>
+                        <circle cx="33.5" cy="13.5" r="2.5" fill="#000"/>
+                        <circle cx="85.5" cy="31.5" r="2.5" fill="#000"/>
+                        <circle cx="56.5" cy="10.5" r="2.5" fill="#000"/>
+                        <circle cx="28.5" cy="73.5" r="2.5" fill="#000"/>
+                        <circle cx="59.5" cy="80.5" r="2.5" fill="#000"/>
+                        <circle cx="81.5" cy="46.5" r="2.5" fill="#000"/>
+                        <circle cx="24.5" cy="30.5" r="2.5" fill="#000"/>
+                        <circle cx="69.5" cy="75.5" r="2.5" fill="#000"/>
+                        <circle cx="64.5" cy="21.5" r="2.5" fill="#000"/>
+                        <circle cx="77.5" cy="66.5" r="2.5" fill="#000"/>
+                        <circle cx="39.5" cy="19.5" r="2.5" fill="#000"/>
+                        <circle cx="81.5" cy="54.5" r="2.5" fill="#000"/>
+                        <circle cx="79.5" cy="38.5" r="2.5" fill="#000"/>
+                        <circle cx="55.5" cy="18.5" r="2.5" fill="#000"/>
+                        <circle cx="44.5" cy="81.5" r="2.5" fill="#000"/>
+                        <circle cx="13.5" cy="33.5" r="2.5" fill="#000"/>
+                        <circle cx="71.5" cy="16.5" r="2.5" fill="#000"/>
+                        <circle cx="35.5" cy="78.5" r="2.5" fill="#000"/>
+                        <circle cx="60.5" cy="28.5" r="2.5" fill="#000"/>
+                        <circle cx="71.5" cy="39.5" r="2.5" fill="#000"/>
+                        <circle cx="29.5" cy="37.5" r="2.5" fill="#000"/>
+                        <circle cx="27.5" cy="58.5" r="2.5" fill="#000"/>
+                        <circle cx="41.5" cy="72.5" r="2.5" fill="#000"/>
+                        <circle cx="32.5" cy="66.5" r="2.5" fill="#000"/>
+                        <circle cx="70.5" cy="62.5" r="2.5" fill="#000"/>
+                        <circle cx="43.5" cy="26.5" r="2.5" fill="#000"/>
+                        <circle cx="20.5" cy="37.5" r="2.5" fill="#000"/>
+                        <circle cx="58.5" cy="36.5" r="2.5" fill="#000"/>
+                        <circle cx="37.5" cy="59.5" r="2.5" fill="#000"/>
+                        <circle cx="50" cy="50" r="32" stroke="#000" stroke-width=".3"/>
+                        <circle cx="50" cy="50" r="40" stroke="#000" stroke-width=".3"/>
+                        <circle cx="50" cy="50" r="24" stroke="#000" stroke-width=".3"/>
+                        <circle cx="50" cy="50" r="16" stroke="#000" stroke-width=".3"/>
+                      </g>
+                  </svg>
+                </figure>
+                <figcaption>
+                    <hgroup>
+                        <h5>118</h5>
+                        <h6>periodic elements.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
 
-        <!-- Javascript fies -->
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+            <article class='contentMiddle'>
+                <figure>
+                    <svg class='devices' xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+                      <g fill="none" fill-rule="evenodd">
+                        <path fill="#000" d="M88.5 68l-.6 5H12l-.6-5H18v1h22v-1h20v1h22v-1h6.5zM57 53H43v-3.5H15V53h-4v-6c0-.6.4-1 1-1h76c.6 0 1 .4 1 1v6h-4v-3.5H57V53z"/>
+                        <path stroke="#000" stroke-width=".5" d="M60 68H40v1H18v-1H6l-1-7.5L6 53h12v-1h22v1h20v-1h22v1h12l1 7.5-1 7.5H82v1H60v-1zM27 29.2c0-.5.5-1 1-1h44c.6 0 1 .5 1 1v17H27v-17z"/>
+                        <circle cx="11.5" cy="60.5" r="1.5" fill="#000"/>
+                        <path fill="#000" d="M40 60.3h20v.5H40zm42 0h13v.5H82zm-77 0h13v.5H5z"/>
+                        <path stroke="#000" stroke-width=".5" d="M18 52h22v17H18z"/>
+                        <path fill="#000" d="M18 55.5h22v.5H18zm0 9.5h22v.5H18zm5.1-3h13.4v-3H23.1c-.9 0-1.6.7-1.6 1.5s.7 1.5 1.6 1.5zm-.1.5a2 2 0 1 1 0-4h14v4H23z"/>
+                        <path fill="#000" d="M28 58.5h.5v4H28z"/>
+                        <circle cx="22.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="24.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="26.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="29.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="31.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="33.5" cy="60.5" r=".5" fill="#000"/>
+                        <circle cx="35.5" cy="60.5" r=".5" fill="#000"/>
+                        <path stroke="#000" stroke-width=".5" d="M82 52H60v17h22z"/>
+                        <path fill="#000" d="M82 55.5H60v.5h22zm0 9.5H60v.5h22zm-5.1-3H63.5v-3h13.4c.9 0 1.6.7 1.6 1.5s-.7 1.5-1.6 1.5zm.1.5a2 2 0 1 0 0-4H63v4h14z"/>
+                        <path fill="#000" d="M72 58.5h-.5v4h.5z"/>
+                        <circle cx="77.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 155 0)"/>
+                        <circle cx="75.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 151 0)"/>
+                        <circle cx="73.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 147 0)"/>
+                        <circle cx="70.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 141 0)"/>
+                        <circle cx="68.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 137 0)"/>
+                        <circle cx="66.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 133 0)"/>
+                        <circle cx="64.5" cy="60.5" r=".5" fill="#000" transform="matrix(-1 0 0 1 129 0)"/>
+                      </g>
+                    </svg>
+                </figure>
 
-        <script src='https://jwisneski.github.io/portfolio/js/main.js'></script>
-        <!-- <script src='js/main.js'></script> -->
+                <figcaption>
+                    <hgroup>
+                        <h5>80</h5>
+                        <h6>devices and conosles.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
 
-        <script>
-          //Google Analytics script
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-89518737-1', 'auto');
-            ga('send', 'pageview');
-        </script>
+            <article class='contentBottom'>
+                <figure>
+                    <svg class='otherStuff' xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+                      <g fill="none" fill-rule="evenodd">
+                        <path stroke="#000" stroke-width=".5" d="M44.5 88l1.9-.9V84l-1-1V57h13.2v26l-1 1v3.1l1.9.9v4l-1.9.7V95H46.4v-2.3l-1.9-.7z"/>
+                        <path fill="#000" d="M46.3 92.4h4v.5h-4zm7.4 0h4v.5h-4zm-7.3-5.6h3.9v.5h-3.9zm7.4 0h3.9v.5h-3.9zm-7.6-3h11.5v.5H46.2zm-3.7-24.3h3v14h-3v-14zm-2-.5h2v15h-2V59zm4.8-2.8h13.5V58H45.3v-1.8zm1.7-.9h10l1.8.9H45.3l1.7-.9zm0-10.8h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0-2.7h10l1 .9H46l1-.9zm0 18.9h10l1 .9H46l1-.9zm0 2.7h10l1 .9H46l1-.9zm0-5.4h10l1 .9H46l1-.9zm10 8.1H47l-1-.9h12l-1 .9zm0-10.8H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0-2.7H47l-1-.9h12l-1 .9zm0 16.2H47l-1-.9h12l-1 .9zm0 2.7H47l-1-.9h12l-1 .9zm0-5.4H47l-1-.9h12l-1 .9z"/>
+                        <path fill="#000" d="M49 26h6v5.5h-6zm0-8h6v4.5h-6z"/>
+                        <path stroke="#000" stroke-width=".5" d="M55 10V5h-6v5h-5v1h16v-1h-5zm-8 3l-1-1v-1h12v1l-1 1v4h-1v1h-8v-1h-1v-4z"/>
+                        <path fill="#000" d="M48 26h8v1h-8zm-1-4h10v3H47z"/>
+                        <path stroke="#000" stroke-width=".3" d="M46.4 25h11.2l.4 1H46z"/>
+                        <path fill="#000" d="M49 9.8h6v.5h-6zm-2 3h10v.5H47zm0 4h10v.5H47z"/>
+                        <path stroke="#000" stroke-width=".5" d="M50.8 86.6h2.5l1.2 1.2V92l-1.2 1.1h-2.5L49.5 92v-4.2z"/>
+                        <path fill="#000" d="M46.2 87h.5v5.5h-.5zm11.2 0h.5v5.5h-.5z"/>
+                      </g>
+                    </svg>
+                </figure>
+                <figcaption>
+                    <hgroup>
+                        <h5>Dozens</h5>
+                        <h6>of collections.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
+
+            <button type='button' class='primaryOrange'><a href='https://thenounproject.com/joelski/' target='_blank'>Check them out</a></button>
+
+            <svg class='downArrow close' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
+            </svg>
+        </section>
+
+        <section id='games' data-section-name='Games by Joel' class='hiddenBelow fixedHeight threeDown'> <!--Video game-->
+            <header>
+                <hgroup>
+                    <h2>I made a video game</h2>
+                    <h3>Starring Kurt Cobain.</h3>
+                </hgroup>
+            </header>
+
+            <article class='contentTop'>
+                <figure>
+                    <img src='images/starbucks.png'/>
+                </figure>
+                <figcaption>
+                    <hgroup>
+                        <h5>Travel</h5>
+                        <h6>from Seattle to L.A.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
+
+            <article class='contentMiddle'>
+                <figure>
+                    <img src='images/kurt.png'/>
+                </figure>
+
+                <figcaption>
+                    <hgroup>
+                        <h5>Power up</h5>
+                        <h6>with flannels and cigarettes.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
+
+            <article class='contentBottom'>
+                <figure>
+                    <img src='images/gameGuitar.png'/>
+                </figure>
+                <figcaption>
+                    <hgroup>
+                        <h5>Find Nirvana</h5>
+                        <h6>and save music.</h6>
+                    </hgroup>
+                </figcaption>
+            </article>
+
+            <svg class='downArrow close' viewBox='0 0 52 23' xmlns='http://www.w3.org/2000/svg'>
+                <path d='M52 1L26 23 .43 1l.92-.88L26 21 51 0' fill-rule='evenodd'/>
+            </svg>
+        </section>
     </body>
+
+    <!-- Javascript fies -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+
+    <script src='https://jwisneski.github.io/portfolio/js/main.refactored.js'></script>
+    <!-- <script src='js/main.js'></script> -->
+
+    <script>
+      //Google Analytics script
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-89518737-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </html>
