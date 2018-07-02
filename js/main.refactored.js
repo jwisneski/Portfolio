@@ -288,11 +288,6 @@ function scrollPage(pageSection){
     }
 }
 
-function showText( ){
-    // show ',well'
-    $('.me span').css('opacity', '1');
-}
-
 // show contact section
 function toggleContact(shown, newSection){
     if(!shown){
@@ -315,13 +310,13 @@ function toggleContact(shown, newSection){
             }
         }
 
-        $('.contact h2').removeClass('hideCopy');
+        $('.contact h3').removeClass('hideCopy');
 
         // show contact
         $('#contact').addClass('shown');
         changeTitle('Talk to Joel', '#contact');
 
-        $('input.email').select( );
+        $('#contact input').select( );
 
         //this has to be old section to register properly in the pageScroll function
         oldSection='contact';
@@ -513,11 +508,11 @@ function updateEmailText( ){
 
     //Customize Copy Email Message
     if(browser=='OSX'){
-        $('.contact h2').html('&#8984; + C to copy');
+        $('.contact h3').html('&#8984; + C to copy');
     }else if(browser=='Android' || browser=='iOS'){
-        $('.contact h2').html('Press and hold to copy');
+        $('.contact h3').html('Press and hold to copy');
     }else if(browser=='Windows'){
-        $('.contact h2').html('CTRL + C to copy');
+        $('.contact h3').html('CTRL + C to copy');
     }
 }
 
@@ -628,13 +623,15 @@ $(document).ready(function () {
 
         // check if email is selected
         if(text=='Hi@Joelski.design'){
-            $('.contact h2').removeClass('hideCopy');
+            $('.contact h3').removeClass('hideCopy');
         }else{
-            $('.contact h2').addClass('hideCopy');
+            $('.contact h3').addClass('hideCopy');
         }
+
+        console.log(text);
     });
 
-    $('#contact .downArrow').on('click', function(e){
+    $('.contact .downArrow').on('click', function(e){
         // scroll down on home page
         toggleContact(contact, newSection);
     });
