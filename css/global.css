@@ -151,7 +151,7 @@ footer {
   position: relative;
   text-align: center;
   color: #000;
-  grid-area: spaceBelow;
+  grid-area: backButton;
   margin: 10px 0;
   align-self: end; }
 
@@ -244,6 +244,9 @@ svg {
   header {
     align-self: start;
     width: auto; }
+  
+  footer{
+    grid-area:spaceBelow;}
 
   hgroup {
     width: auto;
