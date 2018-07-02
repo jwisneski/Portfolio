@@ -395,7 +395,7 @@ function toggleProject(element){
         //scroll to last section
          // if(browser=='Android' || browser=='iOS'){
             //add the HTML posiiton fixed style
-            $('html').addClass('mobileOverflowFix');
+            //$('html').addClass('mobileOverflowFix');
         // }
 
     } else{
@@ -405,11 +405,11 @@ function toggleProject(element){
         pageScroll( );
 
         $('main').removeClass('fixed');
-        $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
+        //$('.overlayContainer').removeClass('overlayContainerWhiteSpace');
 
         // wait for contact to animate up
         setTimeout(function(){
-            $('.overlayContainer').removeClass('overlayContainerShown');
+            //$('.overlayContainer').removeClass('overlayContainerShown');
         }, 500);
 
         var browser = detectBrowser( );
@@ -417,10 +417,10 @@ function toggleProject(element){
         //scroll to last section
          // if(browser=='Android' || browser=='iOS'){
             //remove the HTML posiiton fixed style
-            $('html').removeClass('mobileOverflowFix');
+            //$('html').removeClass('mobileOverflowFix');
 
             //scroll to last seen section on the page
-            $('main').animate({
+            $('html, body, main').animate({
                 scrollTop: mobileStop
             }, 0);
         // }
@@ -670,8 +670,16 @@ $(document).ready(function () {
         toggleProject('icons');
     });
 
+    $('#icons .close').on('click tap', function(e){
+        toggleProject('');
+    });
+
     $('.games').on('click tap', function(e){
         toggleProject('games');
+    });
+
+    $('#games .close').on('click tap', function(e){
+        toggleProject('');
     });
 
     // $('div.music').on('click tap', function(e){
