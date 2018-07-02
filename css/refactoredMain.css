@@ -271,10 +271,7 @@ svg.close {
   width: 50px !important;
   height: 50px !important;
   padding: 10px;
-  top: 20px;
-  right: calc(50vw - 35px);
   z-index: 11;
-  margin-bottom: 60px;
   cursor: pointer;
   grid-area: backButton;
   align-self: end;
