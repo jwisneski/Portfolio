@@ -66,7 +66,6 @@ function getFirstPageScroll( ){
 
             if(newSection=='the Nationwide app'){
                 animateNW(true);
-                console.log(stop);
             }
 
             if(newSection=='company website'){
@@ -80,8 +79,6 @@ function pageScroll( ){
     // we round here to reduce a little workload
     lastStop=stop;
     stop = Math.round($(window).scrollTop());
-
-    console.log(stop);
 
     for(var key in positions){
         if(stop>positions[key]){
@@ -242,7 +239,7 @@ function animateIM(down){
 function stopScroll( ){
     // we round here to reduce a little workload
     stop = Math.round($(window).scrollTop());
-    $('html, body').animate({
+    $('main').animate({
         scrollTop: stop
     });
 }
@@ -279,7 +276,7 @@ function scrollPage(pageSection){
             var timing = Math.abs((oldPosition-newPosition)*(3/7));
             Math.round(timing);
 
-            $('html, body').animate({
+            $('main').animate({
                 scrollTop: newPosition
             }, timing, 'swing');
 
@@ -294,15 +291,9 @@ function toggleContact(shown, newSection){
         //get position
         var newPosition;
         stop = Math.round($(window).scrollTop());
+        console.log(stop);
 
-        //hide arrow if need be
-        if(project){
-            $('.upArrow').removeClass('upArrowShown');
-        }else{
-            // setup mobile stop for later
-            // does not overwrite if a project is open
-            mobileStop=stop;
-        }
+        mobileStop=stop;
 
         for(var key in positions){
             if(stop>positions[key]){
@@ -326,8 +317,7 @@ function toggleContact(shown, newSection){
         setTimeout(function(){
             // still trying to stop the scrtolling - this keeps
             // top of the page from flashing before the container shows up
-            $('body').addClass('hideOverflow');
-            $('body').addClass('bodyFixed');
+            $('main').addClass('fixed');
 
             // add white background to overlay container to covery body text
             $('.overlayContainer').addClass('overlayContainerWhiteSpace');
@@ -345,32 +335,26 @@ function toggleContact(shown, newSection){
         // close contact
         $('#contact').removeClass('shown');
 
-        if(!project){
-            $('body').removeClass('hideOverflow');
-            $('body').removeClass('bodyFixed');
-            $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
+        $('main').removeClass('fixed');
+        $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
 
-            // wait for contact to animate up
-            setTimeout(function(){
-                $('.overlayContainer').removeClass('overlayContainerShown');
-            }, 500);
+        // wait for contact to animate up
+        setTimeout(function(){
+            $('.overlayContainer').removeClass('overlayContainerShown');
+        }, 500);
 
-            var browser = detectBrowser( );
+        var browser = detectBrowser( );
 
-            // scroll to last section
-             // if(browser=='Android' || browser=='iOS'){
-                //remove the HTML posiiton fixed style
-                $('html').removeClass('mobileOverflowFix');
+        //remove the HTML posiiton fixed style
+        $('html').removeClass('mobileOverflowFix');
 
-                //scroll to last seen section on the page
-                //scrollto:stop
-                $('html, body').animate({
-                    scrollTop: mobileStop
-                }, 0);
-            // }
-        }else{
-            $('.upArrow').addClass('upArrowShown');
-        }
+        //scroll to last seen section on the page
+        //scrollto:stop
+        $('html, body, main').animate({
+            scrollTop: mobileStop
+        }, 0);
+
+        console.log(mobileStop);
 
         // change the page name to the last seen section
         pageScroll( );
@@ -380,6 +364,7 @@ function toggleContact(shown, newSection){
 }
 
 function toggleProject(element){
+    conosle.log('toggleProject');
     if(element!=''){
         project=element;
 
@@ -393,14 +378,10 @@ function toggleProject(element){
         //show project container (slide up)
         $('section#'+project).addClass('shown');
 
-        // keep body from scrolling while a project is open
-        $('body').addClass('hideOverflow');
-        $('.overlayContainer').addClass('overlayContainerShown');
-
         setTimeout(function(){
             // still trying to stop the scrtolling - this keeps
             // top of the page from flashing before the container shows up
-            $('body').addClass('bodyFixed');
+            $('main').addClass('fixed');
 
             // add white background to overlay container to covery body text
             $('.overlayContainer').addClass('overlayContainerWhiteSpace');
@@ -427,8 +408,7 @@ function toggleProject(element){
         // set link title to last section
         pageScroll( );
 
-        $('body').removeClass('hideOverflow');
-        $('body').removeClass('bodyFixed');
+        $('main').removeClass('fixed');
         $('.overlayContainer').removeClass('overlayContainerWhiteSpace');
 
         // wait for contact to animate up
@@ -444,7 +424,7 @@ function toggleProject(element){
             $('html').removeClass('mobileOverflowFix');
 
             //scroll to last seen section on the page
-            $('html, body').animate({
+            $('main').animate({
                 scrollTop: mobileStop
             }, 0);
         // }
@@ -549,7 +529,7 @@ function changePage() {
 
         wrapper.innerHTML = responseText;
 
-        var oldContent = document.querySelector('body');
+        var oldContent = document.querySelector('main');
         //added .project to prevent doubling first section on reload of the homepage
         var newContent = wrapper.querySelector('section.project');
 
@@ -627,8 +607,6 @@ $(document).ready(function () {
         }else{
             $('.contact h3').addClass('hideCopy');
         }
-
-        console.log(text);
     });
 
     $('.contact .downArrow').on('click', function(e){
@@ -658,8 +636,6 @@ $(document).ready(function () {
         //figure out where we are starting on the page (in window.load)
         if(project==''){
             pageScroll( );
-
-            console.log('scroll');
         }
     });
 
