@@ -24,7 +24,9 @@
         <meta name='thumbnail' content='https://jwisneski.github.io/portfolio/images/linkPreview.jpg'/>
 
         <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/global.css'>
+        <!-- <link rel='stylesheet' type='text/css' href='scss/global.css'> -->
         <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/refactoredMain.css'>
+        <!-- <link rel='stylesheet' type='text/css' href='scss/refactoredMain.css'> -->
         <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/mobileDemo.css'>
         <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/desktopDemo.css'>
         <!-- <link rel='stylesheet' type='text/css' href='https://jwisneski.github.io/portfolio/css/homeUpdate.css'> -->
@@ -613,18 +615,19 @@
                 <button type='button' class='primaryOrange contactBtn'><a href='javascript:;'>Send me an email</a></button>
 
                 <footer>
-                    <p><span>&copy; Joel Wisneski 2018</span></br>
+                    <p class='centered'><span>&copy; Joel Wisneski 2018</span></br>
                     Designed with Sketch, built with code.</p>
                 </footer>
             </section>
         </main>
 
-        <section id='contact' data-section-name="Let's talk" class='hiddenBelow fixedHeight threeDown'> <!--Contact-->
+        <section id='contact' data-section-name="contact" class='contact hiddenBelow fixedHeight threeDown'> <!--Contact-->
             <header>
                 <hgroup>
                     <h2>Hi@Joelski.design</h2>
-                    <h3>&#8984; + C to copy</h3>
+                    <h3 class='hideCopy'>&#8984; + C to copy</h3>
                 </hgroup>
+                <input class='emailPlaceholder' type='text' value='Hi@Joelski.design' readonly/>
             </header>
 
             <button type='button' class='secondAction secondary'><a href='mailto:hi@joelski.design'>Or open in Mail</a></button>
@@ -824,7 +827,7 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
 
     <script src='https://jwisneski.github.io/portfolio/js/main.refactored.js'></script>
-    <!-- <script src='js/main.js'></script> -->
+    <!-- <script src='js/main.refactored.js'></script> -->
 
     <script>
       //Google Analytics script
