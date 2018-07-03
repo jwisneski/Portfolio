@@ -263,11 +263,15 @@ aside.portrait {
   grid-area: contentBottom; }
 
 .iconSmall img {
-  height: 50px;
-  width: auto; }
+  height: 90px;
+  width: auto;
+  margin-bottom: 50px; }
 
 #sideProjects .secondAction, #contact .secondAction {
   grid-area: mainAction !important; }
+
+#sideProjects header {
+  grid-area: subhead; }
 
 #sendoff button, #contact button {
   grid-area: mainAction !important;
@@ -416,7 +420,14 @@ h3.hideCopy {
     height: 400px; }
 
   .introduction header {
-    grid-area: header; } }
+    grid-area: header; }
+
+  #sideProjects header {
+    grid-area: header;
+    margin-bottom: 50px; }
+
+  #sideProjects figure {
+    height: auto !important; } }
 @media (min-width: 930px) {
   .fixedHeight.mobileProject, .fixedHeight.desktopProject {
     min-height: 0;
