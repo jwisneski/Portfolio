@@ -682,9 +682,87 @@ $(document).ready(function () {
         toggleProject('');
     });
 
-    // $('div.music').on('click tap', function(e){
-    //     toggleProject('music');
-    // });
+    $('.music').on('click tap', function(e){
+        var note = Math.floor((Math.random() * 3) + 1);
+        var upDown = Math.floor((Math.random() * 2) + 1);
+
+        $('.music .musicNote:nth-of-type(' + note +')').removeClass('musicNoteHidden');
+
+        setTimeout(function(){
+            $('.music .musicNote:nth-of-type(' + note +')').addClass('musicNoteMoved');
+
+            if(upDown==1){
+                // add 1
+                note++;
+                if(note >= 4){
+                    note=1;
+                }
+
+                setTimeout(function(){
+                    $('.music .musicNote:nth-of-type(' + note +')').removeClass('musicNoteHidden');
+
+                    setTimeout(function(){
+                        $('.music .musicNote:nth-of-type(' + note +')').addClass('musicNoteMoved');
+
+                        // add 1
+                        note++;
+                        if(note >= 4){
+                            note=1;
+                        }
+
+                        setTimeout(function(){
+                            $('.music .musicNote:nth-of-type(' + note +')').removeClass('musicNoteHidden');
+
+                            setTimeout(function(){
+                                $('.music .musicNote:nth-of-type(' + note +')').addClass('musicNoteMoved');
+
+                            }, 300);
+                        }, 100);
+                    }, 300);
+                }, 100);
+
+            }else{
+                // sub 1
+                note--;
+                if(note <= 0){
+                    note=3;
+                }
+
+                setTimeout(function(){
+                    $('.music .musicNote:nth-of-type(' + note +')').removeClass('musicNoteHidden');
+
+                    setTimeout(function(){
+                        $('.music .musicNote:nth-of-type(' + note +')').addClass('musicNoteMoved');
+
+                        // sub 1
+                        note--;
+                        if(note <= 0){
+                            note=3;
+                        }
+
+                        setTimeout(function(){
+                            $('.music .musicNote:nth-of-type(' + note +')').removeClass('musicNoteHidden');
+
+                            setTimeout(function(){
+                                $('.music .musicNote:nth-of-type(' + note +')').addClass('musicNoteMoved');
+                            }, 300);
+                        }, 100);
+                    }, 300);
+                }, 100);
+            }
+        }, 200);
+
+        setTimeout(function(){
+            $('.musicNoteMoved').addClass('musicNoteHidden');
+            $('.musicNoteMoved.musicNoteHidden').removeClass('musicNoteMoved');
+
+            $('.musicNoteMoved').addClass('musicNoteHidden');
+            $('.musicNoteMoved.musicNoteHidden').removeClass('musicNoteMoved');
+
+            $('.musicNoteMoved').addClass('musicNoteHidden');
+            $('.musicNoteMoved.musicNoteHidden').removeClass('musicNoteMoved');
+        }, 1600);
+    });
 
     $('.mobileProject').on('click tap', function(e){
         $('.nationwideAppProject .mobileProjectAnimation').each(function() {
