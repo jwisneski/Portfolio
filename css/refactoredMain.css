@@ -310,7 +310,48 @@ h3.hideCopy {
   opacity: 0; }
 
 .icons, .games {
+  position: relative;
   cursor: pointer; }
+
+.musicNote {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  line-height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #0072CF;
+  font-size: 50px;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  opacity: 1; }
+
+.musicNote:nth-of-type(2) {
+  color: #00AD46;
+  top: 17%;
+  left: 25%; }
+
+.musicNote:nth-of-type(3) {
+  color: #CB187C;
+  top: 20%;
+  left: 50%; }
+
+.musicNoteMoved {
+  top: 5% !important;
+  opacity: 0; }
+
+.musicNoteHidden {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  -webkit-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;
+  opacity: 0; }
 
 @media (min-width: 660px) {
   .mobileProject, .desktopProject {
