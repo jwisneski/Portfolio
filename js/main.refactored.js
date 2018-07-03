@@ -427,6 +427,10 @@ function toggleProject(element){
 
         $('.shown').removeClass('shown');
 
+        $('#icons, #games').animate({
+            scrollTop: 0
+        }, 0);
+
         // wait for project to animate down
         setTimeout(function(){
             $('.overlayContainer').removeClass('overlayContainerShown');
