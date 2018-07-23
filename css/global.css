@@ -92,7 +92,9 @@ a {
 
 button a {
   color: inherit;
-  font-weight: inherit; }
+  font-weight: inherit;
+  width: 100%;
+  height: 100%; }
 
 button {
   /* quick functional transition for hovers, etc. */
