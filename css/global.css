@@ -227,7 +227,9 @@ input {
     max-height: none !important; } }
 @media (min-width: 370px) {
   button {
-    width: 300px;
+    width: 300px; }
+
+  a {
     justify-self: center; } }
 @media (min-width: 660px) {
   header {
@@ -277,7 +279,7 @@ input {
   article {
     width: auto; }
 
-  button {
+  a {
     justify-self: auto; } }
 
 /*# sourceMappingURL=global.css.map */
