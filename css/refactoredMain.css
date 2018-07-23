@@ -273,7 +273,7 @@ aside.portrait {
 #sideProjects header {
   grid-area: subhead; }
 
-#sendoff button, #contact button {
+#sendoff a, #contact a {
   grid-area: mainAction !important;
   justify-self: center !important; }
 
@@ -458,7 +458,7 @@ h3.hideCopy {
     height: 250px;
     width: auto; }
 
-  .desktopProject button, .mobileProject button {
+  .desktopProject a, .mobileProject a {
     align-self: center;
     grid-area: mainAction !important; }
 
