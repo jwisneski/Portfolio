@@ -170,7 +170,7 @@ button.imageMattersYellow {
     background-color: #fff;
     color: #F2C924; }
 
-button.secondAction {
+.secondAction {
   grid-area: secondAction; }
 
 @media (min-width: 660px) {
