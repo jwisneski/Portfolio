@@ -1,0 +1,328 @@
+// include
+@import '_variables';
+@import '_mixins';
+
+*{
+    margin:0;
+    padding:0;
+}
+
+// default elements
+html{
+    font-weight:$thin;
+    font-family:-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:$paragraph;
+    color:$dark;
+    height:$fullHeight;
+    width:$fullWidth;
+
+    overflow-x:hidden;
+
+    max-width:$browserWide;
+    cursor:default;
+}
+
+body{
+    position:relative;
+    height:auto;
+
+    overflow-x:hidden;
+}
+
+main{ //main content container repalces .mainContainer
+    width:$browserWide;
+    height:auto;
+
+    overflow:hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    line-height:$defaultLineHeight;
+}
+
+h1{ // main section titles
+    font-weight:$thick;
+    font-size:$title;
+}
+
+h2{ // project section titles
+    font-weight:$thin;
+    font-size: $subtitle;
+}
+
+h3{ // project section subtitle
+    font-weight:$regular;
+    font-size:$header;
+}
+
+h4{ // project title context
+    font-size:$label;
+    font-weight:$thick;
+    min-width: 0;
+    margin-bottom:0;
+}
+
+h4 span{
+    font-weight:$thick;
+}
+
+h5{ // project impact title
+    font-size:$header;
+    font-weight:$thin;
+    margin-bottom:0;
+}
+
+h5 span{
+    font-size:$label;
+}
+
+h6{ // project imact
+    font-weight:$regular;
+    font-size:$label // might need a separate size for these
+}
+
+p{
+    /* adds a readable width and some spacing below paragraphs */
+    max-width:$contentMax;
+    margin:$smallSpace 0;
+}
+
+blockquote{ // replaces line breaks on the home page
+    @include flex(row, center, center);
+    font-style:italic;
+    text-align:center;
+    font-size:$paragraph;
+    position:relative;
+    display:none;
+    height:auto;
+    width:100%;
+    padding:$largeSpace $intentionalSpace;
+}
+
+blockquote p{
+    max-width:400px;
+}
+
+blockquote span{
+    font-size:$label;
+}
+
+a{
+    text-decoration:none;
+    color:$primaryBlue;
+
+    grid-area:mainAction;
+}
+
+button a{
+    color:inherit;
+    font-weight:inherit;
+}
+
+button{
+    @include transition(0.3s);
+
+    /* removes the 1990's affordances */
+    text-decoration:none;
+
+    /* adds the 2010's affordances */
+    padding:10px;
+    width:100%;
+
+    /* used to make links expand from the center */
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+
+    font-weight:$thin;
+    font-size:$paragraph;
+
+    border-width:$border;
+    border-style:solid;
+
+    letter-spacing:2px;
+    cursor:pointer;
+
+    background-color:$light;
+    color:$light;
+
+    &:hover{
+        background-color:$light;
+  }
+}
+
+header{ // used for  titles
+    @include flex(column, center, space-around);
+
+    grid-area:header;
+}
+
+hgroup{ // group of h1 tags for use in section titles replaces titleRow?
+    @include flex(column, center, flex-start);
+
+    margin-top:$intentionalSpace;
+    margin-bottom:$intentionalSpace;
+
+    width:$fullWidth;
+}
+
+footer{ // copyright text
+    @include flex(column, center, flex-end);
+
+    text-align:center;
+    color:$dark;
+    grid-area:backButton;
+    margin:10px 0;
+    align-self:end;
+}
+
+footer p{
+    font-size:$label;
+}
+
+footer span{
+    font-weight:$thick;
+}
+
+section{
+    @include grid;
+
+    height:auto;
+
+    padding:0 $smallSpace;
+}
+
+main > section:first-of-type{
+    margin-top:0;
+}
+
+main > section:last-of-type{
+    margin-bottom:0;
+}
+
+body > section{
+    margin:0;
+}
+
+article{
+    @include flex(row, center, center);
+    width:100%;
+    grid-area:subhead;
+}
+
+aside{ // images (iPhone or desktop) for sections
+    width:100%;
+    grid-area:contentTop;
+    display:none;
+}
+
+figure{
+    @include flex(row, center, space-around);
+
+    width:$fullWidth;
+}
+
+img{
+    width:50%;
+    height:auto;
+}
+
+svg{ // channels
+    width:auto;
+    height:$smallIcon;
+}
+
+div{
+
+}
+
+input{
+    width:2px;
+    height:2px;
+    overflow:hidden;
+    opacity:0;
+}
+
+@media(max-height:560px){
+    section{
+        max-height:none !important;
+    }
+}
+
+@media(min-width:$S-width){
+    button{
+        width:300px;
+    }
+
+    a{
+        justify-self:center;
+    }
+}
+
+@media(min-width:$M-width){
+    header{
+        width:100%;
+    }
+
+    hgroup{
+        width:100%;
+    }
+
+    aside{
+        grid-area:image;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        display:block;
+    }
+
+    section{
+        margin:$largeSpace 0;
+        padding:0;
+    }
+}
+
+@media(min-width:$M-special-width){
+    header{
+        align-self:start;
+        width:auto;
+    }
+
+    hgroup{
+        width:auto;
+        align-items:flex-start;
+    }
+
+    h1{
+        font-size:4vw;
+    }
+
+    h4{
+        font-size:18px;
+    }
+
+    h5{
+        font-size:25px;
+    }
+
+    header h5{
+        font-size:50px;
+    }
+
+    h6{
+        font-size:16px;
+    }
+
+    blockquote{
+        display:flex;
+        margin:0 0 100px 0;
+    }
+
+    article{
+        width:auto;
+    }
+
+    a{
+        justify-self:auto;
+    }
+}
