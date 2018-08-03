@@ -96,7 +96,7 @@ section.projectMenu {
   bottom: 0;
   background-color: #fff;
   grid-template-columns: 10px 1fr 1fr 10px;
-  grid-template-rows: 200px 1fr 1fr 1fr;
+  grid-template-rows: 0 1fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-template-areas: "marginLeft marginTop marginTop marginRight" "marginLeft menuItem1 menuItem2 marginRight" "marginLeft menuItem3 menuItem4 marginRight" "marginLeft marginBottom marginBottom marginRight";
   z-index: 2; }
