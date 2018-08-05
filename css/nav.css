@@ -213,9 +213,6 @@ section.projectMenu {
 .imageMattersYellow.hover {
   background-color: #F2C924; }
 
-.imageMattersYellow svg {
-  fill: #000266; }
-
 .overlayContainer {
   z-index: 101; }
 
