@@ -93,7 +93,56 @@ section#games, section#icons {
     grid-template-areas: "marginLeft spaceTop spaceTop spaceTop marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; }
 
   section.threeDown#sendoff {
-    grid-template-areas: "marginLeft space space space marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; } }
+    grid-template-areas: "marginLeft space space space marginRight" "marginLeft header header mainAction marginRight" "marginLeft spaceMiddle spaceMiddle spaceMiddle marginRight" "marginLeft contentTop contentMiddle contentBottom marginRight" "marginLeft spaceLeft backButton spaceRight marginRight"; }
+
+  section.fullWidthBottom {
+    padding: 0;
+    grid-template-columns: 20px 1fr auto 1fr 20px;
+    grid-template-rows: 50px auto 20px auto 300px;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft marginLeft marginTop marginRight marginRight" "marginLeft marginLeft header marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "image image image image image"; }
+
+  section.fullWidthTop {
+    padding: 0;
+    grid-template-columns: 20px 1fr auto 1fr 20px;
+    grid-template-rows: 50px 300px auto 20px auto;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft marginLeft marginTop marginRight marginRight" "marginLeft marginLeft header marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "image image image image image"; }
+
+  section.centerLong {
+    /* adds auto to last row for images*/
+    grid-template-rows: 50px auto 20px auto auto; }
+
+  section.imageLeft {
+    padding: 0;
+    grid-template-columns: 20px 300px 50px 1fr 20px;
+    grid-template-rows: 50px auto auto auto 50px;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft marginTop marginTop marginTop marginRight" "marginLeft image spaceBetween header marginRight" "marginLeft image spaceBetween subhead marginRight" "marginLeft image spaceBetween contentTop marginRight" "marginLeft marginBottom marginBottom marginBottom marginRight"; }
+
+  section.imageRight {
+    padding: 0;
+    grid-template-columns: 20px 1fr 50px 300px 20px;
+    grid-template-rows: 50px auto auto auto 50px;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft marginTop marginTop marginTop marginRight" "marginLeft header spaceBetween image marginRight" "marginLeft subhead spaceBetween image marginRight" "marginLeft contentTop spaceBetween image marginRight" "marginLeft marginBottom marginBottom marginBottom marginRight"; }
+
+  section.contentDown {
+    padding: 0;
+    grid-template-columns: 20px 1fr auto 1fr 20px;
+    grid-template-rows: 50px auto 20px auto 300px;
+    grid-column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "marginLeft marginLeft marginTop marginRight marginRight" "marginLeft marginLeft header marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "marginLeft marginLeft subhead marginRight marginRight" "image image image image image"; } }
 button.primaryBlue {
   border-color: #1F76DB;
   background-color: #1F76DB; }
@@ -165,9 +214,11 @@ button.nationwideBlue.light {
 
 button.imageMattersYellow {
   border-color: #F2C924;
-  background-color: #F2C924; }
+  background-color: #F2C924;
+  color: #000266; }
   button.imageMattersYellow:hover {
-    background-color: #fff;
+    background-color: #000266;
+    border-color: #000266;
     color: #F2C924; }
 
 .secondAction {
