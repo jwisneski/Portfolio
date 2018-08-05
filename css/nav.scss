@@ -226,10 +226,15 @@ section.projectMenu{
 
 .imageMattersYellow{
     border:1px solid $imageMattersYellow;
+    color:$imageMattersBlue;
 }
 
 .imageMattersYellow.hover{
     background-color:$imageMattersYellow;
+}
+
+.imageMattersYellow svg{
+    fill:$imageMattersBlue;
 }
 
 .overlayContainer{

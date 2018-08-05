@@ -207,10 +207,14 @@ section.projectMenu {
   background-color: #555; }
 
 .imageMattersYellow {
-  border: 1px solid #F2C924; }
+  border: 1px solid #F2C924;
+  color: #000266; }
 
 .imageMattersYellow.hover {
   background-color: #F2C924; }
+
+.imageMattersYellow svg {
+  fill: #000266; }
 
 .overlayContainer {
   z-index: 101; }
