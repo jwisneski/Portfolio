@@ -1016,12 +1016,6 @@ section.sendoff{
 }
 
 .upArrow{
-    -ms-transform: rotate(180deg);
-    -ms-transform-origin: center;
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    -webkit-transform-origin: center; /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
-    transform-origin:  center;
     display:none;
     position:fixed;
 }
