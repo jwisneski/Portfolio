@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function(){
+        // removes the loading screen
+        $('#loading').addClass('hidden');
+
+        setTimeout(function(){
+            // moves loading screen below
+            $('#loading').addClass('hiddenBelow');
+        }, 500);
+    }, 1500);
+}, false);
+
 // Project Open
 var project='';
 var positions={ };
