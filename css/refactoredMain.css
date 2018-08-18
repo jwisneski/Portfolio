@@ -312,10 +312,13 @@ section.autoHeight.smallSection {
 
 section.hiddenBelow {
   position: fixed;
-  top: 120vh !important;
+  top: 120vh;
   left: 0;
   width: 100%;
   background-color: #fff; }
+
+#loading.hiddenBelow {
+  top: 120vh !important; }
 
 section.hiddenBelow.shown {
   top: 0; }
