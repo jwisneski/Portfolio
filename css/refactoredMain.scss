@@ -193,6 +193,19 @@ h3.hideCopy{
     opacity:0;
 }
 
+.nationwideLead aside{
+    background-color:$nationwideBlue;
+}
+
+.nwComponentHero{
+    background-image: url("https://jwisneski.github.io/portfolio/images/atomicdesignhero.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    width:50%;
+    height:60%;
+    padding-top:15%;
+}
 
 
 @media(min-width:$M-width){

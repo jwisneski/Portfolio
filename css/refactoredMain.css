@@ -438,6 +438,18 @@ h3.hideCopy {
   transition: all 0s ease;
   opacity: 0; }
 
+.nationwideLead aside {
+  background-color: #0072CF; }
+
+.nwComponentHero {
+  background-image: url("https://jwisneski.github.io/portfolio/images/atomicdesignhero.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50%;
+  height: 60%;
+  padding-top: 15%; }
+
 @media (min-width: 660px) {
   .mobileProject, .desktopProject {
     grid-template-columns: 20px 1fr 1fr 20px;
