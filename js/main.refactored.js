@@ -114,10 +114,32 @@ function pageScroll( ){
     if(newSection=='featured projects'){
         // scroll from savings launcher
         if(stop<lastStop){
-            animateSavings(false);
+            // animateSavings(false);
+            animateNW(false);
+        }
+    }
+
+    else if(newSection=='the Nationwide app'){
+            // scroll to nationwide app
+            if(stop>lastStop){
+                animateNW(true);
+
+            }else if(stop<lastStop){
+                animateSavings(false);
+            }
         }
 
-    }else if(newSection=='the savings launcher'){
+    else if(newSection=='the design system'){
+            // scroll to nationwide app
+            if(stop>lastStop){
+                animateNW(true);
+
+            }else if(stop<lastStop){
+                animateSavings(false);
+            }
+        }
+
+    else if(newSection=='the savings launcher'){
         // scroll to savings launcher
         if(stop>lastStop){
             animateSavings(true);
@@ -153,23 +175,7 @@ function pageScroll( ){
 
         // scroll from NW to mini bag
         }else if(stop<lastStop){
-            animateNW(false);
-        }
-
-    }else if(newSection=='the Nationwide app'){
-        // scroll to nationwide app
-        if(stop>lastStop){
-            animateNW(true);
-
-            if((stop+200) > positions['company website']){
-                var topOffset=((stop-positions['company website'])/-100);
-
-                $('.imAfter').css('top', topOffset+positions['company website']);
-            }
-
-        // scroll from company website to NW
-        }else if(stop<lastStop){
-            animateIM(false);
+            // animateNW(false);
         }
     }
 
