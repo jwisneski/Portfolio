@@ -1,0 +1,201 @@
+button.primaryBlue {
+  border-color: #1F76DB;
+  background-color: #1F76DB; }
+  button.primaryBlue:hover {
+    background-color: #fff;
+    color: #1F76DB; }
+
+button.primaryOrange {
+  border-color: #EA7E0D;
+  background-color: #EA7E0D; }
+  button.primaryOrange:hover {
+    background-color: #fff;
+    color: #EA7E0D; }
+
+button.disabled {
+  background-color: #fff;
+  border-color: #555;
+  color: #555; }
+  button.disabled:hover {
+    background-color: #fff;
+    border-color: #555;
+    color: #555; }
+
+button.secondary {
+  border: none;
+  background-color: #fff;
+  color: #1F76DB; }
+  button.secondary:hover {
+    border-color: #1F76DB; }
+
+button.kohlsGreen {
+  border-color: #00AD46;
+  background-color: #00AD46; }
+  button.kohlsGreen:hover {
+    background-color: #fff;
+    color: #00AD46; }
+
+button.kohlsMagenta {
+  border-color: #CB187C;
+  background-color: #CB187C; }
+  button.kohlsMagenta:hover {
+    background-color: #fff;
+    color: #CB187C; }
+
+button.kohlsMagenta.light {
+  border-color: #CB187C;
+  background-color: #fff;
+  color: #CB187C; }
+  button.kohlsMagenta.light:hover {
+    border-color: #fff;
+    background-color: #CB187C;
+    color: #fff; }
+
+button.nationwideBlue {
+  border-color: #0072CF;
+  background-color: #0072CF; }
+  button.nationwideBlue:hover {
+    background-color: #fff;
+    color: #0072CF; }
+
+button.nationwideBlue.light {
+  border-color: #0072CF;
+  background-color: #fff;
+  color: #0072CF; }
+  button.nationwideBlue.light:hover {
+    border-color: #fff;
+    background-color: #0072CF;
+    color: #fff; }
+
+button.imageMattersYellow {
+  border-color: #F2C924;
+  background-color: #F2C924;
+  color: #000266; }
+  button.imageMattersYellow:hover {
+    background-color: #000266;
+    border-color: #000266;
+    color: #F2C924; }
+
+.secondAction {
+  grid-area: secondAction; }
+
+@media (min-width: 660px) {
+  button.kohlsMagenta.light {
+    border-color: #CB187C;
+    background-color: #CB187C;
+    color: #fff; }
+    button.kohlsMagenta.light:hover {
+      border-color: #CB187C;
+      background-color: #fff;
+      color: #CB187C; }
+
+  button.nationwideBlue.light {
+    border-color: #0072CF;
+    background-color: #0072CF;
+    color: #fff; }
+    button.nationwideBlue.light:hover {
+      border-color: #0072CF;
+      background-color: #fff;
+      color: #0072CF; } }
+html {
+  width: 100vw;
+  overflow-x: hidden; }
+
+.heroImage {
+  background-color: #0072CF;
+  width: 100%;
+  height: auto;
+  padding: 50px 0; }
+
+blockquote {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  font-style: italic;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  display: none;
+  height: auto;
+  width: 100%;
+  padding: 50px 20px; }
+
+blockquote p {
+  max-width: 400px; }
+
+blockquote span {
+  font-size: 14px; }
+
+blockquote a {
+  display: inline;
+  padding: inherit;
+  width: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #0072CF; }
+
+.fullWidthBottom .imageContainer {
+  width: 70% !important; }
+
+img {
+  width: 100%; }
+
+.autoHeight {
+  height: auto !important; }
+
+.topAligned {
+  align-items: flex-start !important; }
+
+button a {
+  color: inherit;
+  font-weight: inherit; }
+
+button {
+  /* quick functional transition for hovers, etc. */
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* removes the 1990's affordances */
+  text-decoration: none;
+  /* adds the 2010's affordances */
+  padding: 10px;
+  width: 100%;
+  /* used to make links expand from the center */
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 200;
+  font-size: 18px;
+  border-width: 2px;
+  border-style: solid;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #fff;
+  margin-bottom: 50px; }
+  button:hover {
+    background-color: #fff; }
+
+.linkToProject {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+@media (min-width: 370px) {
+  button {
+    width: 300px; }
+
+  a {
+    position: relative;
+    justify-self: center;
+    align-self: center; } }
+@media (min-width: 930px) {
+  blockquote {
+    display: flex; } }
+
+/*# sourceMappingURL=nwComponents.css.map */

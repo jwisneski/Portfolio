@@ -1,0 +1,123 @@
+@import '_variables';
+@import '_mixins';
+@import '_buttons';
+
+html{
+    width:100vw;
+    overflow-x:hidden;
+}
+
+.heroImage{
+    background-color:$nationwideBlue;
+    width:100%;
+    height:auto;
+    padding:50px 0;
+}
+
+blockquote{ // replaces line breaks on the home page
+    @include flex(row, center, center);
+    font-style:italic;
+    text-align:center;
+    font-size:$paragraph;
+    position:relative;
+    display:none;
+    height:auto;
+    width:100%;
+    padding:$largeSpace $intentionalSpace;
+}
+
+blockquote p{
+    max-width:400px;
+}
+
+blockquote span{
+    font-size:$label;
+}
+
+blockquote a{
+    display:inline;
+    padding: inherit;
+    width: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color:$nationwideBlue;
+}
+
+.fullWidthBottom .imageContainer{
+    width:70% !important;
+}
+
+img{
+    width:100%;
+}
+
+.autoHeight{
+    height:auto !important;
+}
+
+.topAligned{
+    align-items:flex-start !important;
+}
+
+button a{
+    color:inherit;
+    font-weight:inherit;
+}
+
+button{
+    @include transition(0.3s);
+
+    /* removes the 1990's affordances */
+    text-decoration:none;
+
+    /* adds the 2010's affordances */
+    padding:10px;
+    width:100%;
+
+    /* used to make links expand from the center */
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+
+    font-weight:$thin;
+    font-size:$paragraph;
+
+    border-width:$border;
+    border-style:solid;
+
+    letter-spacing:2px;
+    cursor:pointer;
+
+    background-color:$light;
+    color:$light;
+
+    margin-bottom:50px;
+
+    &:hover{
+        background-color:$light;
+  }
+}
+
+.linkToProject{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+}
+
+@media(min-width:$S-width){
+    button{
+        width:300px;
+    }
+
+    a{
+        position:relative;
+        justify-self:center;
+        align-self:center;
+    }
+}
+
+@media(min-width:$M-special-width){
+    blockquote{
+        display:flex;
+    }
+}
